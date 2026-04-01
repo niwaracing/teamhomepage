@@ -18,7 +18,8 @@
             font-family: 'Oswald', sans-serif;
         }
         .hero-gradient {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(10,10,10,1)), url('/teamhomepage/images/car-main.jpg');
+            /* ヒーロー画像はメインのST5Rを使用 */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(10,10,10,1)), url('/teamhomepage/images/car-ST5R.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -27,6 +28,10 @@
         }
         .text-glow {
             text-shadow: 0 0 10px rgba(225, 29, 72, 0.5);
+        }
+        /* 画像がない場合のバックアップカラー */
+        .img-placeholder {
+            background-color: #1a1a1a;
         }
     </style>
 </head>
@@ -44,6 +49,7 @@
                         <a href="#concept" class="hover:text-rose-500 transition">CONCEPT</a>
                         <a href="#about" class="hover:text-rose-500 transition">TEAM</a>
                         <a href="#categories" class="hover:text-rose-500 transition">CATEGORIES</a>
+                        <a href="#machine" class="hover:text-rose-500 transition">MACHINE</a>
                         <a href="#schedule" class="hover:text-rose-500 transition">SCHEDULE</a>
                         <a href="#contact" class="bg-rose-600 px-4 py-2 rounded text-white hover:bg-rose-700 transition">CONTACT</a>
                     </div>
@@ -58,7 +64,7 @@
             <h2 class="text-rose-600 font-oswald text-xl tracking-[0.3em] mb-2 uppercase text-glow">Virtual to Real</h2>
             <h1 class="text-5xl md:text-8xl font-oswald font-bold mb-6 tracking-tighter">シミュレーターから<br class="md:hidden"><span class="text-rose-600">リアルな戦場へ</span></h1>
             <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-300 mb-8 leading-relaxed">
-                iRacingで磨いた技術を武器に、スーパー耐久、ロードスターパーティレース、富士チャンピオンレースへ。
+                iRacingで磨いた技術を武器に、多彩なリアルカテゴリーへ参戦。
                 ニワレーシングは、ヴァーチャルとリアルの境界線を突き抜けます。
             </p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
@@ -84,9 +90,9 @@
     <!-- チーム・参戦カテゴリー -->
     <section id="categories" class="py-24 px-4 bg-zinc-900">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold mb-16 accent-border pl-4 font-oswald">RACING CATEGORIES</h2>
+            <h2 class="text-3xl font-bold mb-16 accent-border pl-4 font-oswald uppercase">Racing Categories</h2>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
                 <!-- iRacing -->
                 <div class="bg-black p-8 rounded-lg border border-white/5 hover:border-rose-600/50 transition group">
                     <div class="text-rose-600 text-3xl mb-4 group-hover:scale-110 transition duration-300">
@@ -122,42 +128,74 @@
                     <h4 class="text-xl font-bold mb-2">富士チャンピオン</h4>
                     <p class="text-gray-500 text-sm">富士スピードウェイを舞台にした伝統のシリーズ。ハイスピードな戦いに挑みます。</p>
                 </div>
+
+                <!-- N-ONEオーナーズカップ -->
+                <div class="bg-black p-8 rounded-lg border border-white/5 hover:border-rose-600/50 transition group">
+                    <div class="text-rose-600 text-3xl mb-4 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-gauge-high"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">N-ONE CUP</h4>
+                    <p class="text-gray-500 text-sm">軽自動車による人気のワンメイクレース。接戦必至の駆け引きが魅力のカテゴリーです。</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- マシン紹介 -->
-    <section id="machine" class="py-24 px-4">
+    <!-- マシン紹介セクション -->
+    <section id="machine" class="py-24 px-4 bg-black">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-8 items-center">
-                <div class="md:col-span-1">
-                    <h2 class="text-3xl font-bold mb-8 font-oswald tracking-widest uppercase">The Machine</h2>
-                    <div class="bg-zinc-900 p-6 rounded-lg border border-white/5">
-                        <h3 class="text-rose-600 font-bold mb-4 uppercase text-sm">Current Spec</h3>
-                        <ul class="space-y-3 text-sm">
-                            <li class="flex justify-between border-b border-white/10 pb-2">
-                                <span class="text-gray-500 uppercase">Class</span>
-                                <span>Roadster / ST-5 / etc</span>
-                            </li>
-                            <li class="flex justify-between border-b border-white/10 pb-2">
-                                <span class="text-gray-500">SIM BASE</span>
-                                <span>iRacing Fanatec Direct Drive</span>
-                            </li>
-                            <li class="flex justify-between border-b border-white/10 pb-2">
-                                <span class="text-gray-500">CIRCUIT</span>
-                                <span>Fuji / Motegi / Tsukuba</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="md:col-span-2">
-                    <div class="relative overflow-hidden rounded-lg group shadow-2xl">
-                        <img src="/teamhomepage/images/car-main.jpg" alt="NIWA RACING Machine" class="w-full h-auto object-cover transition duration-700 group-hover:scale-105">
-                        <div class="absolute bottom-0 right-0 bg-rose-600 p-4 font-bold font-oswald tracking-tighter">
-                            #NIWA_RACING
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold font-oswald tracking-widest uppercase">The Machines</h2>
+                <p class="text-gray-500 mt-2">Our Racing Fleet</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto space-y-12">
+                
+                <!-- マシン1: スーパー耐久 -->
+                <div class="relative overflow-hidden rounded-lg group shadow-2xl border border-white/10 img-placeholder">
+                    <img src="/teamhomepage/images/car-ST5R.jpg" alt="Super Taikyu ST5R" class="w-full h-[400px] object-cover transition duration-700 group-hover:scale-105" onerror="this.style.display='none'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex justify-between items-end">
+                        <div>
+                            <span class="bg-rose-600 text-white text-[10px] font-bold px-2 py-1 mb-2 inline-block">ST-5 CLASS</span>
+                            <h3 class="text-3xl font-bold font-oswald tracking-tighter">SUPER TAIKYU ST5R</h3>
+                            <p class="text-gray-400 text-sm">Endurance Racing Machine</p>
+                        </div>
+                        <div class="hidden md:block">
+                            <span class="text-rose-600 font-oswald font-bold text-4xl opacity-20">01</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- マシン2: ロードスターパーティレース -->
+                <div class="relative overflow-hidden rounded-lg group shadow-2xl border border-white/10 img-placeholder">
+                    <img src="/teamhomepage/images/car-roadstar.jpg" alt="Roadster Party Race" class="w-full h-[400px] object-cover transition duration-700 group-hover:scale-105" onerror="this.style.display='none'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex justify-between items-end">
+                        <div>
+                            <span class="bg-rose-600 text-white text-[10px] font-bold px-2 py-1 mb-2 inline-block">MAZDA ROADSTER (ND)</span>
+                            <h3 class="text-3xl font-bold font-oswald tracking-tighter uppercase">Roadster Party Race</h3>
+                            <p class="text-gray-400 text-sm">Official One-make Sprint Machine</p>
+                        </div>
+                        <div class="hidden md:block">
+                            <span class="text-rose-600 font-oswald font-bold text-4xl opacity-20">02</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- マシン3: N-ONEオーナーズカップ -->
+                <div class="relative overflow-hidden rounded-lg group shadow-2xl border border-white/10 img-placeholder">
+                    <img src="/teamhomepage/images/car-none.jpg" alt="N-ONE Owners Cup" class="w-full h-[400px] object-cover transition duration-700 group-hover:scale-105" onerror="this.style.display='none'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex justify-between items-end">
+                        <div>
+                            <span class="bg-rose-600 text-white text-[10px] font-bold px-2 py-1 mb-2 inline-block">HONDA N-ONE</span>
+                            <h3 class="text-3xl font-bold font-oswald tracking-tighter uppercase">N-ONE Owners Cup</h3>
+                            <p class="text-gray-400 text-sm">Light-weight Competition Machine</p>
+                        </div>
+                        <div class="hidden md:block">
+                            <span class="text-rose-600 font-oswald font-bold text-4xl opacity-20">03</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
