@@ -1,7 +1,228 @@
 <!DOCTYPE html>
-<html>
-<body>
-    <h1>NIWARACING 公式サイト</h1>
-    <p>現在、富士24時間耐久レースでの参戦に向けて準備中です！</p>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIWA RACING | Virtual to Real</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+        .font-oswald {
+            font-family: 'Oswald', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(10,10,10,1)), url('/teamhomepage/images/car-main.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .accent-border {
+            border-left: 4px solid #e11d48;
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(225, 29, 72, 0.5);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ナビゲーション -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold font-oswald tracking-tighter text-rose-600">NIWA <span class="text-white">RACING</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 text-sm font-medium">
+                        <a href="#concept" class="hover:text-rose-500 transition">CONCEPT</a>
+                        <a href="#about" class="hover:text-rose-500 transition">TEAM</a>
+                        <a href="#categories" class="hover:text-rose-500 transition">CATEGORIES</a>
+                        <a href="#schedule" class="hover:text-rose-500 transition">SCHEDULE</a>
+                        <a href="#contact" class="bg-rose-600 px-4 py-2 rounded text-white hover:bg-rose-700 transition">CONTACT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <header class="relative h-screen flex items-center justify-center hero-gradient">
+        <div class="text-center px-4">
+            <h2 class="text-rose-600 font-oswald text-xl tracking-[0.3em] mb-2 uppercase text-glow">Virtual to Real</h2>
+            <h1 class="text-5xl md:text-8xl font-oswald font-bold mb-6 tracking-tighter">シミュレーターから<br class="md:hidden"><span class="text-rose-600">リアルな戦場へ</span></h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-300 mb-8 leading-relaxed">
+                iRacingで磨いた技術を武器に、スーパー耐久、ロードスターパーティレース、富士チャンピオンレースへ。
+                ニワレーシングは、ヴァーチャルとリアルの境界線を突き抜けます。
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#categories" class="border border-white px-8 py-3 hover:bg-white hover:text-black transition font-bold">ACTIVITY</a>
+                <a href="#contact" class="bg-rose-600 px-8 py-3 hover:bg-rose-700 transition font-bold">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- コンセプトセクション -->
+    <section id="concept" class="py-24 px-4 bg-black">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-rose-600 font-oswald text-sm tracking-widest mb-4 uppercase">Our Concept</h2>
+            <h3 class="text-3xl md:text-4xl font-bold mb-8">ヴァーチャルからリアルへ</h3>
+            <p class="text-gray-400 leading-relaxed text-lg">
+                現代のモータースポーツにおいて、シミュレーターは単なるゲームではありません。<br>
+                iRacingで培ったデータ分析力、ライン取り、そして極限の集中力。<br>
+                私たちはそれらをリアルのサーキットへと持ち込み、新たなモータースポーツの形を証明し続けます。
+            </p>
+        </div>
+    </section>
+
+    <!-- チーム・参戦カテゴリー -->
+    <section id="categories" class="py-24 px-4 bg-zinc-900">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-16 accent-border pl-4 font-oswald">RACING CATEGORIES</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- iRacing -->
+                <div class="bg-black p-8 rounded-lg border border-white/5 hover:border-rose-600/50 transition group">
+                    <div class="text-rose-600 text-3xl mb-4 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 uppercase font-oswald">iRacing</h4>
+                    <p class="text-gray-500 text-sm">世界最高峰のシミュレーターにて日々トレーニングを行い、車両セットアップの理論とスキルを磨きます。</p>
+                </div>
+
+                <!-- スーパー耐久 -->
+                <div class="bg-black p-8 rounded-lg border border-white/5 hover:border-rose-600/50 transition group">
+                    <div class="text-rose-600 text-3xl mb-4 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-stopwatch"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">スーパー耐久</h4>
+                    <p class="text-gray-500 text-sm">国内最大級の耐久レース。チームワークと戦略が試される過酷なフィールドで戦います。</p>
+                </div>
+
+                <!-- ロードスターパーティレース -->
+                <div class="bg-black p-8 rounded-lg border border-white/5 hover:border-rose-600/50 transition group">
+                    <div class="text-rose-600 text-3xl mb-4 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">パーティレース</h4>
+                    <p class="text-gray-500 text-sm">JAF公認のワンメイクレース。ドライバーの純粋な技量が試される接戦を繰り広げます。</p>
+                </div>
+
+                <!-- 富士チャンピオンレース -->
+                <div class="bg-black p-8 rounded-lg border border-white/5 hover:border-rose-600/50 transition group">
+                    <div class="text-rose-600 text-3xl mb-4 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">富士チャンピオン</h4>
+                    <p class="text-gray-500 text-sm">富士スピードウェイを舞台にした伝統のシリーズ。ハイスピードな戦いに挑みます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- マシン紹介 -->
+    <section id="machine" class="py-24 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-1">
+                    <h2 class="text-3xl font-bold mb-8 font-oswald tracking-widest uppercase">The Machine</h2>
+                    <div class="bg-zinc-900 p-6 rounded-lg border border-white/5">
+                        <h3 class="text-rose-600 font-bold mb-4 uppercase text-sm">Current Spec</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex justify-between border-b border-white/10 pb-2">
+                                <span class="text-gray-500 uppercase">Class</span>
+                                <span>Roadster / ST-5 / etc</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/10 pb-2">
+                                <span class="text-gray-500">SIM BASE</span>
+                                <span>iRacing Fanatec Direct Drive</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/10 pb-2">
+                                <span class="text-gray-500">CIRCUIT</span>
+                                <span>Fuji / Motegi / Tsukuba</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:col-span-2">
+                    <div class="relative overflow-hidden rounded-lg group shadow-2xl">
+                        <img src="/teamhomepage/images/car-main.jpg" alt="NIWA RACING Machine" class="w-full h-auto object-cover transition duration-700 group-hover:scale-105">
+                        <div class="absolute bottom-0 right-0 bg-rose-600 p-4 font-bold font-oswald tracking-tighter">
+                            #NIWA_RACING
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- スケジュール -->
+    <section id="schedule" class="py-24 px-4 bg-zinc-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center font-oswald tracking-widest uppercase">Race Schedule</h2>
+            <div class="space-y-4">
+                <div class="flex flex-col md:flex-row items-center bg-black p-6 rounded-lg border-l-4 border-rose-600">
+                    <div class="md:w-32 text-center mb-4 md:mb-0">
+                        <span class="block text-2xl font-bold font-oswald">NEXT</span>
+                    </div>
+                    <div class="flex-grow md:ml-8">
+                        <h4 class="text-xl font-bold">富士チャンピオンレースシリーズ</h4>
+                        <p class="text-gray-500 text-sm">Fuji Speedway</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-rose-600 font-bold font-oswald">PREPARING</div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center bg-black/50 p-6 rounded-lg border-l-4 border-gray-700">
+                    <div class="md:w-32 text-center mb-4 md:mb-0">
+                        <span class="block text-xl font-bold font-oswald text-gray-500 uppercase">TBD</span>
+                    </div>
+                    <div class="flex-grow md:ml-8">
+                        <h4 class="text-xl font-bold text-gray-500">ロードスター・パーティレースIII</h4>
+                        <p class="text-gray-600 text-sm">Official Series</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer id="contact" class="bg-black py-16 px-4 border-t border-white/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <span class="text-3xl font-bold font-oswald tracking-tighter text-rose-600">NIWA <span class="text-white">RACING</span></span>
+                    <p class="mt-6 text-sm text-gray-500 leading-relaxed">
+                        Virtual to Real - ヴァーチャルの熱狂を、リアルの感動へ。<br>
+                        私たちは常に最速を目指し、挑戦し続けます。
+                    </p>
+                </div>
+                <div class="md:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-8 text-sm">
+                    <div>
+                        <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Team Contact</h5>
+                        <p class="text-gray-500">info@niwaracing.jp</p>
+                    </div>
+                    <div>
+                        <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Follow Us</h5>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-xl hover:text-rose-600 transition"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-xl hover:text-rose-600 transition"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="text-xl hover:text-rose-600 transition"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 text-center md:text-left">
+                <p class="text-xs text-gray-600">
+                    © 2024 NIWA RACING TEAM. Virtual to Real Experience.
+                </p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
