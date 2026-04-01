@@ -18,7 +18,7 @@
             font-family: 'Oswald', sans-serif;
         }
         .hero-gradient {
-            /* ヒーロー画像はメインのST5Rを使用 */
+            /* ヒーロー画像を car-main.jpg へ変更 */
             background: linear-gradient(rgba(0,0,0,0.4), rgba(10,10,10,1)), url('/teamhomepage/images/car-main.jpg');
             background-size: cover;
             background-position: center;
@@ -62,7 +62,7 @@
     <header class="relative h-screen flex items-center justify-center hero-gradient">
         <div class="text-center px-4">
             <h2 class="text-rose-600 font-oswald text-xl tracking-[0.3em] mb-2 uppercase text-glow">Virtual to Real</h2>
-            <h1 class="text-5xl md:text-8xl font-oswald font-bold mb-6 tracking-tighter">シミュレーターから<br class="md:hidden"><span class="text-rose-600">リアルレースへ</span></h1>
+            <h1 class="text-5xl md:text-8xl font-oswald font-bold mb-6 tracking-tighter uppercase">シミュレーターから<br class="md:hidden"><span class="text-rose-600">リアルレースへ</span></h1>
             <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-300 mb-8 leading-relaxed">
                 iRacingで磨いた技術を武器に、多彩なリアルカテゴリーへ参戦。
                 ニワレーシングは、ヴァーチャルとリアルの境界線を突き抜けます。
@@ -81,7 +81,7 @@
             <h3 class="text-3xl md:text-4xl font-bold mb-8">ヴァーチャルからリアルへ</h3>
             <p class="text-gray-400 leading-relaxed text-lg">
                 現代のモータースポーツにおいて、シミュレーターは単なるゲームではありません。<br>
-                iRacingで培ったデータ分析力、ライン取り、そして極限の集中力。<br>
+                iRacingで培ったデータ分析力、ライン取り、反映させた極限の集中力。<br>
                 私たちはそれらをリアルのサーキットへと持ち込み、新たなモータースポーツの形を証明し続けます。
             </p>
         </div>
@@ -117,7 +117,7 @@
                         <i class="fas fa-car"></i>
                     </div>
                     <h4 class="text-xl font-bold mb-2">パーティレース</h4>
-                    <p class="text-gray-500 text-sm">JAF公認のワンメイクレース。ドライバーの純粋な技量が試される接戦を繰り広げます。</p>
+                    <p class="text-gray-500 text-sm">JAF公認のワンメイクレース. ドライバーの純粋な技量が試される接戦を繰り広げます。</p>
                 </div>
 
                 <!-- 富士チャンピオンレース -->
@@ -242,14 +242,16 @@
                 <div class="md:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-8 text-sm">
                     <div>
                         <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Team Contact</h5>
-                        <p class="text-gray-500">info@niwaracing.jp</p>
+                        <p class="text-gray-500">niwaracing@gmail.com</p>
                     </div>
                     <div>
                         <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Follow Us</h5>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-xl hover:text-rose-600 transition"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="text-xl hover:text-rose-600 transition"><i class="fab fa-x-twitter"></i></a>
-                            <a href="#" class="text-xl hover:text-rose-600 transition"><i class="fab fa-youtube"></i></a>
+                        <div class="flex flex-col space-y-4">
+                            <!-- Xアカウントのみを表示 -->
+                            <a href="https://x.com/niwaracing" target="_blank" class="flex items-center space-x-2 group hover:text-rose-600 transition">
+                                <span class="text-xl"><i class="fab fa-x-twitter"></i></span>
+                                <span class="text-gray-500 group-hover:text-rose-600 transition">@niwaracing</span>
+                            </a>
                         </div>
                     </div>
                 </div>
