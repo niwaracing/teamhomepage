@@ -50,6 +50,10 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
         }
+        .footer-map iframe {
+            filter: grayscale(0.1) contrast(1.1);
+            border-radius: 1rem;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -69,6 +73,7 @@
                         <a href="#categories" class="nav-link transition">CATEGORIES</a>
                         <a href="#machine" class="nav-link transition">MACHINE</a>
                         <a href="#profile" class="nav-link transition">PROFILE</a>
+                        <a href="#contact" class="nav-link transition">ACCESS</a>
                         <a href="#contact" class="bg-rose-600 px-5 py-2.5 rounded text-white hover:bg-rose-700 shadow-lg shadow-rose-600/20 transition">CONTACT</a>
                     </div>
                 </div>
@@ -151,7 +156,7 @@
                         <i class="fas fa-gauge-high"></i>
                     </div>
                     <h4 class="text-xl font-bold mb-2 text-zinc-900">N-ONE CUP</h4>
-                    <p class="text-zinc-500 text-sm leading-relaxed">軽自動車による人気のワンメイクレース。接戦必至の駆け引きが魅力のカテゴリーです。</p>
+                    <p class="text-zinc-500 text-sm leading-relaxed">軽自動車による人気のワンメイクレース. 接戦必至の駆け引きが魅力のカテゴリーです。</p>
                 </div>
             </div>
         </div>
@@ -206,7 +211,7 @@
                 <div class="md:col-span-4">
                     <div class="sticky top-32">
                         <div class="aspect-[3/4] rounded-3xl overflow-hidden border-4 border-rose-600 shadow-2xl bg-zinc-900 mb-8">
-                            <img src="./images/nwia.jpg" alt="Director Eiji Niwa" class="w-full h-full object-cover">
+                            <img src="./images/nwia.webp" alt="Director Eiji Niwa" class="w-full h-full object-cover">
                         </div>
                         <div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10">
                             <h3 class="text-3xl font-bold mb-1">丹羽 英司</h3>
@@ -242,11 +247,10 @@
                         <div class="space-y-6 text-gray-400 leading-relaxed text-lg">
                             <p>
                                 長野県出身。iRacingを中心としたシミュレーターの世界でキャリアをスタート。
-                                データに基づいた緻密なドライビングスタイルを武器に、ヴァーチャルレースのトップシーンで活躍。
+                                データに基づいた緻密なドライビングスタイルを武器に、2022年より本格的にリアルモータースポーツへの挑戦を開始。
                             </p>
                             <p>
-                                2022年より本格的にリアルモータースポーツへの挑戦を開始。
-                                「シミュレーターの技術がどこまで実戦で通用するか」をテーマに、自らステアリングを握り、スーパー耐久やロードスター・パーティレースなど多岐にわたるカテゴリーに参戦。
+                                NIWA RACING代表としてチーム運営を行いながら、自らステアリングを握り、スーパー耐久やロードスター・パーティレースなど多岐にわたるカテゴリーに参戦。ヴァーチャルとリアルを繋ぐ架け橋となるべく精力的に活動している。
                             </p>
                         </div>
                     </div>
@@ -316,42 +320,65 @@
     <footer id="contact" class="bg-white py-24 px-4 border-t border-gray-100">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-4 gap-12 mb-20">
-                <div class="md:col-span-2">
+                <!-- ロゴ & コンタクト -->
+                <div class="md:col-span-1">
                     <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8">
-                    <p class="text-zinc-500 max-w-sm leading-relaxed font-medium">
-                        Virtual to Real - ヴァーチャルの熱狂を、リアルの感動へ。<br>
-                        最新のシミュレーション技術と、長年の実戦経験を融合させ、次世代のモータースポーツを切り拓きます。
-                    </p>
+                    <div class="space-y-6">
+                        <h5 class="text-zinc-900 font-bold uppercase text-xs tracking-widest border-b border-rose-600 w-fit pb-1">Contact</h5>
+                        <div class="space-y-2">
+                            <p class="text-zinc-500 text-sm font-bold flex items-start gap-2">
+                                <i class="fas fa-map-marker-alt text-rose-600 mt-1"></i>
+                                <span>長野県上田市国分1530-1</span>
+                            </p>
+                            <a href="mailto:niwaracing@gmail.com" class="text-zinc-500 hover:text-rose-600 transition block font-medium flex items-center gap-2">
+                                <i class="fas fa-envelope text-rose-600"></i>
+                                niwaracing@gmail.com
+                            </a>
+                        </div>
+                        
+                        <h5 class="text-zinc-900 font-bold uppercase text-xs tracking-widest mt-8 border-b border-rose-600 w-fit pb-1">Follow Us</h5>
+                        <div class="flex flex-col space-y-4">
+                            <a href="https://x.com/niwaracing" target="_blank" class="flex items-center space-x-3 group text-zinc-400 hover:text-sky-500 transition w-fit">
+                                <span class="text-xl w-6 text-center"><i class="fab fa-twitter"></i></span>
+                                <span class="text-zinc-500 group-hover:text-sky-500 transition font-bold">@niwaracing</span>
+                            </a>
+                            <a href="https://www.instagram.com/niwaracing" target="_blank" class="flex items-center space-x-3 group text-zinc-400 hover:text-rose-600 transition w-fit">
+                                <span class="text-xl w-6 text-center"><i class="fab fa-instagram"></i></span>
+                                <span class="text-zinc-500 group-hover:text-rose-600 transition font-bold">@niwaracing</span>
+                            </a>
+                            <a href="https://www.facebook.com/eiji.niwa.5/" target="_blank" class="flex items-center space-x-3 group text-zinc-400 hover:text-blue-600 transition w-fit">
+                                <span class="text-xl w-6 text-center"><i class="fab fa-facebook-f"></i></span>
+                                <span class="text-zinc-500 group-hover:text-blue-600 transition font-bold">NIWA RACING</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="space-y-6">
-                    <h5 class="text-zinc-900 font-bold uppercase text-xs tracking-widest">Team Contact</h5>
-                    <a href="mailto:niwaracing@gmail.com" class="text-zinc-500 hover:text-rose-600 transition block font-medium">niwaracing@gmail.com</a>
-                </div>
-                <div class="space-y-6">
-                    <h5 class="text-zinc-900 font-bold uppercase text-xs tracking-widest">Follow Us</h5>
-                    <div class="flex flex-col space-y-5">
-                        <a href="https://x.com/niwaracing" target="_blank" class="flex items-center space-x-3 group text-zinc-400 hover:text-sky-500 transition w-fit">
-                            <span class="text-2xl w-8 text-center"><i class="fab fa-twitter"></i></span>
-                            <span class="text-zinc-500 group-hover:text-sky-500 transition font-bold">@niwaracing</span>
-                        </a>
-                        <a href="https://www.instagram.com/niwaracing" target="_blank" class="flex items-center space-x-3 group text-zinc-400 hover:text-rose-600 transition w-fit">
-                            <span class="text-2xl w-8 text-center"><i class="fab fa-instagram"></i></span>
-                            <span class="text-zinc-500 group-hover:text-rose-600 transition font-bold">@niwaracing</span>
-                        </a>
-                        <a href="https://www.facebook.com/eiji.niwa.5/" target="_blank" class="flex items-center space-x-3 group text-zinc-400 hover:text-blue-600 transition w-fit">
-                            <span class="text-2xl w-8 text-center"><i class="fab fa-facebook-f"></i></span>
-                            <span class="text-zinc-500 group-hover:text-blue-600 transition font-bold">NIWA RACING</span>
-                        </a>
+
+                <!-- マップセクション (NIWA RACING) -->
+                <div class="md:col-span-3">
+                    <h5 class="text-zinc-900 font-bold uppercase text-xs tracking-widest mb-6">NIWA RACING</h5>
+                    <div class="footer-map h-[300px] md:h-[450px] w-full shadow-inner bg-zinc-50 p-2 rounded-2xl">
+                        <!-- 長野県上田市国分1530-1 の埋め込み -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.111451000623!2d138.2721!3d36.3881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601d848762746401%3A0xc391b11f71a06705!2z44CSMzg2LTAwMTYg6ZW36YeO55yM5LiK55Sw5biC5Zu95YiGMTUzMC0x!5e0!3m2!1sja!2sjp!4v1712218000000!5m2!1sja!2sjp" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
             </div>
+            
             <div class="pt-10 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-xs text-zinc-400 font-bold">
                     © 2025 NIWA RACING TEAM. All Rights Reserved.
                 </p>
                 <div class="flex gap-8 text-[10px] font-bold text-zinc-400">
-                    <a href="#" class="hover:text-rose-600">PRIVACY POLICY</a>
-                    <a href="#" class="hover:text-rose-600">TERMS OF SERVICE</a>
+                    <a href="#" class="hover:text-rose-600 transition">PRIVACY POLICY</a>
+                    <a href="#" class="hover:text-rose-600 transition">TERMS OF SERVICE</a>
                 </div>
             </div>
         </div>
