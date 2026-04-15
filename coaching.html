@@ -113,10 +113,104 @@
     </script>
 
 
-    <section class="py-32 px-4 bg-zinc-50 pt-40 min-h-screen flex items-center justify-center">
-        <div class="max-w-4xl mx-auto bg-white p-12 rounded-2xl border border-gray-100 shadow-sm text-center">
-            <h1 class="text-3xl font-bold mb-6 text-zinc-900">コーチング</h1>
-            <p class="text-zinc-500 text-lg leading-relaxed">ドライビングレッスンや走行データ分析などのサービスを提供します。</p>
+    <!-- ヒーローセクション -->
+    <header class="relative h-[60vh] flex items-center justify-center hero-gradient pt-20">
+        <div class="text-center px-4">
+            <div class="inline-block bg-rose-50 px-4 py-1 rounded-full mb-4">
+                <h2 class="text-rose-600 font-oswald text-sm tracking-[0.3em] uppercase font-bold">Coaching</h2>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tighter text-zinc-900 leading-tight">
+                経験とデータで、<span class="text-rose-600">走りを変える。</span>
+            </h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto text-zinc-600 leading-relaxed font-medium">
+                長年の実戦経験と最新のデータロガーを組み合わせた、<br class="hidden md:block">
+                論理的かつ確実なドライビングレッスンを提供します。
+            </p>
+        </div>
+    </header>
+
+    <!-- 講師紹介 -->
+    <section class="py-24 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-rose-600 font-oswald text-sm tracking-widest mb-4 uppercase font-bold">Instructor</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-6 text-zinc-900">現役プロドライバーによる<br>直接指導</h3>
+                    <p class="text-zinc-600 leading-relaxed text-lg mb-6">
+                        長年「スーパー耐久シリーズ」など第一線で参戦し続けている現役レーシングドライバーが、あなたのコーチとして直接指導にあたります。
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="text-rose-600 mt-1"><i class="fas fa-check-circle text-xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-zinc-900 mb-1">現場で培った活きた知見</h4>
+                                <p class="text-zinc-500 text-sm">最新のレーシングシーンで得られたノウハウを惜しみなく提供します。</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="text-rose-600 mt-1"><i class="fas fa-check-circle text-xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-zinc-900 mb-1">ドライバー目線のアドバイス</h4>
+                                <p class="text-zinc-500 text-sm">机上の空論ではない、実際のコクピットで役立つ具体的で実践的な指導を行います。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <div class="aspect-[4/5] md:aspect-square rounded-3xl overflow-hidden shadow-2xl relative">
+                        <img src="./images/nwia.webp" alt="コーチ" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-zinc-900 to-transparent p-8">
+                            <p class="text-white font-bold text-xl">丹羽 英司</p>
+                            <p class="text-rose-400 font-oswald text-sm">NIWA RACING 代表 / ドライバー</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 指導メソッド -->
+    <section class="py-24 px-4 bg-zinc-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-rose-600 font-oswald text-sm tracking-widest mb-4 uppercase font-bold">Method</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mb-6 text-zinc-900">データが導く、論理的なスキルアップ</h3>
+                <p class="text-zinc-600 max-w-2xl mx-auto leading-relaxed text-lg">
+                    AIMやデジスパイス（Digispice）などの最新データロガーを駆使し、走行データを可視化。<br>感覚に頼らない論理的な分析で、確実なタイムアップを目指します。
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-2xl border border-gray-100 shadow-sm card-hover transition duration-300 group">
+                    <div class="w-16 h-16 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-zinc-900">最新ツールによるデータ計測</h4>
+                    <p class="text-zinc-500 text-sm leading-relaxed">
+                        AIMやDigispiceなどのデータロガーを使用し、走行中のあらゆる挙動を精密に記録します。
+                    </p>
+                </div>
+
+                <div class="bg-white p-10 rounded-2xl border border-gray-100 shadow-sm card-hover transition duration-300 group">
+                    <div class="w-16 h-16 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-zinc-900">課題の明確な可視化</h4>
+                    <p class="text-zinc-500 text-sm leading-relaxed">
+                        ブレーキポイント、アクセル開度、ライン取りなどのデータを分析し、個々のドライバーの癖や課題を論理的に浮き彫りにします。
+                    </p>
+                </div>
+
+                <div class="bg-white p-10 rounded-2xl border border-gray-100 shadow-sm card-hover transition duration-300 group">
+                    <div class="w-16 h-16 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-flag-checkered"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-zinc-900">効率的なタイムアップ</h4>
+                    <p class="text-zinc-500 text-sm leading-relaxed">
+                        闇雲に走るのではなく、データから導き出された確実な「改善点」にフォーカスすることで、効率的にスキルを向上させます。
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
