@@ -114,12 +114,114 @@
 
 
 
-    <section class="py-32 px-4 bg-zinc-50 pt-40 min-h-[60vh]">
+    <section class="py-32 px-4 bg-zinc-50 pt-40">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold mb-16 accent-border pl-6 font-oswald text-zinc-900">メンテナンス</h2>
-            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
-                <p class="text-zinc-500 text-lg leading-relaxed">レーシングカーの日常メンテナンスから、レース前の本格的なセットアップまで、プロのメカニックがサポートいたします。</p>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold font-oswald tracking-widest uppercase text-zinc-900 mb-4">Maintenance</h2>
+                <h3 class="text-xl text-zinc-600 font-bold">メンテナンス・整備</h3>
+                <div class="h-1 w-20 bg-rose-600 mx-auto mt-6"></div>
             </div>
+
+            <div class="bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-sm mb-20 text-center">
+                <p class="text-zinc-600 text-lg leading-relaxed md:text-xl font-medium">
+                    一般車両の日常点検から、競技車両のハードな整備まで。<br class="hidden md:block">
+                    確かな技術と豊富な経験を持つプロフェッショナルが、お客様のカーライフとレース活動をサポートします。
+                </p>
+            </div>
+
+            <!-- サービスメニュー -->
+            <h3 class="text-2xl font-bold mb-10 accent-border pl-6 font-oswald text-zinc-900 uppercase">Service Menu</h3>
+            <div class="grid md:grid-cols-3 gap-8 mb-24">
+                <!-- オイル交換 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover transition duration-300">
+                    <div class="text-rose-600 text-4xl mb-6">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-zinc-900">オイル交換</h4>
+                    <p class="text-zinc-500 leading-relaxed mb-4">
+                        エンジンオイルやミッションオイルなどの定期交換を実施します。街乗りからサーキット走行まで、用途や車種に合わせた最適なオイル選定のご提案もいたします。
+                    </p>
+                    <ul class="text-sm text-zinc-500 space-y-2">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-600"></i> エンジンオイル交換</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-600"></i> ミッションオイル交換</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-600"></i> 各種フルード交換</li>
+                    </ul>
+                </div>
+
+                <!-- タイヤ交換 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover transition duration-300">
+                    <div class="text-rose-600 text-4xl mb-6">
+                        <i class="fas fa-compact-disc"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-zinc-900">タイヤ交換</h4>
+                    <p class="text-zinc-500 leading-relaxed mb-4">
+                        日常の街乗り用エコタイヤから、サーキット走行用のハイグリップタイヤやレーシングタイヤまで、幅広い種類のタイヤ組み換え作業に迅速・確実に対応します。
+                    </p>
+                    <ul class="text-sm text-zinc-500 space-y-2">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-600"></i> 一般タイヤ組み換え</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-600"></i> レーシングタイヤ組み換え</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-600"></i> ホイールバランス調整</li>
+                    </ul>
+                </div>
+
+                <!-- 車検対応 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover transition duration-300">
+                    <div class="text-rose-600 text-4xl mb-6">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-zinc-900">車検対応</h4>
+                    <p class="text-zinc-500 leading-relaxed mb-4">
+                        一般車両はもちろんのこと、カスタマイズされた車両の車検整備・代行サービスも承っております。安心してお乗りいただけるよう、細部まで丁寧に点検いたします。
+                    </p>
+                    <ul class="text-sm text-zinc-500 space-y-2">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-600"></i> 法定24ヶ月点検</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-600"></i> 継続車検代行</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-600"></i> 構造変更車検相談</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- レーシングカー製作 -->
+            <div class="bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl relative">
+                <!-- 装飾用背景パターン -->
+                <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#e11d48 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+                <div class="grid md:grid-cols-2 relative z-10">
+                    <div class="p-10 md:p-16 flex flex-col justify-center">
+                        <h3 class="text-sm text-rose-500 font-oswald tracking-widest font-bold mb-2 uppercase">Racing Car Build</h3>
+                        <h4 class="text-3xl md:text-4xl font-bold text-white mb-6">レーシングカー製作</h4>
+                        <p class="text-gray-300 leading-relaxed mb-8 text-lg">
+                            本格的なレース参戦に向けた車両製作を承ります。<br>
+                            ロールケージの精密な取り付けから、各カテゴリーの競技規則（レギュレーション）に適合した各種パーツの組み込み・セットアップまで、レースで勝つためのマシン作りをトータルでサポートします。
+                        </p>
+                        <ul class="space-y-4 text-gray-400">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-wrench text-rose-500 mt-1"></i>
+                                <span>ロールケージの溶接・ボルトオン取り付け</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-cogs text-rose-500 mt-1"></i>
+                                <span>競技規則に合わせた専用パーツの選定と組み込み</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-car-crash text-rose-500 mt-1"></i>
+                                <span>安全装備（シート、ハーネス、消火器等）の設置</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-tachometer-alt text-rose-500 mt-1"></i>
+                                <span>サスペンション、駆動系の本格レースセッティング</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="h-64 md:h-auto bg-zinc-800 relative">
+                        <!-- 装飾・アイコン領域 -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-zinc-800 to-zinc-950 flex items-center justify-center">
+                            <i class="fas fa-tools text-8xl text-zinc-700/50"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
