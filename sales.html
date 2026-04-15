@@ -114,15 +114,151 @@
 
 
 
-    <section class="py-32 px-4 bg-zinc-50 pt-40 min-h-[60vh]">
+    <!-- ヒーローセクション -->
+    <header class="relative h-[60vh] flex items-center justify-center hero-gradient pt-20">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-oswald font-bold mb-4 tracking-wider uppercase leading-tight text-white">
+                Car Sales & Purchase
+            </h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-200 leading-relaxed font-medium">
+                自動車販売・買取
+            </p>
+        </div>
+    </header>
+
+    <!-- サービス内容 -->
+    <section class="py-24 px-4 bg-zinc-50">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold mb-16 accent-border pl-6 font-oswald text-zinc-900">自動車販売・買取</h2>
-            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
-                <p class="text-zinc-500 text-lg leading-relaxed">ベース車両から完成済みのレーシングカーまで、幅広く販売・買取を行っております。</p>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold font-oswald tracking-widest uppercase text-zinc-900">Our Services</h2>
+                <div class="h-1 w-20 bg-rose-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- 新車販売 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover transition duration-300 shadow-sm">
+                    <div class="text-rose-600 text-3xl mb-4">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-zinc-900">新車販売</h3>
+                    <p class="text-zinc-500 text-sm leading-relaxed mb-6">
+                        国産車・輸入車を問わず、各メーカーの新車販売に対応しております。お客様のニーズに合わせた最適な一台をご提案いたします。
+                    </p>
+                </div>
+
+                <!-- 中古車販売 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover transition duration-300 shadow-sm">
+                    <div class="text-rose-600 text-3xl mb-4">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-zinc-900">中古車販売</h3>
+                    <p class="text-zinc-500 text-sm leading-relaxed mb-6">
+                        コンディションの良い厳選した中古車を販売しております。モータースポーツベース車両から日常使いのクルマまで幅広く取り扱っています。
+                    </p>
+                </div>
+
+                <!-- 車両買取 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover transition duration-300 shadow-sm">
+                    <div class="text-rose-600 text-3xl mb-4">
+                        <i class="fas fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-zinc-900">車両買取</h3>
+                    <p class="text-zinc-500 text-sm leading-relaxed mb-6">
+                        スポーツカーやレーシングカーはもちろん、普通乗用車や軽自動車など、車種を問わず幅広く高価買取を行っております。お気軽にご相談ください。
+                    </p>
+                </div>
+
+                <!-- 全国納車対応 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover transition duration-300 shadow-sm">
+                    <div class="text-rose-600 text-3xl mb-4">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-zinc-900">全国納車対応</h3>
+                    <p class="text-zinc-500 text-sm leading-relaxed mb-6">
+                        長野県内だけでなく、日本全国どこへでも納車が可能です。遠方のお客様も安心してご購入いただけます。
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#contact" class="inline-block bg-rose-600 text-white px-10 py-4 hover:bg-rose-700 shadow-xl shadow-rose-600/30 transition font-bold rounded-lg">
+                    <i class="fas fa-envelope mr-2"></i> 販売・買取の相談をする
+                </a>
             </div>
         </div>
     </section>
 
+    <!-- 在庫車両セクション -->
+    <section id="stock-list" class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold font-oswald tracking-widest uppercase text-zinc-900">Stock List</h2>
+                <p class="mt-2 text-zinc-500">在庫車両一覧</p>
+                <div class="h-1 w-20 bg-rose-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="bg-zinc-100 rounded-3xl p-12 text-center mb-12 border border-zinc-200 border-dashed">
+                <div class="text-4xl text-zinc-300 mb-4">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-zinc-600 mb-2 font-oswald tracking-widest uppercase">Coming Soon</h3>
+                <p class="text-zinc-500">準備中</p>
+            </div>
+
+            <!-- プレースホルダー（将来的に使用するレイアウト枠） -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 opacity-50 grayscale pointer-events-none">
+                <!-- ダミーカード 1 -->
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+                    <div class="h-48 bg-zinc-200 flex items-center justify-center">
+                        <i class="fas fa-image text-4xl text-zinc-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-bold text-zinc-900">車種名サンプル</h4>
+                            <span class="bg-rose-100 text-rose-600 text-xs font-bold px-2 py-1 rounded">中古車</span>
+                        </div>
+                        <div class="text-sm text-zinc-500 space-y-1 mb-4">
+                            <p>年式: 20XX年</p>
+                            <p>走行距離: X0,000 km</p>
+                            <p>車検: 令和X年X月</p>
+                        </div>
+                        <div class="text-xl font-bold text-rose-600 font-oswald">
+                            ¥ ASK
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ダミーカード 2 -->
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+                    <div class="h-48 bg-zinc-200 flex items-center justify-center">
+                        <i class="fas fa-image text-4xl text-zinc-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-bold text-zinc-900">車種名サンプル</h4>
+                            <span class="bg-blue-100 text-blue-600 text-xs font-bold px-2 py-1 rounded">新車</span>
+                        </div>
+                        <div class="text-sm text-zinc-500 space-y-1 mb-4">
+                            <p>年式: 新車</p>
+                            <p>走行距離: -</p>
+                            <p>車検: 新規3年</p>
+                        </div>
+                        <div class="text-xl font-bold text-rose-600 font-oswald">
+                            ¥ ASK
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-zinc-500 mb-6 text-sm">掲載されていない車両の取り寄せや、お探しすることも可能です。</p>
+                <a href="#contact" class="inline-block border-2 border-zinc-900 text-zinc-900 px-8 py-3 hover:bg-zinc-900 hover:text-white transition font-bold rounded-lg">
+                    <i class="fas fa-magnifying-glass mr-2"></i> 車両探しを依頼する
+                </a>
+            </div>
+        </div>
+    </section>
 
 <footer id="contact" class="bg-white py-24 px-4 border-t border-gray-100">
         <div class="max-w-7xl mx-auto">
