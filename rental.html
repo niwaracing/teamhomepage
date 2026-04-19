@@ -117,9 +117,83 @@
     <section class="py-32 px-4 bg-zinc-50 pt-40 min-h-[60vh]">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-bold mb-16 accent-border pl-6 font-oswald text-zinc-900">レーシングカーレンタル</h2>
-            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
-                <p class="text-zinc-500 text-lg leading-relaxed">レース参戦や練習走行向けのレーシングカーレンタルサービスをご提供しています。詳細についてはお問い合わせください。</p>
+
+            <!-- 1. レンタル車両ラインナップ -->
+            <div class="mb-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- GLOBAL MX-5 CUP -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
+                        <div class="h-48 w-full img-placeholder flex items-center justify-center">
+                            <span class="text-zinc-400 font-bold">画像準備中</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-zinc-900 mb-2">GLOBAL MX-5 CUP</h3>
+                            <p class="text-rose-600 font-bold mb-4">価格: 1枠 50,000円</p>
+                            <p class="text-zinc-500 text-sm mb-6 flex-grow">特徴: 世界中で愛用される本格派。左ハンドル、2Lエンジン、Hパターンシーケンシャルミッションを搭載。</p>
+                            <a href="#contact" class="block w-full text-center bg-rose-600 text-white font-bold py-3 rounded-xl hover:bg-rose-700 transition">ご予約・空き状況の確認はこちら</a>
+                        </div>
+                    </div>
+
+                    <!-- ロードスター（ND5RC） -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
+                        <img src="./images/car-roadstar.jpg" alt="ロードスター（ND5RC）" class="h-48 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-zinc-900 mb-2">ロードスター（ND5RC）</h3>
+                            <p class="text-rose-600 font-bold mb-4">価格: 1枠 25,000円<br><span class="text-sm">1レース 110,000円</span></p>
+                            <p class="text-zinc-500 text-sm mb-6 flex-grow">特徴: ロードスターパーティレース、マツダファンエンデュランス（マツ耐）、スーパー耐久（S耐）チャレンジなどで活躍中の実践車両。</p>
+                            <a href="#contact" class="block w-full text-center bg-rose-600 text-white font-bold py-3 rounded-xl hover:bg-rose-700 transition">ご予約・空き状況の確認はこちら</a>
+                        </div>
+                    </div>
+
+                    <!-- N-ONE -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
+                        <img src="./images/car-none.jpg" alt="N-ONE" class="h-48 w-full object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-zinc-900 mb-2">N-ONE</h3>
+                            <p class="text-rose-600 font-bold mb-4">価格: 1枠 20,000円<br><span class="text-sm">1レース 100,000円</span></p>
+                            <p class="text-zinc-500 text-sm mb-6 flex-grow">特徴: Turbo / FF / CVT。オートマチック車のため、AT限定免許の方でも本格的なレース体験が可能です。</p>
+                            <a href="#contact" class="block w-full text-center bg-rose-600 text-white font-bold py-3 rounded-xl hover:bg-rose-700 transition">ご予約・空き状況の確認はこちら</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- 2. 割引・価格の透明性セクション -->
+            <div class="bg-white p-8 rounded-2xl border-l-4 border-rose-600 shadow-sm mb-16">
+                <h3 class="text-2xl font-bold text-zinc-900 mb-6 text-center md:text-left">どなたでも、もっと身近にモータースポーツを</h3>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-rose-100 text-rose-600 p-2 rounded-full h-10 w-10 flex items-center justify-center shrink-0">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-zinc-900 mb-1">特別割引</h4>
+                            <p class="text-zinc-600">学生の方、および女性の方はレンタル基本料金から<span class="font-bold text-rose-600">10％割引</span>いたします。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-rose-100 text-rose-600 p-2 rounded-full h-10 w-10 flex items-center justify-center shrink-0">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-zinc-900 mb-1">明朗会計</h4>
+                            <p class="text-zinc-600">「誰がいつ、どのレースで乗っても同じ価格」。時期やドライバーによって変動しない、透明性の高い価格設定がNIWA RACINGのこだわりです。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. 注意事項（重要事項） -->
+            <div class="bg-gray-100 p-6 rounded-xl border border-gray-200">
+                <h4 class="font-bold text-zinc-800 mb-4 flex items-center gap-2">
+                    <i class="fas fa-exclamation-triangle text-amber-500"></i> 注意事項
+                </h4>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-zinc-600">
+                    <li>レンタル費用には走行費（サーキットへの支払分）は含まれておりません。</li>
+                    <li>万が一、クラッシュやレーシングアクシデントにより車両に損傷が生じた場合は、別途修理費用を請求させていただきます。</li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
