@@ -198,54 +198,123 @@
                 <div class="h-1 w-20 bg-rose-600 mx-auto mt-4"></div>
             </div>
 
-            <div class="bg-zinc-100 rounded-3xl p-12 text-center mb-12 border border-zinc-200 border-dashed">
-                <div class="text-4xl text-zinc-300 mb-4">
-                    <i class="fas fa-clock"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-zinc-600 mb-2 font-oswald tracking-widest uppercase">Coming Soon</h3>
-                <p class="text-zinc-500">準備中</p>
-            </div>
-
-            <!-- プレースホルダー（将来的に使用するレイアウト枠） -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 opacity-50 grayscale pointer-events-none">
-                <!-- ダミーカード 1 -->
-                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
-                    <div class="h-48 bg-zinc-200 flex items-center justify-center">
-                        <i class="fas fa-image text-4xl text-zinc-400"></i>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- トヨタ GR86 N1車両 -->
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('トヨタ GR86 N1車両', '530万円（税込）', '約7,000km', 'MT', 'なし', 'images/GR86cup.jpg')">
+                    <div class="h-48 bg-zinc-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/GR86cup.jpg" alt="トヨタ GR86 N1車両" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-lg font-bold text-zinc-900">車種名サンプル</h4>
-                            <span class="bg-rose-100 text-rose-600 text-xs font-bold px-2 py-1 rounded">中古車</span>
+                            <h4 class="text-lg font-bold text-zinc-900">トヨタ GR86 N1車両</h4>
                         </div>
                         <div class="text-sm text-zinc-500 space-y-1 mb-4">
-                            <p>年式: 20XX年</p>
-                            <p>走行距離: X0,000 km</p>
-                            <p>車検: 令和X年X月</p>
+                            <p>走行: 約7,000km</p>
+                            <p>ミッション: MT</p>
+                            <p>車検: なし</p>
                         </div>
                         <div class="text-xl font-bold text-rose-600 font-oswald">
-                            ¥ ASK
+                            ¥ 5,300,000
                         </div>
                     </div>
                 </div>
 
-                <!-- ダミーカード 2 -->
-                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
-                    <div class="h-48 bg-zinc-200 flex items-center justify-center">
-                        <i class="fas fa-image text-4xl text-zinc-400"></i>
+                <!-- ルノー メガーヌRS -->
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('ルノー メガーヌRS', '230万円（税込）', '77,744km', 'AT', '令和9年2月', 'images/Megane.jpg')">
+                    <div class="h-48 bg-zinc-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/Megane.jpg" alt="ルノー メガーヌRS" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-lg font-bold text-zinc-900">車種名サンプル</h4>
-                            <span class="bg-blue-100 text-blue-600 text-xs font-bold px-2 py-1 rounded">新車</span>
+                            <h4 class="text-lg font-bold text-zinc-900">ルノー メガーヌRS</h4>
                         </div>
                         <div class="text-sm text-zinc-500 space-y-1 mb-4">
-                            <p>年式: 新車</p>
-                            <p>走行距離: -</p>
-                            <p>車検: 新規3年</p>
+                            <p>走行: 77,744km</p>
+                            <p>ミッション: AT</p>
+                            <p>車検: 令和9年2月</p>
                         </div>
                         <div class="text-xl font-bold text-rose-600 font-oswald">
-                            ¥ ASK
+                            ¥ 2,300,000
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BMW 235i -->
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('BMW 235i', '280万円（税込）', '50,127km', 'AT', '令和9年3月', 'images/235i.jpg')">
+                    <div class="h-48 bg-zinc-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/235i.jpg" alt="BMW 235i" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-bold text-zinc-900">BMW 235i</h4>
+                        </div>
+                        <div class="text-sm text-zinc-500 space-y-1 mb-4">
+                            <p>走行: 50,127km</p>
+                            <p>ミッション: AT</p>
+                            <p>車検: 令和9年3月</p>
+                        </div>
+                        <div class="text-xl font-bold text-rose-600 font-oswald">
+                            ¥ 2,800,000
+                        </div>
+                    </div>
+                </div>
+
+                <!-- トヨタ ランドクルーザー250 -->
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('トヨタ ランドクルーザー250', '730万円（税込）', '22km', 'AT', '令和10年9月', 'images/250.jpg')">
+                    <div class="h-48 bg-zinc-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/250.jpg" alt="トヨタ ランドクルーザー250" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-bold text-zinc-900">トヨタ ランドクルーザー250</h4>
+                        </div>
+                        <div class="text-sm text-zinc-500 space-y-1 mb-4">
+                            <p>走行: 22km</p>
+                            <p>ミッション: AT</p>
+                            <p>車検: 令和10年9月</p>
+                        </div>
+                        <div class="text-xl font-bold text-rose-600 font-oswald">
+                            ¥ 7,300,000
+                        </div>
+                    </div>
+                </div>
+
+                <!-- トヨタ アクア -->
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('トヨタ アクア', '99.8万円（税込）', '37,000km', 'AT', '令和9年1月', 'images/AQUA.jpg')">
+                    <div class="h-48 bg-zinc-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/AQUA.jpg" alt="トヨタ アクア" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-bold text-zinc-900">トヨタ アクア</h4>
+                        </div>
+                        <div class="text-sm text-zinc-500 space-y-1 mb-4">
+                            <p>走行: 37,000km</p>
+                            <p>ミッション: AT</p>
+                            <p>車検: 令和9年1月</p>
+                        </div>
+                        <div class="text-xl font-bold text-rose-600 font-oswald">
+                            ¥ 998,000
+                        </div>
+                    </div>
+                </div>
+
+                <!-- スズキ エブリイ -->
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('スズキ エブリイ', '39.8万円（税込）', '78,234km', 'MT', '令和8年10月', 'images/every.jpg')">
+                    <div class="h-48 bg-zinc-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/every.jpg" alt="スズキ エブリイ" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-bold text-zinc-900">スズキ エブリイ</h4>
+                        </div>
+                        <div class="text-sm text-zinc-500 space-y-1 mb-4">
+                            <p>走行: 78,234km</p>
+                            <p>ミッション: MT</p>
+                            <p>車検: 令和8年10月</p>
+                        </div>
+                        <div class="text-xl font-bold text-rose-600 font-oswald">
+                            ¥ 398,000
                         </div>
                     </div>
                 </div>
@@ -335,5 +404,129 @@
         </div>
     </footer>
 
+    <!-- 詳細表示モーダル -->
+    <div id="carModal" class="fixed inset-0 z-50 hidden">
+        <!-- 背景オーバーレイ -->
+        <div class="absolute inset-0 bg-black/80 transition-opacity" onclick="closeCarModal()"></div>
+
+        <!-- モーダル本体 -->
+        <div class="absolute inset-0 md:inset-10 lg:inset-20 bg-white md:rounded-2xl flex flex-col overflow-hidden shadow-2xl z-10">
+            <!-- ヘッダー部分 -->
+            <div class="flex justify-between items-center p-4 border-b border-gray-100 bg-white">
+                <h3 id="modalCarName" class="text-xl font-bold text-zinc-900"></h3>
+                <button onclick="closeCarModal()" class="text-zinc-400 hover:text-rose-600 focus:outline-none p-2 transition">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- スクロール可能なコンテンツエリア -->
+            <div class="flex-1 overflow-y-auto p-4 custom-scrollbar bg-zinc-50">
+                <div class="max-w-5xl mx-auto space-y-6">
+                    <!-- メイン画像と基本情報 -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- メイン画像 -->
+                        <div class="rounded-xl overflow-hidden bg-zinc-200 border border-gray-100">
+                            <img id="modalMainImg" src="" alt="" class="w-full h-auto object-cover">
+                        </div>
+
+                        <!-- 基本情報 -->
+                        <div class="space-y-4 bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                            <div class="text-3xl font-bold text-rose-600 font-oswald border-b border-gray-100 pb-4">
+                                <span id="modalCarPrice"></span>
+                            </div>
+                            <ul class="space-y-3 text-sm text-zinc-700">
+                                <li class="flex justify-between border-b border-gray-50 pb-2">
+                                    <span class="text-zinc-500 font-bold">走行距離</span>
+                                    <span id="modalCarMileage"></span>
+                                </li>
+                                <li class="flex justify-between border-b border-gray-50 pb-2">
+                                    <span class="text-zinc-500 font-bold">ミッション</span>
+                                    <span id="modalCarMission"></span>
+                                </li>
+                                <li class="flex justify-between border-b border-gray-50 pb-2">
+                                    <span class="text-zinc-500 font-bold">車検</span>
+                                    <span id="modalCarInspection"></span>
+                                </li>
+                            </ul>
+
+                            <div class="pt-4">
+                                <a href="#contact" onclick="closeCarModal()" class="block text-center bg-rose-600 text-white py-3 rounded hover:bg-rose-700 transition font-bold shadow-md shadow-rose-600/20">
+                                    <i class="fas fa-envelope mr-2"></i> この車両について問い合わせる
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 追加写真セクション -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                        <h4 class="text-lg font-bold text-zinc-900 mb-4 border-l-4 border-rose-600 pl-3">室内の様子・追加写真</h4>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <!-- プレースホルダー画像枠 -->
+                            <div class="aspect-video bg-zinc-100 rounded-lg flex items-center justify-center border border-dashed border-zinc-300">
+                                <div class="text-center text-zinc-400">
+                                    <i class="fas fa-camera text-2xl mb-1"></i>
+                                    <p class="text-xs">Image</p>
+                                </div>
+                            </div>
+                            <div class="aspect-video bg-zinc-100 rounded-lg flex items-center justify-center border border-dashed border-zinc-300">
+                                <div class="text-center text-zinc-400">
+                                    <i class="fas fa-camera text-2xl mb-1"></i>
+                                    <p class="text-xs">Image</p>
+                                </div>
+                            </div>
+                            <div class="aspect-video bg-zinc-100 rounded-lg flex items-center justify-center border border-dashed border-zinc-300">
+                                <div class="text-center text-zinc-400">
+                                    <i class="fas fa-camera text-2xl mb-1"></i>
+                                    <p class="text-xs">Image</p>
+                                </div>
+                            </div>
+                            <div class="aspect-video bg-zinc-100 rounded-lg flex items-center justify-center border border-dashed border-zinc-300">
+                                <div class="text-center text-zinc-400">
+                                    <i class="fas fa-camera text-2xl mb-1"></i>
+                                    <p class="text-xs">Image</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダル用JavaScript -->
+    <script>
+        function openCarModal(name, price, mileage, mission, inspection, imgSrc) {
+            document.getElementById('modalCarName').textContent = name;
+            document.getElementById('modalCarPrice').textContent = price;
+            document.getElementById('modalCarMileage').textContent = mileage;
+            document.getElementById('modalCarMission').textContent = mission;
+            document.getElementById('modalCarInspection').textContent = inspection;
+
+            const mainImg = document.getElementById('modalMainImg');
+            mainImg.src = imgSrc;
+            mainImg.alt = name;
+
+            // モーダルを表示
+            document.getElementById('carModal').classList.remove('hidden');
+
+            // 背面のスクロールを禁止
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCarModal() {
+            // モーダルを非表示
+            document.getElementById('carModal').classList.add('hidden');
+
+            // 背面のスクロールを許可
+            document.body.style.overflow = '';
+        }
+
+        // ESCキーでモーダルを閉じる
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeCarModal();
+            }
+        });
+    </script>
 </body>
 </html>
