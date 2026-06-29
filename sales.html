@@ -240,9 +240,10 @@
                 </div>
 
                 <!-- BMW 235i -->
-                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('BMW 235i', '280万円（税込）', '50,127km', 'AT', '令和9年3月', 'images/235i.jpg')">
-                    <div class="h-48 bg-zinc-200 flex items-center justify-center overflow-hidden">
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('BMW 235i', '280万円（税込）', '50,127km', 'AT', '令和9年3月', 'images/235i.jpg', true)">
+                    <div class="h-48 bg-zinc-200 flex items-center justify-center overflow-hidden relative">
                         <img src="images/235i.jpg" alt="BMW 235i" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-red-600/70 flex items-center justify-center text-white font-bold text-2xl tracking-widest z-10">SOLD OUT</div>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
@@ -253,8 +254,8 @@
                             <p>ミッション: AT</p>
                             <p>車検: 令和9年3月</p>
                         </div>
-                        <div class="text-xl font-bold text-rose-600 font-oswald">
-                            ¥ 2,800,000
+                        <div class="text-xl font-bold font-oswald text-zinc-400 line-through">
+                            ¥ 2,800,000<span class="ml-2 text-sm text-red-600 font-normal no-underline inline-block">売約済み</span>
                         </div>
                     </div>
                 </div>
@@ -425,14 +426,15 @@
                     <!-- メイン画像と基本情報 -->
                     <div class="grid md:grid-cols-2 gap-6">
                         <!-- メイン画像 -->
-                        <div class="rounded-xl overflow-hidden bg-zinc-200 border border-gray-100">
+                        <div class="rounded-xl overflow-hidden bg-zinc-200 border border-gray-100 relative">
                             <img id="modalMainImg" src="" alt="" class="w-full h-auto object-cover">
+                            <div id="modalSoldOutOverlay" class="absolute inset-0 bg-red-600/70 flex items-center justify-center text-white font-bold text-4xl tracking-widest z-10 hidden">SOLD OUT</div>
                         </div>
 
                         <!-- 基本情報 -->
                         <div class="space-y-4 bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-                            <div class="text-3xl font-bold text-rose-600 font-oswald border-b border-gray-100 pb-4">
-                                <span id="modalCarPrice"></span>
+                            <div id="modalPriceContainer" class="text-3xl font-bold text-rose-600 font-oswald border-b border-gray-100 pb-4">
+                                <span id="modalCarPrice"></span><span id="modalSoldOutBadge" class="ml-2 text-lg text-red-600 font-normal no-underline inline-block hidden">売約済み</span>
                             </div>
                             <ul class="space-y-3 text-sm text-zinc-700">
                                 <li class="flex justify-between border-b border-gray-50 pb-2">
@@ -450,7 +452,7 @@
                             </ul>
 
                             <div class="pt-4">
-                                <a href="#contact" onclick="closeCarModal()" class="block text-center bg-rose-600 text-white py-3 rounded hover:bg-rose-700 transition font-bold shadow-md shadow-rose-600/20">
+                                <a href="#contact" id="modalContactBtn" onclick="closeCarModal()" class="block text-center bg-rose-600 text-white py-3 rounded hover:bg-rose-700 transition font-bold shadow-md shadow-rose-600/20">
                                     <i class="fas fa-envelope mr-2"></i> この車両について問い合わせる
                                 </a>
                             </div>
@@ -495,7 +497,7 @@
 
     <!-- モーダル用JavaScript -->
     <script>
-        function openCarModal(name, price, mileage, mission, inspection, imgSrc) {
+        function openCarModal(name, price, mileage, mission, inspection, imgSrc, isSoldOut = false) {
             document.getElementById('modalCarName').textContent = name;
             document.getElementById('modalCarPrice').textContent = price;
             document.getElementById('modalCarMileage').textContent = mileage;
@@ -505,6 +507,25 @@
             const mainImg = document.getElementById('modalMainImg');
             mainImg.src = imgSrc;
             mainImg.alt = name;
+
+            const priceContainer = document.getElementById('modalPriceContainer');
+            const soldOutOverlay = document.getElementById('modalSoldOutOverlay');
+            const soldOutBadge = document.getElementById('modalSoldOutBadge');
+            const contactBtn = document.getElementById('modalContactBtn');
+
+            if (isSoldOut) {
+                priceContainer.classList.remove('text-rose-600');
+                priceContainer.classList.add('text-zinc-400', 'line-through');
+                soldOutOverlay.classList.remove('hidden');
+                soldOutBadge.classList.remove('hidden');
+                contactBtn.classList.add('hidden');
+            } else {
+                priceContainer.classList.remove('text-zinc-400', 'line-through');
+                priceContainer.classList.add('text-rose-600');
+                soldOutOverlay.classList.add('hidden');
+                soldOutBadge.classList.add('hidden');
+                contactBtn.classList.remove('hidden');
+            }
 
             // モーダルを表示
             document.getElementById('carModal').classList.remove('hidden');
