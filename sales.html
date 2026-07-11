@@ -199,6 +199,26 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- マツダ デミオ 15MB -->
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('マツダ デミオ 15MB（平成28年式）', '88万円（税込）', '52,274km', '6速MT', '2年付き', 'images/demio/demio.jpg', false, '修復歴無し、ラルグス車高調、カーボンボンネット、ETC付き。', ['images/demio/in1.jpg', 'images/demio/in2.jpg', 'images/demio/in3.jpg', 'images/demio/out1.jpg', 'images/demio/out2.jpg'])">
+                    <div class="h-48 bg-zinc-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/demio/demio.jpg" alt="マツダ デミオ 15MB" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-bold text-zinc-900">マツダ デミオ 15MB</h4>
+                        </div>
+                        <div class="text-sm text-zinc-500 space-y-1 mb-4">
+                            <p>走行: 52,274km</p>
+                            <p>ミッション: 6速MT</p>
+                            <p>車検: 2年付き</p>
+                        </div>
+                        <div class="text-xl font-bold text-rose-600 font-oswald">
+                            ¥ 880,000
+                        </div>
+                    </div>
+                </div>
+
                 <!-- トヨタ GR86 N1車両 -->
                 <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('トヨタ GR86 N1車両', '530万円（税込）', '約7,000km', 'MT', 'なし', 'images/GR86cup.jpg')">
                     <div class="h-48 bg-zinc-200 flex items-center justify-center overflow-hidden">
@@ -449,6 +469,10 @@
                                     <span class="text-zinc-500 font-bold">車検</span>
                                     <span id="modalCarInspection"></span>
                                 </li>
+                                <li id="modalCarEquipmentRow" class="hidden justify-between border-b border-gray-50 pb-2">
+                                    <span class="text-zinc-500 font-bold w-1/4">装備・状態</span>
+                                    <span id="modalCarEquipment" class="w-3/4 text-right"></span>
+                                </li>
                             </ul>
 
                             <div class="pt-4">
@@ -462,7 +486,7 @@
                     <!-- 追加写真セクション -->
                     <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
                         <h4 class="text-lg font-bold text-zinc-900 mb-4 border-l-4 border-rose-600 pl-3">室内の様子・追加写真</h4>
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div id="modalAdditionalPhotosGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
                             <!-- プレースホルダー画像枠 -->
                             <div class="aspect-video bg-zinc-100 rounded-lg flex items-center justify-center border border-dashed border-zinc-300">
                                 <div class="text-center text-zinc-400">
@@ -497,16 +521,71 @@
 
     <!-- モーダル用JavaScript -->
     <script>
-        function openCarModal(name, price, mileage, mission, inspection, imgSrc, isSoldOut = false) {
+        const placeholderHTML = `
+                            <div class="aspect-video bg-zinc-100 rounded-lg flex items-center justify-center border border-dashed border-zinc-300">
+                                <div class="text-center text-zinc-400">
+                                    <i class="fas fa-camera text-2xl mb-1"></i>
+                                    <p class="text-xs">Image</p>
+                                </div>
+                            </div>
+                            <div class="aspect-video bg-zinc-100 rounded-lg flex items-center justify-center border border-dashed border-zinc-300">
+                                <div class="text-center text-zinc-400">
+                                    <i class="fas fa-camera text-2xl mb-1"></i>
+                                    <p class="text-xs">Image</p>
+                                </div>
+                            </div>
+                            <div class="aspect-video bg-zinc-100 rounded-lg flex items-center justify-center border border-dashed border-zinc-300">
+                                <div class="text-center text-zinc-400">
+                                    <i class="fas fa-camera text-2xl mb-1"></i>
+                                    <p class="text-xs">Image</p>
+                                </div>
+                            </div>
+                            <div class="aspect-video bg-zinc-100 rounded-lg flex items-center justify-center border border-dashed border-zinc-300">
+                                <div class="text-center text-zinc-400">
+                                    <i class="fas fa-camera text-2xl mb-1"></i>
+                                    <p class="text-xs">Image</p>
+                                </div>
+                            </div>
+        `;
+
+        function openCarModal(name, price, mileage, mission, inspection, imgSrc, isSoldOut = false, equipment = null, additionalImages = null) {
             document.getElementById('modalCarName').textContent = name;
             document.getElementById('modalCarPrice').textContent = price;
             document.getElementById('modalCarMileage').textContent = mileage;
             document.getElementById('modalCarMission').textContent = mission;
             document.getElementById('modalCarInspection').textContent = inspection;
 
+            const equipmentRow = document.getElementById('modalCarEquipmentRow');
+            const equipmentText = document.getElementById('modalCarEquipment');
+            if (equipment) {
+                equipmentText.textContent = equipment;
+                equipmentRow.classList.remove('hidden');
+                equipmentRow.classList.add('flex');
+            } else {
+                equipmentRow.classList.add('hidden');
+                equipmentRow.classList.remove('flex');
+            }
+
             const mainImg = document.getElementById('modalMainImg');
             mainImg.src = imgSrc;
             mainImg.alt = name;
+
+            const grid = document.getElementById('modalAdditionalPhotosGrid');
+            if (additionalImages && additionalImages.length > 0) {
+                grid.className = 'grid grid-cols-2 md:grid-cols-5 gap-4';
+                grid.innerHTML = '';
+                additionalImages.forEach(src => {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = '追加写真';
+                    img.className = 'aspect-video object-cover rounded-lg cursor-pointer hover:opacity-80 transition border border-gray-200';
+                    img.onclick = () => { mainImg.src = src; };
+                    grid.appendChild(img);
+                });
+            } else {
+                grid.className = 'grid grid-cols-2 md:grid-cols-4 gap-4';
+                grid.innerHTML = placeholderHTML;
+            }
 
             const priceContainer = document.getElementById('modalPriceContainer');
             const soldOutOverlay = document.getElementById('modalSoldOutOverlay');
