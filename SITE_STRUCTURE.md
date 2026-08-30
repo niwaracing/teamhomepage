@@ -215,7 +215,9 @@ images/
 │   ├── in1.jpg, in2.jpg, in3.jpg   # 内装・ロールケージ写真
 │   └── out1.jpg, out2.jpg          # 外装写真
 └── MX-5/                 # MX-5 CUPカー専用ディレクトリ
-    └── MX-5.jpg          # 車両写真
+    ├── MX-5.jpg          # メイン車両写真
+    ├── MX-5in1.jpg, MX-5in2.jpg # 内装写真
+    └── MX-5out1.jpg, MX-5out2.jpg # 外装写真
 ```
 
 ### 5.2 画像利用のルール

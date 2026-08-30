@@ -200,7 +200,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- MX-5CUPカー -->
-                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('MX-5CUPカー', '300万円（税込）', '＊＊＊', 'MT', 'なし', 'images/MX-5/MX-5.jpg')">
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('MX-5CUPカー', '300万円（税込）', '＊＊＊', 'MT', 'なし', 'images/MX-5/MX-5.jpg', false, 'GLOBAL MX-5 CUP JAPAN レース専用車両。ロールケージ、バケットシート、レーシングハーネス、セーフティネット装備。', [{src: 'images/MX-5/MX-5in1.jpg', alt: 'MX-5 CUPカー 内装1'}, {src: 'images/MX-5/MX-5in2.jpg', alt: 'MX-5 CUPカー 内装2'}, {src: 'images/MX-5/MX-5out1.jpg', alt: 'MX-5 CUPカー 外装1'}, {src: 'images/MX-5/MX-5out2.jpg', alt: 'MX-5 CUPカー 外装2'}])">
                     <div class="aspect-video bg-zinc-100 flex items-center justify-center overflow-hidden relative">
                         <img src="images/MX-5/MX-5.jpg" alt="MX-5CUPカー" class="w-full h-full object-contain">
                     </div>
@@ -592,15 +592,27 @@
 
             const grid = document.getElementById('modalAdditionalPhotosGrid');
             if (additionalImages && additionalImages.length > 0) {
-                grid.className = 'grid grid-cols-2 md:grid-cols-5 gap-4';
+                const colsClass = additionalImages.length <= 4 ? 'grid-cols-2 md:grid-cols-4' : 'grid-cols-2 md:grid-cols-5';
+                grid.className = `grid ${colsClass} gap-4`;
                 grid.innerHTML = '';
-                additionalImages.forEach(src => {
+                additionalImages.forEach((item, index) => {
+                    const src = typeof item === 'string' ? item : item.src;
+                    const alt = (typeof item === 'object' && item.alt) ? item.alt : `${name} 追加写真${index + 1}`;
+
+                    const wrap = document.createElement('div');
+                    wrap.className = 'aspect-video bg-zinc-100 rounded-lg flex items-center justify-center overflow-hidden border border-gray-200 cursor-pointer hover:opacity-80 transition';
+
                     const img = document.createElement('img');
                     img.src = src;
-                    img.alt = '追加写真';
-                    img.className = 'aspect-video object-cover rounded-lg cursor-pointer hover:opacity-80 transition border border-gray-200';
-                    img.onclick = () => { mainImg.src = src; };
-                    grid.appendChild(img);
+                    img.alt = alt;
+                    img.className = 'w-full h-full object-contain';
+
+                    wrap.onclick = () => {
+                        mainImg.src = src;
+                        mainImg.alt = alt;
+                    };
+                    wrap.appendChild(img);
+                    grid.appendChild(wrap);
                 });
             } else {
                 grid.className = 'grid grid-cols-2 md:grid-cols-4 gap-4';
