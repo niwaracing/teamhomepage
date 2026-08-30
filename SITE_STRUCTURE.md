@@ -210,10 +210,12 @@ images/
 ├── coaching1.jpg         # コーチング風景
 ├── logger1.jpg, logger2.jpg # ロガー・データ解析
 ├── movie.jpg             # 車載・動画撮影
-└── demio/                # デミオ専用ディレクトリ
-    ├── demio.jpg
-    ├── in1.jpg, in2.jpg, in3.jpg   # 内装・ロールケージ写真
-    └── out1.jpg, out2.jpg          # 外装写真
+├── demio/                # デミオ専用ディレクトリ
+│   ├── demio.jpg
+│   ├── in1.jpg, in2.jpg, in3.jpg   # 内装・ロールケージ写真
+│   └── out1.jpg, out2.jpg          # 外装写真
+└── MX-5/                 # MX-5 CUPカー専用ディレクトリ
+    └── MX-5.jpg          # 車両写真
 ```
 
 ### 5.2 画像利用のルール
