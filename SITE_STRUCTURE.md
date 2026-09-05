@@ -11,13 +11,13 @@
 | ファイル名 | タイトル / 役割 | 主なコンテンツ・概要 |
 | :--- | :--- | :--- |
 | [`index.html`](./index.html) | トップページ | ヒーロー（キャッチコピー）、コンセプト（Virtual to Real）、事業紹介（7大サービス）、参戦カテゴリー一覧、ドライバー・体制紹介、実績、問い合わせ・アクセス |
-| [`categories.html`](./categories.html) | 参戦カテゴリー一覧 | 参戦中の全レースカテゴリーへのリンクカード一覧 |
+| [`categories.html`](./categories.html) | 参戦カテゴリー一覧 | 参戦中の全レースカテゴリーおよび参戦使用車両一覧 |
 | [`rental.html`](./rental.html) | レーシングカーレンタル | レンタル車両ラインナップ（MX-5, NDロードスター, N-ONE, デミオ等）、利用料金、ご利用の流れ、規約、予約CTA |
 | [`maintenance.html`](./maintenance.html) | メンテナンス・車両製作 | レース車両の点検・整備、セッティング、車両製作・チューニング、工賃表 |
 | [`simulator.html`](./simulator.html) | シミュレーターレッスン | プロ仕様シミュレーター（iRacing等）によるドライビングレッスン、料金プラン、指導方針 |
 | [`sales.html`](./sales.html) | 自動車販売・買取 | 新車・中古車販売、レース専用競技車両販売、カスタム車両製作、高価買取査定、在庫車両紹介 |
 | [`coaching.html`](./coaching.html) | レーシングコーチング | データロガー（AIM/MoTeC等）解析、車載映像分析、同乗・先導走行レッスン、オンライン指導 |
-| [`Stai.html`](./Stai.html) | スーパー耐久（S耐） | スーパー耐久シリーズ参戦情報、チームストーリー、参戦車両、ドライバー紹介 |
+| [`Stai.html`](./Stai.html) | スーパー耐久特設ページ | スーパー耐久シリーズ参戦情報、チームストーリー、参戦車両、ドライバー紹介 |
 | [`RPR.html`](./RPR.html) | ロードスター・パーティレース | ROADSTER Party Race 参戦情報 |
 | [`Fuji.html`](./Fuji.html) | 富士チャンピオンレース | Fuji Champion Race 参戦情報 |
 | [`Nonecup.html`](./Nonecup.html) | N-ONE OWNER'S CUP | N-ONE ワンメイクレース参戦情報 |
@@ -139,14 +139,15 @@
 全ページ共通で画面上部に固定（`fixed w-full z-50 bg-white border-b border-gray-100 shadow-sm`）。
 
 - **ロゴ**: `./images/teamrogo.jpg`（高さ `h-14 w-auto object-contain`）
-- **ナビゲーションメニュー項目（7項目・順序固定）**:
+- **ナビゲーションメニュー項目（主要ページ構成）**:
   1. ホーム（[`index.html`](./index.html)）
   2. 参戦カテゴリー（[`categories.html`](./categories.html)）
-  3. レーシングカーレンタル（[`rental.html`](./rental.html)）
-  4. メンテナンス（[`maintenance.html`](./maintenance.html)）
-  5. レーシングシミュレーターレッスン（[`simulator.html`](./simulator.html)）
-  6. 自動車販売・買取（[`sales.html`](./sales.html)）
-  7. コーチング（[`coaching.html`](./coaching.html)）
+  3. スーパー耐久特設（[`Stai.html`](./Stai.html)）※主要ページにて追加
+  4. レーシングカーレンタル（[`rental.html`](./rental.html)）
+  5. メンテナンス（[`maintenance.html`](./maintenance.html)）
+  6. レーシングシミュレーターレッスン（[`simulator.html`](./simulator.html)）
+  7. 自動車販売・買取（[`sales.html`](./sales.html)）
+  8. コーチング（[`coaching.html`](./coaching.html)）
 - **レスポンシブ挙動**:
   - PC（`lg:block`）: 横並びメニュー（`text-sm font-bold whitespace-nowrap`）
   - モバイル（`lg:hidden`）: ハンバーガーボタン（`#mobile-menu-btn`）とトグル式ドロップダウン（`#mobile-menu`）
