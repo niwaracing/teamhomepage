@@ -282,6 +282,84 @@
         </div>
     </section>
 
+    <!-- レースレポート (Race Reports) -->
+    <section id="race-reports" class="py-28 px-4 bg-white relative overflow-hidden border-t border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-rose-600 font-oswald text-sm tracking-[0.3em] uppercase font-bold mb-4">Race Reports</h2>
+                <h3 class="text-3xl md:text-5xl font-bold font-oswald tracking-widest uppercase text-zinc-900">2026 Season Reports</h3>
+                <div class="h-1 w-20 bg-rose-600 mx-auto mt-6"></div>
+                <p class="text-zinc-500 mt-4 text-sm md:text-base font-medium">過酷な戦いを走り抜いたNIWA RACINGの公式レースレポートをご覧いただけます。</p>
+            </div>
+
+            <!-- 最新レースカード一覧（もてぎ戦・富士戦） -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-14">
+                <!-- Rd.1 もてぎ戦 -->
+                <div class="bg-zinc-50 rounded-2xl p-8 border border-zinc-200 shadow-sm hover:shadow-xl transition-all duration-300 card-hover flex flex-col justify-between relative group">
+                    <div class="absolute top-0 left-0 h-1.5 w-0 bg-rose-600 rounded-t-2xl transition-all duration-300 group-hover:w-full"></div>
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-5">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold font-oswald tracking-wider bg-rose-600/10 text-rose-600 border border-rose-200">ROUND 1</span>
+                            <span class="text-xs font-bold text-zinc-500 font-oswald tracking-wider flex items-center gap-1.5">
+                                <i class="far fa-calendar-alt text-rose-600"></i>2026.04.18 - 04.19
+                            </span>
+                        </div>
+                        <h4 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 font-oswald tracking-wide group-hover:text-rose-600 transition-colors">
+                            もてぎ 5時間レース
+                        </h4>
+                        <p class="text-sm font-bold text-zinc-600 flex items-center gap-2 mb-8">
+                            <i class="fas fa-map-marker-alt text-rose-600"></i>
+                            モビリティリゾートもてぎ
+                        </p>
+                    </div>
+                    <div>
+                        <a href="reports/2026_rd1_motegi.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full py-4 px-6 rounded-xl bg-zinc-900 text-white hover:bg-rose-600 font-bold text-sm tracking-wide transition-all duration-300 shadow-md group/btn">
+                            <i class="fas fa-file-pdf mr-2.5 text-rose-400 group-hover/btn:text-white transition-colors text-base"></i>
+                            レポートを読む (PDF)
+                            <i class="fas fa-external-link-alt ml-2.5 text-xs opacity-70 group-hover/btn:translate-x-0.5 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Rd.2 富士戦 -->
+                <div class="bg-zinc-50 rounded-2xl p-8 border border-zinc-200 shadow-sm hover:shadow-xl transition-all duration-300 card-hover flex flex-col justify-between relative group">
+                    <div class="absolute top-0 left-0 h-1.5 w-0 bg-rose-600 rounded-t-2xl transition-all duration-300 group-hover:w-full"></div>
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-5">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold font-oswald tracking-wider bg-rose-600/10 text-rose-600 border border-rose-200">ROUND 2</span>
+                            <span class="text-xs font-bold text-zinc-500 font-oswald tracking-wider flex items-center gap-1.5">
+                                <i class="far fa-calendar-alt text-rose-600"></i>2026.05.23 - 05.25
+                            </span>
+                        </div>
+                        <h4 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 font-oswald tracking-wide group-hover:text-rose-600 transition-colors">
+                            富士 24時間レース
+                        </h4>
+                        <p class="text-sm font-bold text-zinc-600 flex items-center gap-2 mb-8">
+                            <i class="fas fa-map-marker-alt text-rose-600"></i>
+                            富士スピードウェイ
+                        </p>
+                    </div>
+                    <div>
+                        <a href="reports/2026_rd2_fuji.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full py-4 px-6 rounded-xl bg-zinc-900 text-white hover:bg-rose-600 font-bold text-sm tracking-wide transition-all duration-300 shadow-md group/btn">
+                            <i class="fas fa-file-pdf mr-2.5 text-rose-400 group-hover/btn:text-white transition-colors text-base"></i>
+                            レポートを読む (PDF)
+                            <i class="fas fa-external-link-alt ml-2.5 text-xs opacity-70 group-hover/btn:translate-x-0.5 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- モーダル起動ボタン -->
+            <div class="text-center">
+                <button id="open-report-modal" type="button" class="inline-flex items-center gap-3 px-8 py-4 rounded-full border-2 border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white font-bold text-sm md:text-base tracking-wider transition-all duration-300 shadow-sm hover:shadow-lg cursor-pointer group">
+                    <i class="fas fa-list-ul text-rose-600 group-hover:text-rose-400 transition-colors"></i>
+                    <span>すべてのレースレポートを見る</span>
+                    <i class="fas fa-chevron-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- スポンサー募集 (Call to Action) -->
     <section id="sponsor-cta" class="py-32 px-4 bg-rose-600 text-white text-center relative overflow-hidden">
         <!-- Abstract Pattern Background -->
@@ -381,5 +459,134 @@
         </div>
     </footer>
 
+    <!-- レースレポート アーカイブモーダル -->
+    <div id="report-modal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <!-- 背景オーバーレイ -->
+        <div id="report-modal-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 opacity-0"></div>
+
+        <div class="min-h-screen px-4 text-center flex items-center justify-center py-12">
+            <div id="report-modal-panel" class="relative inline-block bg-white rounded-3xl text-left overflow-hidden shadow-2xl transform transition-all duration-300 opacity-0 scale-95 max-w-3xl w-full z-10 border border-zinc-100">
+                <!-- モーダルヘッダー -->
+                <div class="bg-zinc-900 text-white px-6 md:px-8 py-5 flex items-center justify-between border-b border-zinc-800">
+                    <div class="flex items-center gap-3">
+                        <span class="w-3 h-3 rounded-full bg-rose-600 inline-block"></span>
+                        <h3 class="text-lg md:text-xl font-bold font-oswald tracking-wider uppercase text-white" id="modal-title">
+                            Race Reports Archive
+                        </h3>
+                    </div>
+                    <button id="close-report-modal" type="button" class="text-zinc-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-zinc-800 focus:outline-none cursor-pointer" aria-label="閉じる">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- モーダルボディ -->
+                <div class="p-6 md:p-8 max-h-[70vh] overflow-y-auto custom-scrollbar">
+                    <!-- シーズン見出し -->
+                    <div class="flex items-center justify-between pb-3 mb-6 border-b border-zinc-200">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xl font-bold font-oswald text-zinc-900">2026 SEASON</span>
+                            <span class="text-xs bg-rose-100 text-rose-700 font-bold px-2.5 py-0.5 rounded-full">Super Taikyu Series</span>
+                        </div>
+                        <span class="text-xs text-zinc-400 font-medium font-oswald">2 REPORTS</span>
+                    </div>
+
+                    <!-- レポートリスト -->
+                    <div class="space-y-4">
+                        <!-- Item 1: Motegi -->
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-rose-300 hover:bg-rose-50/20 transition-all duration-200 gap-4">
+                            <div class="space-y-1.5">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <span class="px-2.5 py-0.5 rounded text-xs font-bold font-oswald bg-rose-600 text-white">Rd.1</span>
+                                    <span class="text-xs text-zinc-500 font-bold font-oswald"><i class="far fa-calendar-alt mr-1 text-rose-600"></i>2026.04.18 - 04.19</span>
+                                    <span class="text-xs text-zinc-500 font-bold"><i class="fas fa-map-marker-alt mr-1 text-rose-600"></i>モビリティリゾートもてぎ</span>
+                                </div>
+                                <h5 class="text-base md:text-lg font-bold text-zinc-900">もてぎ 5時間レース</h5>
+                            </div>
+                            <a href="reports/2026_rd1_motegi.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-900 hover:bg-rose-600 text-white text-xs font-bold transition-colors whitespace-nowrap shadow-sm group/link">
+                                <i class="fas fa-file-pdf text-rose-400 group-hover/link:text-white transition-colors"></i>
+                                <span>PDFを開く</span>
+                                <i class="fas fa-external-link-alt text-[10px] opacity-70 group-hover/link:translate-x-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <!-- Item 2: Fuji -->
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-rose-300 hover:bg-rose-50/20 transition-all duration-200 gap-4">
+                            <div class="space-y-1.5">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <span class="px-2.5 py-0.5 rounded text-xs font-bold font-oswald bg-rose-600 text-white">Rd.2</span>
+                                    <span class="text-xs text-zinc-500 font-bold font-oswald"><i class="far fa-calendar-alt mr-1 text-rose-600"></i>2026.05.23 - 05.25</span>
+                                    <span class="text-xs text-zinc-500 font-bold"><i class="fas fa-map-marker-alt mr-1 text-rose-600"></i>富士スピードウェイ</span>
+                                </div>
+                                <h5 class="text-base md:text-lg font-bold text-zinc-900">富士 24時間レース</h5>
+                            </div>
+                            <a href="reports/2026_rd2_fuji.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-900 hover:bg-rose-600 text-white text-xs font-bold transition-colors whitespace-nowrap shadow-sm group/link">
+                                <i class="fas fa-file-pdf text-rose-400 group-hover/link:text-white transition-colors"></i>
+                                <span>PDFを開く</span>
+                                <i class="fas fa-external-link-alt text-[10px] opacity-70 group-hover/link:translate-x-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-4 rounded-xl bg-gray-50 border border-gray-100 text-center text-xs text-zinc-500 font-medium">
+                        ※レース終了後に順次、公式レポート（PDF）を追加・公開いたします。
+                    </div>
+                </div>
+
+                <!-- モーダルフッター -->
+                <div class="bg-zinc-50 px-6 py-4 border-t border-zinc-100 flex justify-end">
+                    <button id="close-report-modal-btn" type="button" class="px-6 py-2.5 rounded-xl bg-zinc-200 hover:bg-zinc-300 text-zinc-700 text-xs font-bold transition-colors cursor-pointer">
+                        閉じる
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- レースレポート モーダル制御スクリプト -->
+    <script>
+        (function() {
+            const modal = document.getElementById('report-modal');
+            const backdrop = document.getElementById('report-modal-backdrop');
+            const panel = document.getElementById('report-modal-panel');
+            const openBtn = document.getElementById('open-report-modal');
+            const closeBtn = document.getElementById('close-report-modal');
+            const closeBtnFooter = document.getElementById('close-report-modal-btn');
+
+            if (!modal || !openBtn) return;
+
+            function openModal() {
+                modal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+                setTimeout(() => {
+                    backdrop.classList.remove('opacity-0');
+                    backdrop.classList.add('opacity-100');
+                    panel.classList.remove('opacity-0', 'scale-95');
+                    panel.classList.add('opacity-100', 'scale-100');
+                }, 10);
+            }
+
+            function closeModal() {
+                backdrop.classList.remove('opacity-100');
+                backdrop.classList.add('opacity-0');
+                panel.classList.remove('opacity-100', 'scale-100');
+                panel.classList.add('opacity-0', 'scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    document.body.classList.remove('overflow-hidden');
+                }, 300);
+            }
+
+            openBtn.addEventListener('click', openModal);
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+            if (closeBtnFooter) closeBtnFooter.addEventListener('click', closeModal);
+            if (backdrop) backdrop.addEventListener('click', closeModal);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    closeModal();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>

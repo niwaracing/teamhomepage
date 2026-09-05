@@ -17,7 +17,7 @@
 | [`simulator.html`](./simulator.html) | シミュレーターレッスン | プロ仕様シミュレーター（iRacing等）によるドライビングレッスン、料金プラン、指導方針 |
 | [`sales.html`](./sales.html) | 自動車販売・買取 | 新車・中古車販売、レース専用競技車両販売、カスタム車両製作、高価買取査定、在庫車両紹介 |
 | [`coaching.html`](./coaching.html) | レーシングコーチング | データロガー（AIM/MoTeC等）解析、車載映像分析、同乗・先導走行レッスン、オンライン指導 |
-| [`Stai.html`](./Stai.html) | スーパー耐久特設ページ | スーパー耐久シリーズ参戦情報、チームストーリー、参戦車両、ドライバー紹介 |
+| [`Stai.html`](./Stai.html) | スーパー耐久特設ページ | スーパー耐久シリーズ参戦情報、チームストーリー、参戦車両、ドライバー紹介、公式レースレポート（PDF閲覧＆アーカイブモーダル） |
 | [`RPR.html`](./RPR.html) | ロードスター・パーティレース | ROADSTER Party Race 参戦情報 |
 | [`Fuji.html`](./Fuji.html) | 富士チャンピオンレース | Fuji Champion Race 参戦情報 |
 | [`Nonecup.html`](./Nonecup.html) | N-ONE OWNER'S CUP | N-ONE ワンメイクレース参戦情報 |
@@ -184,12 +184,29 @@
   - Instagram: `https://www.instagram.com/niwaracing` (`@niwaracing`)
   - Facebook: `https://www.facebook.com/eiji.niwa.5/` (`NIWA RACING`)
 
+### 4.4 レースレポートセクション・アーカイブモーダル（`Stai.html` 特設）
+スーパー耐久特設ページ（`Stai.html`）専用の戦績報告コンポーネント。
+- **配置位置**: `<section id="gallery-team">`（Gallery & Team）と `<section id="sponsor-cta">`（スポンサー募集）の間。
+- **メイン画面表示（最新戦カード）**:
+  - ページ肥大化を防ぐため、最新レース（例: 2026年 もてぎ戦、富士戦）のみをカードグリッド（`grid-cols-1 md:grid-cols-2`）で表示。
+  - 大会名、日程（カレンダーアイコン付き）、サーキット名（マップピンスタイル）、別タブで開く「レポートを読む (PDF)」ボタン（`target="_blank" rel="noopener noreferrer"`）。
+  - 下部に全レポート閲覧モーダルを起動するボタン（`#open-report-modal`）を配置。
+- **アーカイブモーダル（`#report-modal`）**:
+  - 全シーズン・全ラウンドのレポートPDFを一覧できるポップアップモーダル。
+  - シーズン（2026 SEASON等）ごとに見出しを設け、整然としたリスト形式で表示。
+  - 背景オーバーレイ（ぼかし＋暗転）、ESCキー押下・背景クリック・閉じるボタンによるスムーズなアニメーション開閉。
+  - モーダル表示中は背景のスクロールを固定（`overflow-hidden`）。
+
 ---
 
-## 5. アセット（画像・スクリプト）配置規則
+## 5. アセット（画像・ドキュメント・スクリプト）配置規則
 
 ### 5.1 ディレクトリ構成
 ```text
+reports/                  # レースレポートPDFディレクトリ
+├── 2026_rd1_motegi.pdf   # 2026 Rd.1 もてぎ戦 レースレポート (PDF)
+└── 2026_rd2_fuji.pdf     # 2026 Rd.2 富士24時間戦 レースレポート (PDF)
+
 images/
 ├── teamrogo.jpg          # メインチームロゴ
 ├── nwia.jpg / nwia.webp  # ロゴバリエーション
