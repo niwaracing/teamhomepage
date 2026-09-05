@@ -117,20 +117,29 @@
 
 
     <section class="py-32 px-4 bg-zinc-50 pt-40">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold mb-16 accent-border pl-6 font-oswald uppercase text-zinc-900">Racing Categories</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-                <!-- Super Taikyu Series -->
-                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
-                    <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
+        <div class="max-w-7xl mx-auto space-y-16">
+            <div>
+                <h2 class="text-3xl font-bold accent-border pl-6 font-oswald uppercase text-zinc-900">Racing Categories</h2>
+                <p class="text-zinc-500 text-sm mt-2 pl-6">NIWA RACINGが挑む参戦レースカテゴリー一覧</p>
+            </div>
+
+            <!-- 1. Super Taikyu Series -->
+            <div>
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col lg:flex-row card-hover transition duration-300">
+                    <div class="lg:w-1/2 aspect-video lg:aspect-auto overflow-hidden relative bg-zinc-100 min-h-[260px]">
                         <img src="./images/car-ST5R.jpg" alt="Super Taikyu Series" class="w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
                             ST-5 CLASS
                         </div>
                     </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold mb-3 text-zinc-900">Super Taikyu Series</h3>
-                        <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">国内最大級の耐久レース。チームワークと戦略が試される過酷なフィールドで戦います。</p>
+                    <div class="p-8 lg:w-1/2 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-bold text-rose-600 uppercase tracking-wider mb-2 font-oswald">Endurance Championship</div>
+                            <h3 class="text-2xl font-bold mb-3 text-zinc-900">Super Taikyu Series</h3>
+                            <p class="text-zinc-500 text-sm sm:text-base leading-relaxed mb-6">
+                                国内最大級のアマチュア＆プロ混走ツーリングカー耐久レース。チームワークと綿密なピット戦略が試される過酷なフィールドで戦います。
+                            </p>
+                        </div>
                         <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
                             <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider">参戦車両</span>
                             <span class="text-sm font-bold text-zinc-800 bg-zinc-50 px-3 py-1.5 rounded-lg border border-zinc-200/60 flex items-center gap-2">
@@ -140,143 +149,181 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- ROADSTER Party Race -->
-                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
-                    <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
-                        <img src="./images/car-roadstar.jpg" alt="ROADSTER Party Race" class="w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
-                            JAF公認ワンメイク
+            <!-- 2. MAZDA ロードスター (NR-A仕様) 共通参戦シリーズ -->
+            <div class="bg-gradient-to-br from-rose-50/50 via-white to-zinc-50 rounded-3xl border border-rose-100 shadow-sm p-6 sm:p-10">
+                <!-- グループヘッダー -->
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-rose-100">
+                    <div class="max-w-3xl">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-rose-100/80 text-rose-700 text-xs font-bold rounded-full uppercase tracking-wider mb-3">
+                            <i class="fas fa-layer-group text-rose-600"></i>
+                            <span>同一車両 参戦シリーズ</span>
                         </div>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-zinc-900">
+                            MAZDA ロードスター <span class="text-rose-600 text-lg sm:text-2xl font-normal">(NR-A仕様 / ND5RC)</span>
+                        </h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed mt-3">
+                            「Party Race」「富士チャンピオンレース」「マツ耐」の3カテゴリーは、NIWA RACINGが保有・セッティングを行う<strong>同一のロードスター（NR-A仕様）</strong>で参戦しています。スプリントの駆け引きからチームで挑む耐久まで、1台のマシンで多彩なステージに挑戦可能です。
+                        </p>
                     </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold mb-3 uppercase font-oswald text-zinc-900">ROADSTER Party Race</h3>
-                        <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">JAF公認のワンメイクレース。ドライバーの純粋な技量が試される接戦を繰り広げます。</p>
-                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                            <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider">参戦車両</span>
-                            <span class="text-sm font-bold text-zinc-800 bg-zinc-50 px-3 py-1.5 rounded-lg border border-zinc-200/60 flex items-center gap-2">
-                                <i class="fas fa-car-side text-rose-600"></i>
-                                MAZDA ロードスター (NR-A仕様)
-                            </span>
-                        </div>
+                    <div class="flex-shrink-0">
+                        <a href="rental.html" class="inline-flex items-center gap-2 bg-rose-600 text-white text-sm font-bold px-5 py-3 rounded-xl hover:bg-rose-700 transition shadow-md shadow-rose-600/20">
+                            <i class="fas fa-key"></i>
+                            <span>レンタル車両（ND5RC）詳細はこちら</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Fuji Champion Race -->
-                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
-                    <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
-                        <img src="./images/car-roadstar.jpg" alt="Fuji Champion Race" class="w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
-                            FUJI SPEEDWAY
+                <!-- 3カードグリッド -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                    <!-- ROADSTER Party Race -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
+                        <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
+                            <img src="./images/car-roadstar.jpg" alt="ROADSTER Party Race" class="w-full h-full object-cover transition duration-700 hover:scale-105">
+                            <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
+                                JAF公認ワンメイク
+                            </div>
                         </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold mb-3 uppercase font-oswald text-zinc-900">Fuji Champion Race</h3>
-                        <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">富士スピードウェイを舞台にした伝統のシリーズ。ハイスピードな戦いに挑みます。</p>
-                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                            <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider">参戦車両</span>
-                            <span class="text-sm font-bold text-zinc-800 bg-zinc-50 px-3 py-1.5 rounded-lg border border-zinc-200/60 flex items-center gap-2">
-                                <i class="fas fa-car-side text-rose-600"></i>
-                                MAZDA ロードスター (NR-A仕様)
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- N-ONE OWNER'S CUP -->
-                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
-                    <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
-                        <img src="./images/car-none.jpg" alt="N-ONE OWNER'S CUP" class="w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
-                            660cc TURBO
-                        </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold mb-3 uppercase font-oswald text-zinc-900">N-ONE OWNER'S CUP</h3>
-                        <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">軽自動車による人気のワンメイクレース。接戦必至の駆け引きが魅力のカテゴリーです。</p>
-                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                            <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider">参戦車両</span>
-                            <span class="text-sm font-bold text-zinc-800 bg-zinc-50 px-3 py-1.5 rounded-lg border border-zinc-200/60 flex items-center gap-2">
-                                <i class="fas fa-car-side text-rose-600"></i>
-                                HONDA N-ONE (Cup仕様)
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- MAZDA Fan ENDURANCE (マツ耐) -->
-                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
-                    <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
-                        <img src="./images/car-roadstar.jpg" alt="MAZDA Fan ENDURANCE" class="w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
-                            MAZDA ONLY
-                        </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold mb-3 text-zinc-900">MAZDA Fan ENDURANCE (マツ耐)</h3>
-                        <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">マツダ車オーナーによる耐久レース。燃費と走りのバランスが試される戦いです。</p>
-                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                            <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider">参戦車両</span>
-                            <span class="text-sm font-bold text-zinc-800 bg-zinc-50 px-3 py-1.5 rounded-lg border border-zinc-200/60 flex items-center gap-2">
-                                <i class="fas fa-car-side text-rose-600"></i>
-                                MAZDA ロードスター (ND5RC)
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- もてぎEnjoy耐久レース (JOY耐) -->
-                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
-                    <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
-                        <img src="./images/MX-5.jpg" alt="もてぎEnjoy耐久レース (JOY耐)" class="w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
-                            7 HOURS ENDURANCE
-                        </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold mb-3 text-zinc-900">もてぎEnjoy耐久レース (JOY耐)</h3>
-                        <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">モビリティリゾートもてぎで開催される耐久レース。幅広い層の参加者が集う祭典です。</p>
-                        <div class="pt-4 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                            <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider">参戦車両</span>
-                            <div class="flex flex-wrap gap-2 justify-start sm:justify-end">
-                                <span class="text-sm font-bold text-zinc-800 bg-zinc-50 px-3 py-1.5 rounded-lg border border-zinc-200/60 flex items-center gap-2">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="text-lg font-bold mb-2 uppercase font-oswald text-zinc-900">ROADSTER Party Race</h4>
+                            <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">JAF公認のワンメイクレース。イコールコンディションのもと、ドライバーの純粋な技量が試される接戦を繰り広げます。</p>
+                            <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                                <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider">参戦車両</span>
+                                <span class="text-xs font-bold text-zinc-800 bg-rose-50/60 px-2.5 py-1.5 rounded-lg border border-rose-200/60 flex items-center gap-1.5 text-rose-900">
                                     <i class="fas fa-car-side text-rose-600"></i>
-                                    MX-5CUPカー
+                                    ロードスター (NR-A仕様)
                                 </span>
-                                <span class="text-sm font-bold text-zinc-800 bg-zinc-50 px-3 py-1.5 rounded-lg border border-zinc-200/60 flex items-center gap-2">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fuji Champion Race -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
+                        <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
+                            <img src="./images/car-roadstar.jpg" alt="Fuji Champion Race" class="w-full h-full object-cover transition duration-700 hover:scale-105">
+                            <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
+                                FUJI SPEEDWAY
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="text-lg font-bold mb-2 uppercase font-oswald text-zinc-900">Fuji Champion Race</h4>
+                            <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">富士スピードウェイを舞台にした伝統のシリーズ。長いストレートと高速コーナーでのハイスピードバトルに挑みます。</p>
+                            <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                                <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider">参戦車両</span>
+                                <span class="text-xs font-bold text-zinc-800 bg-rose-50/60 px-2.5 py-1.5 rounded-lg border border-rose-200/60 flex items-center gap-1.5 text-rose-900">
                                     <i class="fas fa-car-side text-rose-600"></i>
-                                    ロードスター（ND5RC）
+                                    ロードスター (NR-A仕様)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MAZDA Fan ENDURANCE (マツ耐) -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
+                        <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
+                            <img src="./images/car-roadstar.jpg" alt="MAZDA Fan ENDURANCE" class="w-full h-full object-cover transition duration-700 hover:scale-105">
+                            <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
+                                MAZDA ONLY 耐久
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="text-lg font-bold mb-2 text-zinc-900">MAZDA Fan ENDURANCE (マツ耐)</h4>
+                            <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">マツダ車オーナーによる人気耐久レース。規定周回数を無給油で走りきる燃費とペース配分の戦略性が魅力です。</p>
+                            <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                                <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider">参戦車両</span>
+                                <span class="text-xs font-bold text-zinc-800 bg-rose-50/60 px-2.5 py-1.5 rounded-lg border border-rose-200/60 flex items-center gap-1.5 text-rose-900">
+                                    <i class="fas fa-car-side text-rose-600"></i>
+                                    ロードスター (NR-A仕様)
                                 </span>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Starfield idlers Games -->
-                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
-                    <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
-                        <img src="./images/BRZ.jpg" alt="Starfield idlers Games" class="w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
-                            SPRINT & ENDURANCE
+            <!-- 3. その他の参戦カテゴリー -->
+            <div>
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold accent-border pl-4 text-zinc-900">Other Categories</h3>
+                    <p class="text-zinc-500 text-xs sm:text-sm mt-1 pl-4">軽ワンメイクから耐久レース、混走スプリントまで多彩なフィールドに参戦</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- N-ONE OWNER'S CUP -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
+                        <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
+                            <img src="./images/car-none.jpg" alt="N-ONE OWNER'S CUP" class="w-full h-full object-cover transition duration-700 hover:scale-105">
+                            <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
+                                660cc TURBO
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h4 class="text-xl font-bold mb-3 uppercase font-oswald text-zinc-900">N-ONE OWNER'S CUP</h4>
+                            <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">軽自動車による人気のワンメイクレース。接戦必至の駆け引きが魅力のカテゴリーです。</p>
+                            <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                                <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider">参戦車両</span>
+                                <span class="text-sm font-bold text-zinc-800 bg-zinc-50 px-3 py-1.5 rounded-lg border border-zinc-200/60 flex items-center gap-2">
+                                    <i class="fas fa-car-side text-rose-600"></i>
+                                    HONDA N-ONE (Cup仕様)
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold mb-3 text-zinc-900">Starfield idlers Games</h3>
-                        <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">多彩な車種が混走するアイドラーズのレース。個性的で熱い走りが楽しめます。</p>
-                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                            <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider">参戦車両</span>
-                            <span class="text-sm font-bold text-zinc-800 bg-zinc-50 px-3 py-1.5 rounded-lg border border-zinc-200/60 flex items-center gap-2">
-                                <i class="fas fa-car-side text-rose-600"></i>
-                                BRZ
-                            </span>
+
+                    <!-- もてぎEnjoy耐久レース (JOY耐) -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
+                        <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
+                            <img src="./images/MX-5.jpg" alt="もてぎEnjoy耐久レース (JOY耐)" class="w-full h-full object-cover transition duration-700 hover:scale-105">
+                            <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
+                                7 HOURS ENDURANCE
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h4 class="text-xl font-bold mb-3 text-zinc-900">もてぎEnjoy耐久レース (JOY耐)</h4>
+                            <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">モビリティリゾートもてぎで開催される耐久レース。幅広い層の参加者が集う祭典です。</p>
+                            <div class="pt-4 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                                <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider">参戦車両</span>
+                                <div class="flex flex-wrap gap-2 justify-start sm:justify-end">
+                                    <span class="text-sm font-bold text-zinc-800 bg-zinc-50 px-3 py-1.5 rounded-lg border border-zinc-200/60 flex items-center gap-2">
+                                        <i class="fas fa-car-side text-rose-600"></i>
+                                        MX-5 CUPカー
+                                    </span>
+                                    <span class="text-sm font-bold text-zinc-800 bg-zinc-50 px-3 py-1.5 rounded-lg border border-zinc-200/60 flex items-center gap-2">
+                                        <i class="fas fa-car-side text-rose-600"></i>
+                                        ロードスター (ND5RC)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Starfield idlers Games -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
+                        <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
+                            <img src="./images/BRZ.jpg" alt="Starfield idlers Games" class="w-full h-full object-cover transition duration-700 hover:scale-105">
+                            <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
+                                SPRINT & ENDURANCE
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h4 class="text-xl font-bold mb-3 text-zinc-900">Starfield idlers Games</h4>
+                            <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">多彩な車種が混走するアイドラーズのレース。個性的で熱い走りが楽しめます。</p>
+                            <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                                <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider">参戦車両</span>
+                                <span class="text-sm font-bold text-zinc-800 bg-zinc-50 px-3 py-1.5 rounded-lg border border-zinc-200/60 flex items-center gap-2">
+                                    <i class="fas fa-car-side text-rose-600"></i>
+                                    BRZ
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- 注記テキスト -->
-            <div class="mt-8 text-xs sm:text-sm text-zinc-500 flex items-center gap-2">
+            <div class="text-xs sm:text-sm text-zinc-500 flex items-center gap-2">
                 <i class="fas fa-info-circle text-rose-600 text-sm"></i>
                 <span>※参戦車両は予告なく変更となる場合がございます。あらかじめご了承ください。</span>
             </div>
