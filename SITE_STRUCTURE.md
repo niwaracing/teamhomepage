@@ -11,7 +11,7 @@
 | ファイル名 | タイトル / 役割 | 主なコンテンツ・概要 |
 | :--- | :--- | :--- |
 | [`index.html`](./index.html) | トップページ | ヒーロー（キャッチコピー）、コンセプト（Virtual to Real）、事業紹介（7大サービス）、参戦カテゴリー一覧、ドライバー・体制紹介、実績、問い合わせ・アクセス |
-| [`categories.html`](./categories.html) | 参戦カテゴリー一覧 | 参戦中の全レースカテゴリーおよび参戦使用車両一覧（ロードスターNR-A共通参戦シリーズのグループ化枠含む） |
+| [`categories.html`](./categories.html) | 参戦カテゴリー一覧 | 参戦中の全レースカテゴリーおよび参戦使用車両一覧（ロードスターND5RC共通参戦シリーズのグループ化枠含む） |
 | [`rental.html`](./rental.html) | レーシングカーレンタル | レンタル車両ラインナップ（MX-5, NDロードスター, N-ONE, デミオ等）、利用料金、ご利用の流れ、規約、予約CTA |
 | [`maintenance.html`](./maintenance.html) | メンテナンス・車両製作 | レース車両の点検・整備、セッティング、車両製作・チューニング、工賃表 |
 | [`simulator.html`](./simulator.html) | シミュレーターレッスン | プロ仕様シミュレーター（iRacing等）によるドライビングレッスン、料金プラン、指導方針 |
@@ -200,10 +200,10 @@
 ### 4.5 参戦カテゴリー（`categories.html`）のグループ化構成
 参戦車両の重複や関連性を考慮した3層レイアウト構成：
 1. **最高峰カテゴリー（Super Taikyu Series）**: 最上部に横型フィーチャーカードとして独立配置。
-2. **MAZDA ロードスター (NR-A仕様) 共通参戦シリーズ**:
-   - 同一車両（ND5RC / NR-A仕様）で参戦可能な3カテゴリー（「ROADSTER Party Race」「Fuji Champion Race」「MAZDA Fan ENDURANCE (マツ耐)」）を薄型アクセント枠（ローズ×グラデーション背景）でグルーピング。
+2. **MAZDA ロードスター (ND5RC) 共通参戦シリーズ**:
+   - 同一車両（ND5RC）で参戦可能な3カテゴリー（「ROADSTER Party Race」「Fuji Champion Race」「MAZDA Fan ENDURANCE (マツ耐)」）を薄型アクセント枠（ローズ×グラデーション背景）でグルーピング。
+   - **レイアウト**: 左側にロードスター（ND5RC）の共通車両写真を大きく配置し、右側に3つのレース説明（Party Race / Fuji / マツ耐）を縦並びで配置。
    - ヘッダー部に同一車両での参戦可能メリット解説文およびレンタル車両（`rental.html`）への導線ボタンを配置。
-   - 各カードの参戦車両欄に「ロードスター (NR-A仕様)」共通バッジを明記。
 3. **その他の参戦カテゴリー（Other Categories）**:
    - 「N-ONE OWNER'S CUP」「もてぎEnjoy耐久レース (JOY耐)」「Starfield idlers Games」を整然と3列グリッドで配置。
 
