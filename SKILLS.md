@@ -14,7 +14,7 @@
    - **売却済み（SOLD OUT）車両**: リストの最後尾にまとめて配置します。
 3. **モーダル連動関数 `openCarModal` の引数構成**:
    ```javascript
-   openCarModal(name, price, mileage, mission, inspection, imgSrc, isSoldOut = false, equipment = null, additionalImages = null)
+   openCarModal(name, price, mileage, mission, inspection, imgSrc, isSoldOut = false, equipment = null, additionalImages = null, carId = '')
    ```
    - 第1引数: 車種名（String）
    - 第2引数: モーダル用価格表記（String / 例: `'300万円（税込）'`, `'ASK'`）
@@ -25,6 +25,10 @@
    - 第7引数: SOLD OUT判定フラグ（Boolean / `false` または `true`）
    - 第8引数: 装備・状態テキスト（Stringまたはnull / 省略可能）
    - 第9引数: 追加写真配列（Arrayまたはnull / 省略可能。文字列パスの配列、または `{src, alt}` のオブジェクト配列）
+   - 第10引数: 車両スラッグID（String / 例: `'mx-5'`, `'demio'`。URL共有やダイレクトリンク用）
+4. **個別リンク共有・URLハッシュ連携ルール**:
+   - 各車両カードの最上位 `<div>` には、必ず `id="{vehicle_id}" data-car-id="{vehicle_id}"` を付与します。
+   - これにより、`sales.html#{vehicle_id}` のURLでアクセスされた際に自動で該当車両のモーダルが開き、SNS共有やリンク送信が容易になります。
 
 ---
 
@@ -36,6 +40,7 @@
 
 | パラメータ名 | 必須/任意 | 型 | 説明・入力例 |
 | :--- | :---: | :--- | :--- |
+| `vehicle_id` | 必須 | String | 個別リンク用英数字ID（例: `roadster-nra`, `yaris-cup`） |
 | `vehicle_name` | 必須 | String | 車種名（例: `マツダ ロードスター NR-A`） |
 | `mileage` | 必須 | String | 走行距離（例: `38,000km`, `＊＊＊`） |
 | `transmission` | 必須 | String | トランスミッション（例: `6速MT`, `AT`） |
@@ -56,6 +61,7 @@
    - `SITE_STRUCTURE.md` の画像ツリーを更新（必要に応じて）。
 2. **車両カードHTMLの生成**:
    - 後述の [1.3 HTML/Tailwind CSS テンプレート構造](#13-htmltailwind-css-テンプレート構造) に従ってHTMLブロックを生成。
+   - カード要素に `id="{vehicle_id}" data-car-id="{vehicle_id}"` を指定し、`openCarModal` の引数末尾にも `{vehicle_id}` を渡す。
    - 見切れ防止スタイル（`aspect-video bg-zinc-100` + `object-contain`）を厳格に適用。
 3. **`sales.html` の在庫リストへの挿入**:
    - `<section id="stock-list">` 内の `<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">` 直下を探す。
@@ -77,7 +83,7 @@
 
 ```html
 <!-- {vehicle_name} -->
-<div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('{vehicle_name}', '{modal_price}', '{mileage}', '{transmission}', '{inspection}', '{main_image_path}')">
+<div id="{vehicle_id}" data-car-id="{vehicle_id}" class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('{vehicle_name}', '{modal_price}', '{mileage}', '{transmission}', '{inspection}', '{main_image_path}', false, null, null, '{vehicle_id}')">
     <div class="aspect-video bg-zinc-100 flex items-center justify-center overflow-hidden relative">
         <img src="{main_image_path}" alt="{vehicle_name}" class="w-full h-full object-contain">
     </div>
@@ -101,7 +107,7 @@
 
 ```html
 <!-- {vehicle_name} -->
-<div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('{vehicle_name}', '{modal_price}', '{mileage}', '{transmission}', '{inspection}', '{main_image_path}', false, '{equipment}', [{additional_images_json}])">
+<div id="{vehicle_id}" data-car-id="{vehicle_id}" class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('{vehicle_name}', '{modal_price}', '{mileage}', '{transmission}', '{inspection}', '{main_image_path}', false, '{equipment}', [{additional_images_json}], '{vehicle_id}')">
     <div class="aspect-video bg-zinc-100 flex items-center justify-center overflow-hidden relative">
         <img src="{main_image_path}" alt="{vehicle_name}" class="w-full h-full object-contain">
     </div>
