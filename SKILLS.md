@@ -67,9 +67,11 @@
    - `<section id="stock-list">` 内の `<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">` 直下を探す。
    - **販売中リストの先頭（1番目の車両の上）** に挿入（または指定された販売中車両グループ内の指定位置）。
    - ※売却済み（SOLD OUT）車両群より前に配置すること。
-4. **構文およびスタイル確認**:
+4. **OGP共有用リダイレクトファイル `cars/{vehicle_id}.html` の生成**:
+   - SNS（XやLINE等）でカード写真付きプレビュー（Twitter Card `summary_large_image`）を表示させるため、後述の [1.4 OGP共有用リダイレクトHTML テンプレート構造](#14-ogp共有用リダイレクトhtml-テンプレート構造) に従って `cars/{vehicle_id}.html` を作成。
+5. **構文およびスタイル確認**:
    - HTMLタグの閉じ漏れ、onclickのクォートエスケープミスがないか確認。
-5. **Gitコミット＆Push**:
+6. **Gitコミット＆Push**:
    - コミットメッセージ例:
      - `Add [車種名] to sales page and update stock list`
      - ギャラリー含む場合: `Add [車種名] with photo gallery to sales.html`
@@ -130,6 +132,44 @@
 ※ `{additional_images_json}` の記述例:
 `['images/demo/in1.jpg', 'images/demo/out1.jpg']` または
 `[{src: 'images/demo/in1.jpg', alt: '内装'}, {src: 'images/demo/out1.jpg', alt: '外装'}]`
+
+---
+
+### 1.4 OGP共有用リダイレクトHTML テンプレート構造
+
+SNSでカード写真を大きなアイキャッチとして表示させるため、`cars/{vehicle_id}.html` を作成します。
+
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>{vehicle_name} - NIWA RACING 自動車販売</title>
+    <meta name="description" content="【NIWA RACING 在庫車両】{vehicle_name}（{modal_price}）走行: {mileage} / ミッション: {transmission} / 車検: {inspection}。">
+    
+    <!-- OGP / Twitter Card -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="NIWA RACING">
+    <meta property="og:title" content="【NIWA RACING 在庫車両】{vehicle_name}（{modal_price}）">
+    <meta property="og:description" content="走行: {mileage} / ミッション: {transmission} / 車検: {inspection}。">
+    <meta property="og:image" content="https://niwaracing.github.io/teamhomepage/{main_image_path}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="【NIWA RACING 在庫車両】{vehicle_name}（{modal_price}）">
+    <meta name="twitter:description" content="走行: {mileage} / ミッション: {transmission} / 車検: {inspection}。">
+    <meta name="twitter:image" content="https://niwaracing.github.io/teamhomepage/{main_image_path}">
+
+    <!-- 自動リダイレクト -->
+    <meta http-equiv="refresh" content="0;url=../sales.html#{vehicle_id}">
+    <script>
+        window.location.replace('../sales.html#{vehicle_id}');
+    </script>
+</head>
+<body style="font-family: sans-serif; text-align: center; padding-top: 50px;">
+    <p>車両詳細ページへ移動しています...</p>
+    <p><a href="../sales.html#{vehicle_id}">自動で移動しない場合はこちらをクリックしてください</a></p>
+</body>
+</html>
+```
 
 ---
 

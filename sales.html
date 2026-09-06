@@ -507,28 +507,35 @@
                                 <p class="text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
                                     <i class="fas fa-share-nodes text-rose-600"></i> この車両を共有する
                                 </p>
-                                <div class="grid grid-cols-3 gap-2">
-                                    <!-- リンクコピー -->
-                                    <button type="button" onclick="copyCarShareLink()" class="flex items-center justify-center gap-1.5 py-2.5 px-3 bg-zinc-100 hover:bg-zinc-200 text-zinc-700 text-xs font-bold rounded-lg transition border border-gray-200 shadow-sm active:scale-95">
-                                        <i class="fas fa-link text-zinc-500"></i>
-                                        <span>リンクコピー</span>
-                                    </button>
+                                <div class="grid grid-cols-2 gap-2 mb-2">
                                     <!-- X (旧Twitter) -->
                                     <button type="button" onclick="shareCarOnX()" class="flex items-center justify-center gap-1.5 py-2.5 px-3 bg-zinc-900 hover:bg-black text-white text-xs font-bold rounded-lg transition shadow-sm active:scale-95">
                                         <i class="fa-brands fa-x-twitter text-sm"></i>
-                                        <span>ポスト</span>
+                                        <span>X でシェア</span>
                                     </button>
                                     <!-- LINE -->
                                     <button type="button" onclick="shareCarOnLine()" class="flex items-center justify-center gap-1.5 py-2.5 px-3 bg-[#06C755] hover:bg-[#05b34c] text-white text-xs font-bold rounded-lg transition shadow-sm active:scale-95">
                                         <i class="fa-brands fa-line text-sm"></i>
-                                        <span>LINE</span>
+                                        <span>LINE で送る</span>
                                     </button>
                                 </div>
-                                <!-- スマホ等の端末共有（Web Share API） -->
+                                <div class="grid grid-cols-2 gap-2">
+                                    <!-- リンクコピー -->
+                                    <button type="button" onclick="copyCarShareLink()" class="flex items-center justify-center gap-1.5 py-2.5 px-3 bg-zinc-100 hover:bg-zinc-200 text-zinc-700 text-xs font-bold rounded-lg transition border border-gray-200 shadow-sm active:scale-95" title="個別ページのURLをコピー">
+                                        <i class="fas fa-link text-zinc-500"></i>
+                                        <span>URLコピー</span>
+                                    </button>
+                                    <!-- 写真画像をコピー -->
+                                    <button type="button" onclick="copyCarImage()" class="flex items-center justify-center gap-1.5 py-2.5 px-3 bg-zinc-100 hover:bg-zinc-200 text-zinc-700 text-xs font-bold rounded-lg transition border border-gray-200 shadow-sm active:scale-95" title="カードの写真をクリップボードにコピー">
+                                        <i class="fas fa-image text-zinc-500"></i>
+                                        <span>写真をコピー</span>
+                                    </button>
+                                </div>
+                                <!-- スマホ等の端末共有（Web Share API 写真添付対応） -->
                                 <div id="webShareContainer" class="mt-2 hidden">
-                                    <button type="button" onclick="shareCarNative()" class="w-full flex items-center justify-center gap-2 py-2 px-3 bg-zinc-50 hover:bg-zinc-100 text-zinc-600 text-xs font-bold rounded-lg transition border border-dashed border-zinc-300 active:scale-95">
-                                        <i class="fas fa-arrow-up-from-bracket text-zinc-500"></i>
-                                        <span>その他のアプリで共有</span>
+                                    <button type="button" onclick="shareCarNative()" class="w-full flex items-center justify-center gap-2 py-2.5 px-3 bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-bold rounded-lg transition border border-rose-200 active:scale-95">
+                                        <i class="fas fa-arrow-up-from-bracket text-rose-600"></i>
+                                        <span>写真付きでアプリ共有（スマホ）</span>
                                     </button>
                                 </div>
                             </div>
@@ -622,6 +629,7 @@
                 price: price,
                 mileage: mileage,
                 mission: mission,
+                imgSrc: imgSrc,
                 isSoldOut: isSoldOut
             };
 
@@ -739,18 +747,24 @@
             }
         });
 
-        // 共有URLとテキスト生成関数
+        // 共有URLとテキスト生成関数（OGPリダイレクト用cars/{id}.htmlを自動選択）
         function getCarShareDetails() {
             const carId = currentCarShareData ? currentCarShareData.id : '';
-            const baseUrl = window.location.href.split('#')[0];
-            const shareUrl = carId ? `${baseUrl}#${encodeURIComponent(carId)}` : baseUrl;
+            // 現在のベースディレクトリURL（末尾のスラッシュなし）
+            const baseUrl = window.location.href.split('#')[0].replace(/\/[^\/]*$/, '');
+            // OGP用専用ページが存在する場合はそちらを優先、なければハッシュリンク
+            const shareUrl = carId ? `${baseUrl}/cars/${encodeURIComponent(carId)}.html` : `${baseUrl}/sales.html`;
             
             let text = '【NIWA RACING 在庫車両】';
             if (currentCarShareData) {
                 const status = currentCarShareData.isSoldOut ? ' [売約済み]' : '';
                 text = `【NIWA RACING 在庫車両】${currentCarShareData.name}${status}（${currentCarShareData.price}） 走行: ${currentCarShareData.mileage} #NIWARACING`;
             }
-            return { shareUrl, text };
+            return {
+                shareUrl,
+                text,
+                imgSrc: currentCarShareData ? currentCarShareData.imgSrc : ''
+            };
         }
 
         // コピー完了トースト通知表示
@@ -776,7 +790,7 @@
             const { shareUrl } = getCarShareDetails();
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 navigator.clipboard.writeText(shareUrl).then(() => {
-                    showShareToast('リンクをコピーしました！');
+                    showShareToast('個別URLをコピーしました！');
                 }).catch(() => {
                     fallbackCopy(shareUrl);
                 });
@@ -795,14 +809,72 @@
             textArea.select();
             try {
                 document.execCommand('copy');
-                showShareToast('リンクをコピーしました！');
+                showShareToast('個別URLをコピーしました！');
             } catch (err) {
                 alert('URLのコピーに失敗しました: ' + text);
             }
             document.body.removeChild(textArea);
         }
 
-        // X (Twitter) でシェア
+        // 車両カードの写真をクリップボードにコピー（画像バイナリコピー）
+        async function copyCarImage() {
+            if (!currentCarShareData || !currentCarShareData.imgSrc) {
+                showShareToast('写真が見つかりません');
+                return;
+            }
+            try {
+                showShareToast('写真をコピー中...');
+                const img = new Image();
+                img.crossOrigin = 'anonymous';
+                img.src = currentCarShareData.imgSrc;
+                await new Promise((resolve, reject) => {
+                    img.onload = resolve;
+                    img.onerror = reject;
+                });
+
+                const canvas = document.createElement('canvas');
+                canvas.width = img.naturalWidth;
+                canvas.height = img.naturalHeight;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0);
+
+                canvas.toBlob(async (blob) => {
+                    if (!blob) {
+                        showShareToast('写真のコピーに失敗しました');
+                        return;
+                    }
+                    if (navigator.clipboard && navigator.clipboard.write) {
+                        try {
+                            await navigator.clipboard.write([
+                                new ClipboardItem({ 'image/png': blob })
+                            ]);
+                            showShareToast('カード写真をコピーしました！');
+                        } catch (clipErr) {
+                            console.warn('ClipboardItem write failed, fallback to url copy', clipErr);
+                            const absImgUrl = new URL(currentCarShareData.imgSrc, window.location.href).href;
+                            fallbackCopy(absImgUrl);
+                            showShareToast('写真のURLをコピーしました');
+                        }
+                    } else {
+                        const absImgUrl = new URL(currentCarShareData.imgSrc, window.location.href).href;
+                        fallbackCopy(absImgUrl);
+                        showShareToast('写真のURLをコピーしました');
+                    }
+                }, 'image/png');
+            } catch (err) {
+                console.error('Copy image error:', err);
+                // 画像URLのコピーにフォールバック
+                try {
+                    const absImgUrl = new URL(currentCarShareData.imgSrc, window.location.href).href;
+                    fallbackCopy(absImgUrl);
+                    showShareToast('写真のURLをコピーしました');
+                } catch (e) {
+                    showShareToast('写真のコピーに失敗しました');
+                }
+            }
+        }
+
+        // X (Twitter) でシェア（Twitter Cardによりカード写真が自動表示される）
         function shareCarOnX() {
             const { shareUrl, text } = getCarShareDetails();
             const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(shareUrl)}`;
@@ -816,19 +888,44 @@
             window.open(lineUrl, '_blank', 'noopener,noreferrer');
         }
 
-        // 端末共有 (Web Share API)
-        function shareCarNative() {
-            const { shareUrl, text } = getCarShareDetails();
-            if (navigator.share) {
-                navigator.share({
-                    title: (currentCarShareData ? currentCarShareData.name : 'NIWA RACING 在庫車両') + ' - NIWA RACING',
-                    text: text,
-                    url: shareUrl
-                }).catch(() => {
-                    // キャンセル時などは何もしない
-                });
-            } else {
-                copyCarShareLink();
+        // 端末共有 (Web Share API - 画像ファイル直接添付対応)
+        async function shareCarNative() {
+            const { shareUrl, text, imgSrc } = getCarShareDetails();
+            try {
+                let fileToShare = null;
+                if (imgSrc && navigator.canShare) {
+                    try {
+                        const response = await fetch(imgSrc);
+                        const blob = await response.blob();
+                        const ext = blob.type.includes('png') ? 'png' : 'jpg';
+                        const fileName = (currentCarShareData?.id || 'vehicle') + '.' + ext;
+                        const file = new File([blob], fileName, { type: blob.type });
+                        if (navigator.canShare({ files: [file] })) {
+                            fileToShare = file;
+                        }
+                    } catch (fetchErr) {
+                        console.warn('Could not fetch image for native share', fetchErr);
+                    }
+                }
+
+                if (fileToShare) {
+                    await navigator.share({
+                        title: (currentCarShareData ? currentCarShareData.name : 'NIWA RACING 在庫車両') + ' - NIWA RACING',
+                        text: text,
+                        url: shareUrl,
+                        files: [fileToShare]
+                    });
+                } else if (navigator.share) {
+                    await navigator.share({
+                        title: (currentCarShareData ? currentCarShareData.name : 'NIWA RACING 在庫車両') + ' - NIWA RACING',
+                        text: text,
+                        url: shareUrl
+                    });
+                } else {
+                    copyCarShareLink();
+                }
+            } catch (err) {
+                // 共有キャンセル時は何もしない
             }
         }
 
