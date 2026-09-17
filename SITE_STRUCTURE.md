@@ -10,7 +10,8 @@
 
 | ファイル名 | タイトル / 役割 | 主なコンテンツ・概要 |
 | :--- | :--- | :--- |
-| [`index.html`](./index.html) | トップページ | ヒーロー（キャッチコピー）、コンセプト（Virtual to Real）、参戦カテゴリー一覧、NEWS（新着情報・入庫・レポート）、ドライバー・体制紹介、実績、問い合わせ・アクセス |
+| [`index.html`](./index.html) | トップページ | ヒーロー（キャッチコピー）、コンセプト（Virtual to Real）、ロードマップ案内バナー、参戦カテゴリー一覧、NEWS（新着情報・入庫・レポート）、ドライバー・体制紹介、実績、問い合わせ・アクセス |
+| [`roadmap.html`](./roadmap.html) | ロードマップ | 実車レースのステップアップ・ピラミッド（S耐・パーティレース・マツ耐）と、仲間が集い切磋琢磨するシミュレーター・コミュニティ（iRacing / グランツーリスモ）の独立ページ |
 | [`categories.html`](./categories.html) | 参戦カテゴリー一覧 | 参戦中の全レースカテゴリーおよび参戦使用車両一覧（ロードスターND5RC共通参戦シリーズのグループ化枠含む） |
 | [`rental.html`](./rental.html) | レーシングカーレンタル | レンタル車両ラインナップ（MX-5, NDロードスター, N-ONE, デミオ等）、利用料金、ご利用の流れ、規約、予約CTA |
 | [`maintenance.html`](./maintenance.html) | メンテナンス・車両製作 | レース車両の点検・整備、セッティング、車両製作・チューニング、工賃表 |
@@ -141,13 +142,14 @@
 - **ロゴ**: `./images/teamrogo.jpg`（高さ `h-14 w-auto object-contain`）
 - **ナビゲーションメニュー項目（主要ページ構成）**:
   1. ホーム（[`index.html`](./index.html)）
-  2. 参戦カテゴリー（[`categories.html`](./categories.html)）
-  3. スーパー耐久特設（[`Stai.html`](./Stai.html)）※主要ページにて追加
-  4. レーシングカーレンタル（[`rental.html`](./rental.html)）
-  5. メンテナンス（[`maintenance.html`](./maintenance.html)）
-  6. レーシングシミュレーターレッスン（[`simulator.html`](./simulator.html)）
-  7. 自動車販売・買取（[`sales.html`](./sales.html)）
-  8. コーチング（[`coaching.html`](./coaching.html)）
+  2. ロードマップ（[`roadmap.html`](./roadmap.html)）
+  3. 参戦カテゴリー（[`categories.html`](./categories.html)）
+  4. スーパー耐久特設（[`Stai.html`](./Stai.html)）
+  5. レーシングカーレンタル（[`rental.html`](./rental.html)）
+  6. メンテナンス（[`maintenance.html`](./maintenance.html)）
+  7. レーシングシミュレーターレッスン（[`simulator.html`](./simulator.html)）
+  8. 自動車販売・買取（[`sales.html`](./sales.html)）
+  9. コーチング（[`coaching.html`](./coaching.html)）
 - **レスポンシブ挙動**:
   - PC（`lg:block`）: 横並びメニュー（`text-sm font-bold whitespace-nowrap`）
   - モバイル（`lg:hidden`）: ハンバーガーボタン（`#mobile-menu-btn`）とトグル式ドロップダウン（`#mobile-menu`）
@@ -206,6 +208,18 @@
    - ヘッダー部に同一車両での参戦可能メリット解説文およびレンタル車両（`rental.html`）への導線ボタンを配置。
 3. **その他の参戦カテゴリー（Other Categories）**:
    - 「N-ONE OWNER'S CUP」「もてぎEnjoy耐久レース (JOY耐)」「Starfield idlers Games」を整然と3列グリッドで配置。
+
+### 4.6 ロードマップ（`roadmap.html`）の構成
+- **目的**: 初心者から国内最高峰耐久までの育成ピラミッドと、仲間が集い切磋琢磨するシミュレーター・コミュニティの共鳴を提示。
+- **Real Racing Pyramid（実車ピラミッド）**:
+  1. **APEX（頂点）: スーパー耐久（S耐）** - チームのフラッグシップ目標・国内最高峰（`Stai.html` へのリンク）
+  2. **MIDDLE（2段目）: ロードスター・パーティレース** - JAF公認ワンメイク・純粋な腕磨き（`RPR.html` へのリンク）
+  3. **BASE（1段目）: マツ耐（マツダファン・エンデュランス）** - 初心者歓迎・チーム耐久入門（`mazda-fan.html` へのリンク）
+- **Simulator Community & e-Motorsports**:
+  - 単なる練習台ではなく、所属メンバーが集いワイワイ笑い合いながら競い合う独立した拠点。
+  - iRacing / グランツーリスモの活用、テレメトリ共有によるスキル向上、実車ピラミッドへのシナジー（Virtual to Real）を提示。
+- **トップページ（`index.html`）との連動**:
+  - `index.html` の「参戦カテゴリー」セクション直前に、ロードマップ案内バナー（`#roadmap`）を配置し相互誘導。
 
 ---
 

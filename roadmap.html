@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ロードマップ (ROADMAP) - NIWA RACING</title>
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            scroll-behavior: smooth;
+        }
+        .font-oswald {
+            font-family: 'Oswald', sans-serif;
+        }
+        .accent-border {
+            border-left: 4px solid #e11d48;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.12);
+        }
+        .nav-link:hover {
+            color: #e11d48;
+        }
+        .footer-map iframe {
+            filter: grayscale(0.1) contrast(1.1);
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body class="antialiased bg-white text-zinc-900">
+
+    <!-- ナビゲーション -->
+    <nav class="fixed w-full z-50 bg-white border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain">
+                    </a>
+                </div>
+                <!-- PC用メニュー -->
+                <div class="hidden lg:block">
+                    <div class="ml-10 flex items-baseline space-x-5 text-sm font-bold whitespace-nowrap">
+                        <a href="index.html" class="nav-link transition">ホーム</a>
+                        <a href="roadmap.html" class="nav-link transition text-rose-600">ロードマップ</a>
+                        <a href="categories.html" class="nav-link transition">参戦カテゴリー</a>
+                        <a href="Stai.html" class="nav-link transition">スーパー耐久特設</a>
+                        <a href="rental.html" class="nav-link transition">レーシングカーレンタル</a>
+                        <a href="maintenance.html" class="nav-link transition">メンテナンス</a>
+                        <a href="simulator.html" class="nav-link transition">レーシングシミュレーターレッスン</a>
+                        <a href="sales.html" class="nav-link transition">自動車販売・買取</a>
+                        <a href="coaching.html" class="nav-link transition">コーチング</a>
+                    </div>
+                </div>
+                <!-- スマホ用ハンバーガーボタン -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-zinc-900 hover:text-rose-600 focus:outline-none p-2" aria-label="メニューを開く">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- スマホ用ドロップダウンメニュー -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl">
+            <div class="px-3 pt-3 pb-4 space-y-1 sm:px-4 text-sm font-bold flex flex-col">
+                <a href="index.html" class="block px-3 py-2.5 rounded-lg hover:bg-gray-50 nav-link transition">ホーム</a>
+                <a href="roadmap.html" class="block px-3 py-2.5 rounded-lg bg-rose-50 nav-link transition text-rose-600">ロードマップ</a>
+                <a href="categories.html" class="block px-3 py-2.5 rounded-lg hover:bg-gray-50 nav-link transition">参戦カテゴリー</a>
+                <a href="Stai.html" class="block px-3 py-2.5 rounded-lg hover:bg-gray-50 nav-link transition">スーパー耐久特設</a>
+                <a href="rental.html" class="block px-3 py-2.5 rounded-lg hover:bg-gray-50 nav-link transition">レーシングカーレンタル</a>
+                <a href="maintenance.html" class="block px-3 py-2.5 rounded-lg hover:bg-gray-50 nav-link transition">メンテナンス</a>
+                <a href="simulator.html" class="block px-3 py-2.5 rounded-lg hover:bg-gray-50 nav-link transition">レーシングシミュレーターレッスン</a>
+                <a href="sales.html" class="block px-3 py-2.5 rounded-lg hover:bg-gray-50 nav-link transition">自動車販売・買取</a>
+                <a href="coaching.html" class="block px-3 py-2.5 rounded-lg hover:bg-gray-50 nav-link transition">コーチング</a>
+            </div>
+        </div>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+
+    <!-- ヒーローセクション -->
+    <header class="pt-32 pb-20 px-4 bg-gradient-to-b from-zinc-50 via-white to-zinc-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-rose-50 text-rose-600 px-4 py-1.5 rounded-full text-xs md:text-sm font-bold tracking-widest uppercase mb-6 shadow-sm">
+                <i class="fas fa-layer-group"></i> NIWA RACING ROADMAP
+            </div>
+            <h1 class="text-4xl md:text-6xl font-oswald font-bold tracking-tight uppercase text-zinc-900 mb-6 leading-tight">
+                頂点へ挑む道筋と、<br class="md:hidden"><span class="text-rose-600">仲間と楽しむ熱狂のステージ</span>
+            </h1>
+            <p class="text-zinc-600 max-w-3xl mx-auto text-base md:text-lg leading-relaxed font-medium">
+                NIWA RACINGでは、モータースポーツを生涯楽しむための「ステップアップ・ピラミッド」と、<br class="hidden md:inline">
+                大勢の仲間が集いワイワイ腕を競い合う「シミュレーター・コミュニティ」が共鳴しています。<br class="hidden md:inline">
+                サーキットデビューから最高峰の耐久レースまで、あなたの情熱に応じた道がここにあります。
+            </p>
+        </div>
+    </header>
+
+    <!-- 2大コンセプトの俯瞰セクション -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+                <!-- 左：リアルレースピラミッド概要 -->
+                <div class="bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 text-white p-8 md:p-10 rounded-3xl relative overflow-hidden shadow-xl border border-zinc-800 flex flex-col justify-between">
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-rose-500 font-oswald text-xs md:text-sm uppercase tracking-widest font-bold">Real Motorsport Pyramid</span>
+                            <span class="bg-rose-600/30 text-rose-300 border border-rose-500/40 text-xs px-3 py-1 rounded-full font-bold">3段階のステップ</span>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-bold mb-4 font-oswald uppercase tracking-tight">実車レースのステップアップ構造</h2>
+                        <p class="text-zinc-300 leading-relaxed text-sm md:text-base mb-6">
+                            「マツ耐」で耐久レースの基本とチームワークを体感し、「パーティレース」で完全イコールコンディションの腕試しに挑み、国内最高峰の「スーパー耐久（S耐）」の頂点を目指す。誰もが段階を踏んで着実に前進できる実践的ロードマップです。
+                        </p>
+                    </div>
+                    <div class="relative z-10 pt-5 border-t border-zinc-800 flex flex-wrap items-center justify-between gap-3">
+                        <span class="text-xs text-zinc-400 font-medium"><i class="fas fa-check-circle text-rose-500 mr-1.5"></i> マツ耐 ➔ パーティレース ➔ S耐</span>
+                        <a href="#pyramid-section" class="text-xs font-bold text-rose-400 hover:text-white transition inline-flex items-center">
+                            ピラミッドの詳細を見る <i class="fas fa-arrow-down ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 右：シミュレーターコミュニティ概要 -->
+                <div class="bg-zinc-50 p-8 md:p-10 rounded-3xl relative overflow-hidden border border-gray-200 flex flex-col justify-between card-hover">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-rose-600 font-oswald text-xs md:text-sm uppercase tracking-widest font-bold">Simulator Community</span>
+                            <span class="bg-zinc-200 text-zinc-800 text-xs px-3 py-1 rounded-full font-bold">仲間と集う拠点</span>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-zinc-900 font-oswald uppercase tracking-tight">シミュレーターでワイワイ切磋琢磨</h2>
+                        <p class="text-zinc-600 leading-relaxed text-sm md:text-base mb-6">
+                            シミュレーターはただの練習機材ではありません。所属メンバーが気軽に集まり、ボイスチャットで笑い合いながら競い合い、タイムやライン取りを教え合って上達する、大勢の仲間が熱中するもうひとつの主役ステージです。
+                        </p>
+                    </div>
+                    <div class="pt-5 border-t border-gray-200 flex flex-wrap items-center justify-between gap-3">
+                        <span class="text-xs text-zinc-500 font-medium"><i class="fas fa-gamepad text-rose-600 mr-1.5"></i> iRacing / グランツーリスモ 活用</span>
+                        <a href="#simulator-section" class="text-xs font-bold text-rose-600 hover:text-rose-700 transition inline-flex items-center">
+                            シミュレーターの詳細を見る <i class="fas fa-arrow-down ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 【ピラミッド詳細セクション】 -->
+    <section id="pyramid-section" class="py-24 px-4 bg-zinc-50 border-t border-b border-gray-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-rose-600 font-oswald text-sm uppercase tracking-widest font-bold">Step-by-Step Pyramid</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-zinc-900 mt-2 mb-4 font-oswald uppercase">Real Racing Pyramid</h2>
+                <div class="w-16 h-1 bg-rose-600 mx-auto mb-6"></div>
+                <p class="text-zinc-600 text-base md:text-lg leading-relaxed">
+                    NIWA RACINGが提唱する、3段階の参戦ピラミッド。<br class="hidden md:inline">
+                    それぞれのステージに明確な役割があり、着実にステップアップできる環境を整えています。
+                </p>
+            </div>
+
+            <!-- ビジュアル・ピラミッド図（スタック型カード） -->
+            <div class="max-w-5xl mx-auto mb-20 space-y-8">
+                
+                <!-- TOP: S耐（頂点） -->
+                <div class="bg-gradient-to-r from-amber-500/10 via-rose-500/15 to-amber-500/10 border-2 border-rose-600 rounded-3xl p-6 md:p-8 relative shadow-lg card-hover">
+                    <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                        <div class="flex items-start sm:items-center gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-rose-600 text-white flex-shrink-0 flex items-center justify-center font-oswald text-2xl font-bold shadow-md shadow-rose-600/30">
+                                01
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="bg-rose-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">APEX / 頂点</span>
+                                    <span class="text-zinc-500 text-xs font-bold">国内最高峰 耐久シリーズ</span>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mt-1">スーパー耐久シリーズ（S耐）</h3>
+                            </div>
+                        </div>
+                        <a href="Stai.html" class="whitespace-nowrap px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm rounded-xl transition shadow-md shadow-rose-600/20 inline-flex items-center gap-2">
+                            スーパー耐久特設ページへ <i class="fas fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-6 pt-6 border-t border-rose-200/60 grid md:grid-cols-12 gap-6 items-center">
+                        <div class="md:col-span-4 overflow-hidden rounded-2xl shadow-sm aspect-video sm:aspect-auto">
+                            <img src="./images/car-ST5R.jpg" alt="スーパー耐久 ロードスター" class="w-full h-40 md:h-36 object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:col-span-8 grid sm:grid-cols-3 gap-4 text-xs md:text-sm text-zinc-700">
+                            <div class="bg-white/70 backdrop-blur p-4 rounded-xl border border-rose-100">
+                                <strong class="text-zinc-900 block mb-1 font-bold"><i class="fas fa-flag-checkered text-rose-600 mr-1.5"></i> 位置づけ</strong>
+                                チームの最前線・フラッグシップ目標。プロドライバーとしのぎを削る究極の舞台。
+                            </div>
+                            <div class="bg-white/70 backdrop-blur p-4 rounded-xl border border-rose-100">
+                                <strong class="text-zinc-900 block mb-1 font-bold"><i class="fas fa-car text-rose-600 mr-1.5"></i> 参戦車両</strong>
+                                MAZDA ロードスター (ST-5クラス)。徹底したレーシングビルド。
+                            </div>
+                            <div class="bg-white/70 backdrop-blur p-4 rounded-xl border border-rose-100">
+                                <strong class="text-zinc-900 block mb-1 font-bold"><i class="fas fa-trophy text-rose-600 mr-1.5"></i> レース形式</strong>
+                                富士24時間を含む過酷な長距離耐久レース。総合力とチーム力が問われます。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MIDDLE: パーティレース（2段目） -->
+                <div class="bg-white border-2 border-zinc-300 hover:border-zinc-500 rounded-3xl p-6 md:p-8 relative shadow-md card-hover">
+                    <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                        <div class="flex items-start sm:items-center gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-zinc-800 text-white flex-shrink-0 flex items-center justify-center font-oswald text-2xl font-bold">
+                                02
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="bg-zinc-800 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">MIDDLE / スキル養成</span>
+                                    <span class="text-zinc-500 text-xs font-bold">JAF公認 ワンメイクスプリント</span>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mt-1">ロードスター・パーティレース (Party Race)</h3>
+                            </div>
+                        </div>
+                        <a href="RPR.html" class="whitespace-nowrap px-6 py-3 bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-sm rounded-xl transition inline-flex items-center gap-2">
+                            パーティレース詳細へ <i class="fas fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-6 pt-6 border-t border-gray-100 grid md:grid-cols-12 gap-6 items-center">
+                        <div class="md:col-span-4 overflow-hidden rounded-2xl shadow-sm aspect-video sm:aspect-auto">
+                            <img src="./images/car-roadstar.jpg" alt="ロードスター パーティレース" class="w-full h-40 md:h-36 object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:col-span-8 grid sm:grid-cols-3 gap-4 text-xs md:text-sm text-zinc-600">
+                            <div class="bg-zinc-50 p-4 rounded-xl border border-gray-100">
+                                <strong class="text-zinc-900 block mb-1 font-bold"><i class="fas fa-tachometer-alt text-zinc-800 mr-1.5"></i> 位置づけ</strong>
+                                純粋なウデと駆け引きを鍛える本格スプリント。ごまかしの利かない真剣勝負。
+                            </div>
+                            <div class="bg-zinc-50 p-4 rounded-xl border border-gray-100">
+                                <strong class="text-zinc-900 block mb-1 font-bold"><i class="fas fa-car text-zinc-800 mr-1.5"></i> 参戦車両</strong>
+                                NDロードスター NR-A（ナンバー付き車両）。規定に基づくイコール条件。
+                            </div>
+                            <div class="bg-zinc-50 p-4 rounded-xl border border-gray-100">
+                                <strong class="text-zinc-900 block mb-1 font-bold"><i class="fas fa-balance-scale text-zinc-800 mr-1.5"></i> レース形式</strong>
+                                予選の一発タイムアタックから決勝の接近戦まで、スプリントの極意を学びます。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BASE: マツ耐（1段目・基盤） -->
+                <div class="bg-white border border-gray-200 hover:border-zinc-400 rounded-3xl p-6 md:p-8 relative shadow-sm card-hover">
+                    <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                        <div class="flex items-start sm:items-center gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-zinc-200 text-zinc-800 flex-shrink-0 flex items-center justify-center font-oswald text-2xl font-bold">
+                                03
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="bg-zinc-200 text-zinc-700 text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">BASE / レース入門</span>
+                                    <span class="text-zinc-500 text-xs font-bold">参加型耐久レース</span>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mt-1">マツ耐（マツダファン・エンデュランス）</h3>
+                            </div>
+                        </div>
+                        <a href="mazda-fan.html" class="whitespace-nowrap px-6 py-3 bg-gray-100 hover:bg-gray-200 text-zinc-900 font-bold text-sm rounded-xl transition inline-flex items-center gap-2">
+                            マツ耐詳細へ <i class="fas fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-6 pt-6 border-t border-gray-100 grid md:grid-cols-12 gap-6 items-center">
+                        <div class="md:col-span-4 overflow-hidden rounded-2xl shadow-sm aspect-video sm:aspect-auto">
+                            <img src="./images/MX-5.jpg" alt="マツダファン エンデュランス" class="w-full h-40 md:h-36 object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:col-span-8 grid sm:grid-cols-3 gap-4 text-xs md:text-sm text-zinc-600">
+                            <div class="bg-zinc-50 p-4 rounded-xl border border-gray-100">
+                                <strong class="text-zinc-900 block mb-1 font-bold"><i class="fas fa-users text-zinc-700 mr-1.5"></i> 位置づけ</strong>
+                                サーキット初心者や仲間とチームを組んで挑める、最高のエントリーステージ。
+                            </div>
+                            <div class="bg-zinc-50 p-4 rounded-xl border border-gray-100">
+                                <strong class="text-zinc-900 block mb-1 font-bold"><i class="fas fa-car text-zinc-700 mr-1.5"></i> 参戦車両</strong>
+                                ロードスター、デミオなどマツダ車全般。街乗り車でも参戦可能。
+                            </div>
+                            <div class="bg-zinc-50 p-4 rounded-xl border border-gray-100">
+                                <strong class="text-zinc-900 block mb-1 font-bold"><i class="fas fa-gas-pump text-zinc-700 mr-1.5"></i> レース形式</strong>
+                                2時間半の耐久レース。燃費計算、ピットイン、チーム連携の楽しさを体感。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ステップアップの流れの説明 -->
+            <div class="max-w-5xl mx-auto bg-white p-8 md:p-10 rounded-3xl border border-gray-200 shadow-sm">
+                <h4 class="text-xl font-bold text-zinc-900 mb-6 flex items-center font-oswald uppercase">
+                    <i class="fas fa-route text-rose-600 mr-2.5"></i> Roadmap Step-Up Story / 育成の流れ
+                </h4>
+                <div class="grid md:grid-cols-3 gap-8 text-sm text-zinc-600">
+                    <div class="p-5 rounded-2xl bg-zinc-50 border border-gray-100">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xs font-bold text-white bg-rose-600 px-2 py-0.5 rounded font-oswald">STEP 01</span>
+                            <span class="font-bold text-zinc-900">サーキット体験 ＆ マツ耐デビュー</span>
+                        </div>
+                        <p class="text-xs leading-relaxed text-zinc-600">
+                            まずは走行会やマツ耐に仲間と一緒にエントリー。サーキットの安全な走り方、混走時のマナー、ピットインの手順を楽しく体験します。
+                        </p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-zinc-50 border border-gray-100">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xs font-bold text-white bg-zinc-800 px-2 py-0.5 rounded font-oswald">STEP 02</span>
+                            <span class="font-bold text-zinc-900">パーティレースで腕を磨く</span>
+                        </div>
+                        <p class="text-xs leading-relaxed text-zinc-600">
+                            JAF公認の厳格なワンメイクスプリントへ挑戦。イコールコンディションのマシンで、予選のアタックラップやバトル中の駆け引きを徹底習得します。
+                        </p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-zinc-50 border border-gray-100">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xs font-bold text-white bg-rose-600 px-2 py-0.5 rounded font-oswald">STEP 03</span>
+                            <span class="font-bold text-zinc-900">憧れのスーパー耐久（S耐）へ</span>
+                        </div>
+                        <p class="text-xs leading-relaxed text-zinc-600">
+                            チームの精鋭ドライバーとしてS耐のシートへ。国内最高峰のスピード域、24時間などの長距離戦、プロと競い合うプレッシャーにチーム一丸で挑みます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 【シミュレーター・コミュニティ セクション】 -->
+    <section id="simulator-section" class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 bg-rose-50 text-rose-600 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4 shadow-sm">
+                    <i class="fas fa-gamepad"></i> SIMULATOR COMMUNITY & e-MOTORSPORTS
+                </div>
+                <h2 class="text-3xl md:text-5xl font-bold text-zinc-900 mb-4 font-oswald uppercase leading-tight">
+                    練習台じゃない。<br><span class="text-rose-600">仲間と集い、ワイワイ切磋琢磨するステージ</span>
+                </h2>
+                <div class="w-16 h-1 bg-rose-600 mx-auto mb-6"></div>
+                <p class="text-zinc-600 text-base md:text-lg leading-relaxed">
+                    「もっと速くなりたい」「綺麗なラインで走りたい」――<br class="hidden md:inline">
+                    NIWA RACINGのシミュレーターは、大勢の仲間が集まり、笑い合いながらお互いを高め合う熱狂のコミュニティです。
+                </p>
+            </div>
+
+            <!-- 集合写真＆シミュレーターのビジュアル紹介 -->
+            <div class="max-w-5xl mx-auto mb-16 grid md:grid-cols-2 gap-6 items-center">
+                <div class="rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="./images/sim.jpg" alt="本格レーシングシミュレーター" class="w-full h-64 md:h-72 object-cover hover:scale-105 transition duration-500">
+                    <div class="p-4 bg-zinc-900 text-white text-xs flex justify-between items-center">
+                        <span><i class="fas fa-desktop text-rose-500 mr-2"></i> プロ仕様リグ & 高精度フィードバック</span>
+                        <span class="text-zinc-400 font-oswald">NIWA RACING SIM LAB</span>
+                    </div>
+                </div>
+                <div class="rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="./images/shugo2.jpg" alt="NIWA RACING メンバー集合" class="w-full h-64 md:h-72 object-cover hover:scale-105 transition duration-500">
+                    <div class="p-4 bg-zinc-900 text-white text-xs flex justify-between items-center">
+                        <span><i class="fas fa-users text-rose-500 mr-2"></i> 大勢の仲間が集まり笑顔が溢れるチーム</span>
+                        <span class="text-zinc-400 font-oswald">COMMUNITY FIRST</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3つの特徴カード -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- 特徴1：大勢の仲間が集まるワイワイ感 -->
+                <div class="bg-zinc-50 p-8 rounded-3xl border border-gray-100 card-hover">
+                    <div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-zinc-900 mb-3">大勢の仲間が集うコミュニティ</h3>
+                    <p class="text-zinc-600 text-sm leading-relaxed">
+                        NIWA RACINGにはシミュレーターを楽しむメンバーが多数在籍！週末にはボイスチャットを繋いでワイワイ笑い合いながら走るなど、年齢や実車経験の有無を超えてモータースポーツ好きが集まれる温かいカルチャーがあります。
+                    </p>
+                </div>
+
+                <!-- 特徴2：上達のための切磋琢磨 -->
+                <div class="bg-zinc-50 p-8 rounded-3xl border border-gray-100 card-hover">
+                    <div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-zinc-900 mb-3">タイムや走りを教え合い成長</h3>
+                    <p class="text-zinc-600 text-sm leading-relaxed">
+                        世界一を目指すような過度にストイックなものではなく、「純粋に上手くなりたい」という想いを共有。お互いの走行ラインやテレメトリを見比べ、「ここでもう少しブレーキ残せるよ」とアドバイスし合い、全員でタイムアップを喜び合います。
+                    </p>
+                </div>
+
+                <!-- 特徴3：2大プラットフォーム活用 -->
+                <div class="bg-zinc-50 p-8 rounded-3xl border border-gray-100 card-hover">
+                    <div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-zinc-900 mb-3">iRacing & グランツーリスモ</h3>
+                    <p class="text-zinc-600 text-sm leading-relaxed">
+                        レーザー計測された超精密な物理挙動を誇る「iRacing」での緻密な走り込みから、誰でも親しみやすく白熱バトルを楽しめる「グランツーリスモ」まで。メンバーそれぞれの環境やスタイルに合わせて自由に参戦できます。
+                    </p>
+                </div>
+            </div>
+
+            <!-- シミュレーターと実車の相乗効果（Virtual ✕ Real Synergy） -->
+            <div class="bg-gradient-to-r from-zinc-900 via-zinc-900 to-zinc-950 text-white p-8 md:p-12 rounded-3xl border border-zinc-800 shadow-xl">
+                <div class="grid lg:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <span class="text-rose-500 font-oswald text-xs uppercase tracking-widest font-bold block mb-2">VIRTUAL TO REAL SYNERGY</span>
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4 font-oswald uppercase">シミュレーターでの成長が、実車ピラミッドを支える</h3>
+                        <p class="text-zinc-300 text-sm md:text-base leading-relaxed mb-6">
+                            クラッシュの金銭的・身体的リスクがゼロのシミュレーターだからこそ、限界を超えたタイヤの滑りや急激な荷重移動を何度でもトライできます。仲間とシミュレーターで深めたドライビング理論は、そのまま「マツ耐」や「パーティレース」、そして「S耐」のシートでの自信とスピードに直結します。
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="simulator.html" class="px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm rounded-xl transition shadow-lg shadow-rose-600/30 inline-flex items-center gap-2">
+                                シミュレーターレッスンを見る <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                            <a href="coaching.html" class="px-6 py-3 bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-sm rounded-xl transition border border-zinc-700 inline-flex items-center gap-2">
+                                コーチング案内を見る <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-zinc-800/80 p-5 rounded-2xl border border-zinc-700/50">
+                            <div class="text-rose-500 text-xl md:text-2xl font-bold font-oswald mb-1">UNLIMITED</div>
+                            <h5 class="text-white font-bold text-sm mb-1">反復走行の圧倒的密度</h5>
+                            <p class="text-zinc-400 text-xs">サーキット走行数十回分に匹敵するコーナーの走り込みを手軽に実現。</p>
+                        </div>
+                        <div class="bg-zinc-800/80 p-5 rounded-2xl border border-zinc-700/50">
+                            <div class="text-rose-500 text-xl md:text-2xl font-bold font-oswald mb-1">SAFE & BOLD</div>
+                            <h5 class="text-white font-bold text-sm mb-1">限界域の安全な探求</h5>
+                            <p class="text-zinc-400 text-xs">スピンやオーバーテイクの感覚をノーリスクで身体に染み込ませる。</p>
+                        </div>
+                        <div class="bg-zinc-800/80 p-5 rounded-2xl border border-zinc-700/50">
+                            <div class="text-rose-500 text-xl md:text-2xl font-bold font-oswald mb-1">DATA LOG</div>
+                            <h5 class="text-white font-bold text-sm mb-1">データ比較・アドバイス</h5>
+                            <p class="text-zinc-400 text-xs">仲間同士で走行ラインやブレーキングポイントを可視化して共有。</p>
+                        </div>
+                        <div class="bg-zinc-800/80 p-5 rounded-2xl border border-zinc-700/50">
+                            <div class="text-rose-500 text-xl md:text-2xl font-bold font-oswald mb-1">FUN COMMUNITY</div>
+                            <h5 class="text-white font-bold text-sm mb-1">楽しさを分かち合う仲間</h5>
+                            <p class="text-zinc-400 text-xs">1人で悩まず、仲間と共にタイムアップの喜びを分かち合える。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- お問い合わせ・参加CTA -->
+    <section class="py-20 px-4 bg-zinc-50 border-t border-gray-200">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-6 font-oswald uppercase">
+                あなたもNIWA RACINGの仲間になりませんか？
+            </h2>
+            <p class="text-zinc-600 mb-8 leading-relaxed text-sm md:text-base">
+                シミュレーターでワイワイ走りたい方も、マツ耐からレースを始めてみたい方も大歓迎です。<br class="hidden sm:inline">
+                まずはお気軽にお問い合わせ、またはガレージへ遊びに来てください！
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact" class="px-8 py-4 bg-rose-600 text-white font-bold rounded-xl hover:bg-rose-700 transition shadow-lg shadow-rose-600/30 text-center">
+                    お問い合わせ・見学予約
+                </a>
+                <a href="categories.html" class="px-8 py-4 bg-white text-zinc-900 font-bold rounded-xl border border-gray-200 hover:bg-gray-100 transition text-center">
+                    参戦カテゴリー一覧を見る
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer id="contact" class="bg-white py-24 px-4 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div>
+                <div class="mb-6">
+                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-12 w-auto object-contain">
+                </div>
+                <p class="text-zinc-600 text-sm leading-relaxed mb-6 font-medium">
+                    〒386-0016<br>
+                    長野県上田市国分1530-1<br>
+                    携帯: 080-1172-4441<br>
+                    TEL＆FAX: 0268-84-2674<br>
+                    E-mail: niwaracing@gmail.com
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://x.com/niwaracing" target="_blank" class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-600 hover:bg-rose-600 hover:text-white transition"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/niwaracing" target="_blank" class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-600 hover:bg-rose-600 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/eiji.niwa.5/" target="_blank" class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-600 hover:bg-rose-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="md:col-span-3">
+                <div class="footer-map h-72 w-full">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3209.689728512214!2d138.2678601!3d36.3888365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601dbd5dfd178e35%3A0xe6dd7849b2ba271!2z5Li56YeO55yM5LiK55Sw5biC5Zu95YiG77yR77yV77yT77yQ4oiS77yR!5e0!3m2!1sja!2sjp!4v1710000000000!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-gray-100 text-center text-zinc-400 text-xs">
+            <p>&copy; 2025 NIWA RACING TEAM. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
