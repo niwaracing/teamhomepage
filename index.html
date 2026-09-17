@@ -19,7 +19,7 @@
             font-family: 'Oswald', sans-serif;
         }
         .hero-gradient {
-            background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,1)), url('./images/car-main.jpg');
+            background: linear-gradient(to bottom, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 65%, rgba(255,255,255,0.85) 96%, rgba(255,255,255,1) 100%), url('./images/car-main.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -117,23 +117,32 @@
     </script>
 
 
-    <!-- ヒーローセクション -->
-    <header class="relative h-[90vh] flex items-center justify-center hero-gradient pt-20">
-        <div class="text-center px-4">
-            <div class="inline-block bg-rose-50 px-4 py-1 rounded-full mb-4">
-                <h2 class="text-rose-600 font-oswald text-sm tracking-[0.3em] uppercase font-bold">Virtual to Real</h2>
+    <!-- ヒーローセクション（マシンを最大限に魅せるミニマル構成） -->
+    <header class="relative h-[92vh] flex flex-col justify-end hero-gradient pb-10 px-4 sm:px-8 overflow-hidden pt-20">
+        <div class="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 relative z-10 pb-4">
+            <!-- 左下：控えめで力強いブランドシグネチャー -->
+            <div>
+                <span class="text-rose-600 font-oswald text-xs sm:text-sm uppercase tracking-[0.35em] font-bold block mb-1">
+                    NIWA RACING TEAM
+                </span>
+                <h1 class="text-3xl sm:text-5xl font-oswald font-bold text-zinc-900 tracking-tight uppercase">
+                    Virtual to Real
+                </h1>
             </div>
-            <h1 class="text-5xl md:text-8xl font-oswald font-bold mb-6 tracking-tighter uppercase leading-tight text-zinc-900">
-                シミュレーターから<br class="md:hidden"><span class="text-rose-600">リアルレースへ</span>
-            </h1>
-            <p class="text-lg md:text-xl max-w-2xl mx-auto text-zinc-600 mb-10 leading-relaxed font-medium">
-                iRacingで磨いた技術を武器に、多彩なリアルカテゴリーへ参戦。<br class="hidden md:block">
-                NIWA RACINGは、ヴァーチャルとリアルの境界線を突き抜けます。
-            </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#categories" class="border-2 border-zinc-900 text-zinc-900 px-10 py-4 hover:bg-zinc-900 hover:text-white transition font-bold rounded-lg">ACTIVITY</a>
-                <a href="#contact" class="bg-rose-600 text-white px-10 py-4 hover:bg-rose-700 shadow-xl shadow-rose-600/30 transition font-bold rounded-lg">CONTACT</a>
+
+            <!-- 右下：控えめで上品な導線 -->
+            <div class="flex items-center gap-3">
+                <a href="#contact" class="px-5 py-2.5 bg-white/85 hover:bg-rose-600 hover:text-white backdrop-blur-md text-zinc-800 text-xs font-bold rounded-full border border-gray-200/80 shadow-md transition duration-300 inline-flex items-center gap-2 group">
+                    <i class="fas fa-envelope text-rose-600 group-hover:text-white transition"></i>
+                    <span>お問い合わせ・見学</span>
+                </a>
             </div>
+        </div>
+
+        <!-- 最下部中央：スクロールインジケーター -->
+        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none">
+            <span class="text-[10px] font-oswald uppercase tracking-[0.3em] text-zinc-400 font-bold mb-0.5">SCROLL</span>
+            <i class="fas fa-chevron-down text-[10px] text-zinc-400 animate-bounce"></i>
         </div>
     </header>
 
