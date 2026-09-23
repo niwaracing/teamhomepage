@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Taikyu Series - NIWA RACING</title>
+    <title>スーパー耐久シリーズ特設 | NIWA RACING（S耐参戦情報）</title>
+    <meta name="description" content="NIWA RACINGのスーパー耐久シリーズ（S耐）特設ページ。ST-5Rクラス参戦体制、チームストーリー、参戦車両、ドライバー紹介、公式レースレポート（PDF）アーカイブ、スポンサー様募集情報。">
+    <link rel="icon" href="./images/teamrogo.jpg" type="image/jpeg">
+
+    <!-- OGP / Twitter Card -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="NIWA RACING">
+    <meta property="og:title" content="スーパー耐久シリーズ特設 | NIWA RACING">
+    <meta property="og:description" content="NIWA RACING スーパー耐久シリーズ参戦。チームストーリー・ドライバー・公式レースレポート。">
+    <meta property="og:image" content="https://niwaracing.github.io/teamhomepage/images/288_1.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="スーパー耐久シリーズ特設 | NIWA RACING">
+    <meta name="twitter:description" content="NIWA RACING スーパー耐久シリーズ参戦。チームストーリー・ドライバー・公式レースレポート。">
+    <meta name="twitter:image" content="https://niwaracing.github.io/teamhomepage/images/288_1.jpg">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -59,7 +73,7 @@
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased pb-20 lg:pb-0">
 
     <!-- ナビゲーション -->
     <nav class="fixed w-full z-50 bg-white border-b border-gray-100 shadow-sm">
@@ -604,5 +618,24 @@
             });
         })();
     </script>
+
+    <!-- モバイル用固定アクションバー（スマホ・タブレット専用） -->
+    <aside class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-gray-200 px-3 py-2 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] pb-[max(0.5rem,env(safe-area-inset-bottom))]">
+        <div class="max-w-md mx-auto grid grid-cols-3 gap-2">
+            <a href="tel:08011724441" class="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-zinc-100 hover:bg-zinc-200 text-zinc-800 transition active:scale-95 text-center">
+                <i class="fas fa-phone-alt text-base text-zinc-700 mb-0.5"></i>
+                <span class="text-[10px] font-bold tracking-tight">電話相談</span>
+            </a>
+            <a href="#sponsor-cta" class="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-rose-600 hover:bg-rose-700 text-white shadow-sm transition active:scale-95 text-center">
+                <i class="fas fa-handshake text-base mb-0.5"></i>
+                <span class="text-[10px] font-bold tracking-tight">スポンサー募集</span>
+            </a>
+            <a href="#contact" class="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-zinc-100 hover:bg-zinc-200 text-zinc-800 transition active:scale-95 text-center">
+                <i class="fas fa-envelope text-base text-rose-600 mb-0.5"></i>
+                <span class="text-[10px] font-bold tracking-tight">お問い合わせ</span>
+            </a>
+        </div>
+    </aside>
+
 </body>
 </html>

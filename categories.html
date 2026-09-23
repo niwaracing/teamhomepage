@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>参戦カテゴリー - NIWA RACING</title>
+    <title>参戦カテゴリー一覧 | NIWA RACING（スーパー耐久・パーティレース等）</title>
+    <meta name="description" content="NIWA RACINGの参戦レースカテゴリー一覧。スーパー耐久シリーズ（S耐）、ROADSTER Party Race、マツダファンエンデュランス（マツ耐）、富士チャンピオンレース、N-ONE OWNER'S CUP、iRacingなど多岐にわたる活動を紹介。">
+    <link rel="icon" href="./images/teamrogo.jpg" type="image/jpeg">
+
+    <!-- OGP / Twitter Card -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="NIWA RACING">
+    <meta property="og:title" content="参戦カテゴリー一覧 | NIWA RACING">
+    <meta property="og:description" content="スーパー耐久、ロードスターパーティレース、マツ耐、富士チャンピオンレース等、参戦カテゴリー一覧。">
+    <meta property="og:image" content="https://niwaracing.github.io/teamhomepage/images/car-main.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="参戦カテゴリー一覧 | NIWA RACING">
+    <meta name="twitter:description" content="スーパー耐久、ロードスターパーティレース、マツ耐、富士チャンピオンレース等、参戦カテゴリー一覧。">
+    <meta name="twitter:image" content="https://niwaracing.github.io/teamhomepage/images/car-main.jpg">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -56,7 +70,7 @@
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased pb-20 lg:pb-0">
 
     <!-- ナビゲーション -->
     <nav class="fixed w-full z-50 bg-white border-b border-gray-100 shadow-sm">
@@ -425,6 +439,24 @@
             </div>
         </div>
     </footer>
+
+    <!-- モバイル用固定アクションバー（スマホ・タブレット専用） -->
+    <aside class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-gray-200 px-3 py-2 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] pb-[max(0.5rem,env(safe-area-inset-bottom))]">
+        <div class="max-w-md mx-auto grid grid-cols-3 gap-2">
+            <a href="tel:08011724441" class="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-zinc-100 hover:bg-zinc-200 text-zinc-800 transition active:scale-95 text-center">
+                <i class="fas fa-phone-alt text-base text-zinc-700 mb-0.5"></i>
+                <span class="text-[10px] font-bold tracking-tight">電話相談</span>
+            </a>
+            <a href="rental.html" class="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-rose-600 hover:bg-rose-700 text-white shadow-sm transition active:scale-95 text-center">
+                <i class="fas fa-flag-checkered text-base mb-0.5"></i>
+                <span class="text-[10px] font-bold tracking-tight">マシンレンタル</span>
+            </a>
+            <a href="#contact" class="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-zinc-100 hover:bg-zinc-200 text-zinc-800 transition active:scale-95 text-center">
+                <i class="fas fa-envelope text-base text-rose-600 mb-0.5"></i>
+                <span class="text-[10px] font-bold tracking-tight">お問い合わせ</span>
+            </a>
+        </div>
+    </aside>
 
 </body>
 </html>

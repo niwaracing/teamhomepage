@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIWA RACING | Virtual to Real</title>
+    <title>NIWA RACING | レーシングカーレンタル・シミュレーター・自動車販売（長野県上田市）</title>
+    <meta name="description" content="長野県上田市を拠点とするNIWA RACING。レーシングカーレンタル、本格シミュレーターレッスン（iRacing等）、データロガー解析によるコーチング、新車・中古車・競技車両販売、レース車両製作までトータルサポート。">
+    <link rel="icon" href="./images/teamrogo.jpg" type="image/jpeg">
+
+    <!-- OGP / Twitter Card -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NIWA RACING">
+    <meta property="og:title" content="NIWA RACING | Virtual to Real モータースポーツ総合サポート">
+    <meta property="og:description" content="長野県上田市のモータースポーツチーム。レーシングカーレンタル、シミュレーターレッスン、コーチング、車両販売・製作。">
+    <meta property="og:image" content="https://niwaracing.github.io/teamhomepage/images/car-main.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NIWA RACING | Virtual to Real モータースポーツ総合サポート">
+    <meta name="twitter:description" content="長野県上田市のモータースポーツチーム。レーシングカーレンタル、シミュレーターレッスン、コーチング、車両販売・製作。">
+    <meta name="twitter:image" content="https://niwaracing.github.io/teamhomepage/images/car-main.jpg">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -56,7 +70,7 @@
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased pb-20 lg:pb-0">
 
     <!-- ナビゲーション -->
     <nav class="fixed w-full z-50 bg-white border-b border-gray-100 shadow-sm">
@@ -130,9 +144,13 @@
                 </h1>
             </div>
 
-            <!-- 右下：控えめで上品な導線 -->
-            <div class="flex items-center gap-3">
-                <a href="#contact" class="px-5 py-2.5 bg-white/85 hover:bg-rose-600 hover:text-white backdrop-blur-md text-zinc-800 text-xs font-bold rounded-full border border-gray-200/80 shadow-md transition duration-300 inline-flex items-center gap-2 group">
+            <!-- 右下：導線ボタン -->
+            <div class="flex items-center gap-3 flex-wrap">
+                <a href="#services" class="px-5 py-2.5 bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold rounded-full shadow-md transition duration-300 inline-flex items-center gap-2 group">
+                    <i class="fas fa-th-large text-white/90"></i>
+                    <span>サービス一覧</span>
+                </a>
+                <a href="#contact" class="px-5 py-2.5 bg-white/90 hover:bg-zinc-900 hover:text-white backdrop-blur-md text-zinc-800 text-xs font-bold rounded-full border border-gray-200/80 shadow-md transition duration-300 inline-flex items-center gap-2 group">
                     <i class="fas fa-envelope text-rose-600 group-hover:text-white transition"></i>
                     <span>お問い合わせ・見学</span>
                 </a>
@@ -162,41 +180,166 @@
         </div>
     </section>
 
+    <!-- 提供サービスセクション（Our Services） -->
+    <section id="services" class="py-28 px-4 bg-zinc-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-bold accent-border pl-6 font-oswald uppercase text-zinc-900">Our Services</h2>
+                    <p class="mt-2 text-zinc-500 pl-6 text-sm sm:text-base">NIWA RACINGが提供するモータースポーツ＆カーライフサポート</p>
+                </div>
+                <div class="mt-4 md:mt-0 pl-6 md:pl-0">
+                    <span class="text-xs font-bold text-rose-600 bg-rose-50 border border-rose-200 px-3.5 py-1.5 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5">
+                        <i class="fas fa-check-circle text-rose-600"></i>
+                        Virtual & Real Total Support
+                    </span>
+                </div>
+            </div>
+
+            <!-- 5大サービスグリッド -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1. レーシングカーレンタル -->
+                <div class="bg-white rounded-2xl border border-gray-200/80 overflow-hidden card-hover transition duration-300 shadow-sm flex flex-col group">
+                    <div class="relative h-48 overflow-hidden bg-zinc-100">
+                        <img src="./images/mx5.jpg" alt="レーシングカーレンタル" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-3 left-3 bg-zinc-900/80 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                            <i class="fas fa-flag-checkered text-rose-500 mr-1.5"></i>レンタル
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-zinc-900 mb-2 group-hover:text-rose-600 transition">レーシングカーレンタル</h3>
+                        <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">
+                            GLOBAL MX-5 CUP、ロードスター（ND5RC）、N-ONEなど本格レース車両をレンタル。手ぶらでスポーツ走行やレース参戦が可能です。
+                        </p>
+                        <a href="rental.html" class="inline-flex items-center justify-between w-full px-5 py-3 rounded-xl bg-zinc-50 hover:bg-rose-600 text-zinc-800 hover:text-white font-bold text-sm transition group/btn border border-gray-200 hover:border-rose-600">
+                            <span>ラインナップ・料金を見る</span>
+                            <i class="fas fa-arrow-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. レーシングシミュレーターレッスン -->
+                <div class="bg-white rounded-2xl border border-gray-200/80 overflow-hidden card-hover transition duration-300 shadow-sm flex flex-col group">
+                    <div class="relative h-48 overflow-hidden bg-zinc-100">
+                        <img src="./images/sim.jpg" alt="レーシングシミュレーターレッスン" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-3 left-3 bg-zinc-900/80 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                            <i class="fas fa-gamepad text-rose-500 mr-1.5"></i>シミュレーター
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-zinc-900 mb-2 group-hover:text-rose-600 transition">シミュレーターレッスン</h3>
+                        <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">
+                            iRacingやアセットコルサを用いたプロ仕様シミュレーター。実車前の安全なコース習得や弱点克服、eSportsの特訓に対応します。
+                        </p>
+                        <a href="simulator.html" class="inline-flex items-center justify-between w-full px-5 py-3 rounded-xl bg-zinc-50 hover:bg-rose-600 text-zinc-800 hover:text-white font-bold text-sm transition group/btn border border-gray-200 hover:border-rose-600">
+                            <span>設備・レッスンの詳細を見る</span>
+                            <i class="fas fa-arrow-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. レーシングコーチング -->
+                <div class="bg-white rounded-2xl border border-gray-200/80 overflow-hidden card-hover transition duration-300 shadow-sm flex flex-col group">
+                    <div class="relative h-48 overflow-hidden bg-zinc-100">
+                        <img src="./images/coaching1.jpg" alt="レーシングコーチング" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-3 left-3 bg-zinc-900/80 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                            <i class="fas fa-chart-line text-rose-500 mr-1.5"></i>コーチング
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-zinc-900 mb-2 group-hover:text-rose-600 transition">レーシングコーチング</h3>
+                        <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">
+                            データロガー（MoTeC/AIM等）や車載カメラの分析を活用。現役S耐ドライバーが感覚論にとどまらない論理的指導でタイム短縮へ導きます。
+                        </p>
+                        <a href="coaching.html" class="inline-flex items-center justify-between w-full px-5 py-3 rounded-xl bg-zinc-50 hover:bg-rose-600 text-zinc-800 hover:text-white font-bold text-sm transition group/btn border border-gray-200 hover:border-rose-600">
+                            <span>指導メソッド・料金プランを見る</span>
+                            <i class="fas fa-arrow-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. 自動車販売・買取 -->
+                <div class="bg-white rounded-2xl border border-gray-200/80 overflow-hidden card-hover transition duration-300 shadow-sm flex flex-col group">
+                    <div class="relative h-48 overflow-hidden bg-zinc-100">
+                        <img src="./images/GR86cup.jpg" alt="自動車販売・買取" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-3 left-3 bg-zinc-900/80 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                            <i class="fas fa-car text-rose-500 mr-1.5"></i>販売・買取
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-zinc-900 mb-2 group-hover:text-rose-600 transition">自動車販売・買取</h3>
+                        <p class="text-zinc-500 text-sm leading-relaxed mb-6 flex-grow">
+                            GR86 N1競技車両やスポーツモデルから一般中古車・新車まで。モータースポーツ視点の確かな車両選定と高価査定・買取を実施。
+                        </p>
+                        <a href="sales.html" class="inline-flex items-center justify-between w-full px-5 py-3 rounded-xl bg-zinc-50 hover:bg-rose-600 text-zinc-800 hover:text-white font-bold text-sm transition group/btn border border-gray-200 hover:border-rose-600">
+                            <span>在庫車両一覧・査定を見る</span>
+                            <i class="fas fa-arrow-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. メンテナンス・車両製作 -->
+                <div class="bg-white rounded-2xl border border-gray-200/80 overflow-hidden card-hover transition duration-300 shadow-sm flex flex-col group md:col-span-2 lg:col-span-2">
+                    <div class="grid md:grid-cols-2 h-full">
+                        <div class="relative h-48 md:h-full min-h-[190px] overflow-hidden bg-zinc-100">
+                            <img src="./images/car-main.jpg" alt="メンテナンス・車両製作" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute top-3 left-3 bg-zinc-900/80 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                                <i class="fas fa-wrench text-rose-500 mr-1.5"></i>メンテナンス
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-zinc-900 mb-2 group-hover:text-rose-600 transition">メンテナンス・車両製作</h3>
+                                <p class="text-zinc-500 text-sm leading-relaxed mb-6">
+                                    日常の油脂類交換や車検・点検から、ロールケージ施工・レギュレーション適合のレーシングカー製作、足回りセッティングまで一貫サポート。
+                                </p>
+                            </div>
+                            <a href="maintenance.html" class="inline-flex items-center justify-between w-full px-5 py-3 rounded-xl bg-zinc-50 hover:bg-rose-600 text-zinc-800 hover:text-white font-bold text-sm transition group/btn border border-gray-200 hover:border-rose-600">
+                                <span>サービスメニューを見る</span>
+                                <i class="fas fa-arrow-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- チーム・参戦カテゴリー -->
-    <section id="categories" class="py-32 px-4 bg-zinc-50">
+    <section id="categories" class="py-32 px-4 bg-white border-t border-gray-100">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-bold mb-16 accent-border pl-6 font-oswald uppercase text-zinc-900">Racing Categories</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover transition duration-300 group shadow-sm">
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-gray-200/80 card-hover transition duration-300 group shadow-sm">
                     <div class="text-rose-600 text-3xl mb-4 group-hover:scale-110 transition duration-300">
                         <i class="fas fa-desktop"></i>
                     </div>
                     <h4 class="text-xl font-bold mb-2 uppercase font-oswald text-zinc-900">iRacing</h4>
                     <p class="text-zinc-500 text-sm leading-relaxed">世界最高峰のシミュレーターにて日々トレーニングを行い、車両セットアップの理論とスキルを磨きます。</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover transition duration-300 group shadow-sm">
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-gray-200/80 card-hover transition duration-300 group shadow-sm">
                     <div class="text-rose-600 text-3xl mb-4 group-hover:scale-110 transition duration-300">
                         <i class="fas fa-stopwatch"></i>
                     </div>
                     <h4 class="text-xl font-bold mb-2 text-zinc-900">スーパー耐久シリーズ</h4>
                     <p class="text-zinc-500 text-sm leading-relaxed">国内最大級の耐久レース。チームワークと戦略が試される過酷なフィールドで戦います。</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover transition duration-300 group shadow-sm">
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-gray-200/80 card-hover transition duration-300 group shadow-sm">
                     <div class="text-rose-600 text-3xl mb-4 group-hover:scale-110 transition duration-300">
                         <i class="fas fa-car"></i>
                     </div>
                     <h4 class="text-xl font-bold mb-2 uppercase font-oswald text-zinc-900">ROADSTER Party Race</h4>
                     <p class="text-zinc-500 text-sm leading-relaxed">JAF公認のワンメイクレース。ドライバーの純粋な技量が試される接戦を繰り広げます。</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover transition duration-300 group shadow-sm">
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-gray-200/80 card-hover transition duration-300 group shadow-sm">
                     <div class="text-rose-600 text-3xl mb-4 group-hover:scale-110 transition duration-300">
                         <i class="fas fa-trophy"></i>
                     </div>
                     <h4 class="text-xl font-bold mb-2 text-zinc-900">富士チャンピオンレース</h4>
                     <p class="text-zinc-500 text-sm leading-relaxed">富士スピードウェイを舞台にした伝統のシリーズ。ハイスピードな戦いに挑みます。</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover transition duration-300 group shadow-sm">
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-gray-200/80 card-hover transition duration-300 group shadow-sm">
                     <div class="text-rose-600 text-3xl mb-4 group-hover:scale-110 transition duration-300">
                         <i class="fas fa-gauge-high"></i>
                     </div>
@@ -517,6 +660,24 @@
             </div>
         </div>
     </footer>
+
+    <!-- モバイル用固定アクションバー（スマホ・タブレット専用） -->
+    <aside class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-gray-200 px-3 py-2 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] pb-[max(0.5rem,env(safe-area-inset-bottom))]">
+        <div class="max-w-md mx-auto grid grid-cols-3 gap-2">
+            <a href="tel:08011724441" class="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-zinc-100 hover:bg-zinc-200 text-zinc-800 transition active:scale-95 text-center">
+                <i class="fas fa-phone-alt text-base text-zinc-700 mb-0.5"></i>
+                <span class="text-[10px] font-bold tracking-tight">電話相談</span>
+            </a>
+            <a href="#contact" class="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-rose-600 hover:bg-rose-700 text-white shadow-sm transition active:scale-95 text-center">
+                <i class="fas fa-envelope text-base mb-0.5"></i>
+                <span class="text-[10px] font-bold tracking-tight">お問い合わせ</span>
+            </a>
+            <a href="#contact" class="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-zinc-100 hover:bg-zinc-200 text-zinc-800 transition active:scale-95 text-center">
+                <i class="fas fa-map-marker-alt text-base text-rose-600 mb-0.5"></i>
+                <span class="text-[10px] font-bold tracking-tight">アクセス</span>
+            </a>
+        </div>
+    </aside>
 
 </body>
 </html>
