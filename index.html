@@ -16,7 +16,45 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="NIWA RACING | Virtual to Real モータースポーツ総合サポート">
     <meta name="twitter:description" content="長野県上田市のモータースポーツチーム。レーシングカーレンタル、シミュレーターレッスン、コーチング、車両販売・製作。">
-    <meta name="twitter:image" content="https://niwaracing.github.io/teamhomepage/images/car-main.jpg">
+    <!-- 構造化データ (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "NIWA RACING",
+      "alternateName": "丹羽レーシング",
+      "image": "https://niwaracing.github.io/teamhomepage/images/teamrogo.jpg",
+      "url": "https://niwaracing.github.io/teamhomepage/",
+      "telephone": "+81-80-1172-4441",
+      "faxNumber": "+81-268-84-2674",
+      "email": "niwaracing@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "国分1530-1",
+        "addressLocality": "上田市",
+        "addressRegion": "長野県",
+        "postalCode": "386-0016",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.3881,
+        "longitude": 138.2721
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "丹羽 英司",
+        "alternateName": "Eiji Niwa"
+      },
+      "sameAs": [
+        "https://x.com/niwaracing",
+        "https://www.instagram.com/niwaracing",
+        "https://www.facebook.com/eiji.niwa.5/"
+      ],
+      "priceRange": "¥¥",
+      "description": "長野県上田市を拠点とするモータースポーツチーム。レーシングカーレンタル、本格シミュレーターレッスン、レーシングコーチング、新車・中古車・競技車両販売、車両製作・メンテナンスまで幅広くサポート。"
+    }
+    </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -78,7 +116,7 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center">
                     <a href="#">
-                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain">
+                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain" decoding="async">
                     </a>
                 </div>
                 <!-- PC用メニュー -->
@@ -168,7 +206,7 @@
     <section id="concept" class="py-16 sm:py-20 px-4 bg-white">
         <div class="max-w-4xl mx-auto text-center">
             <div class="mb-6 flex justify-center">
-                <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 opacity-50 grayscale hover:grayscale-0 transition duration-500">
+                <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 opacity-50 grayscale hover:grayscale-0 transition duration-500" loading="lazy" decoding="async">
             </div>
             <h2 class="text-rose-600 font-oswald text-sm tracking-widest mb-3 uppercase font-bold">Our Concept</h2>
             <h3 class="text-2xl md:text-3xl font-bold mb-6 text-zinc-900">ヴァーチャルからリアルへ</h3>
@@ -201,7 +239,7 @@
                 <!-- 1. レーシングカーレンタル -->
                 <div class="bg-white rounded-2xl border border-gray-200/80 overflow-hidden card-hover transition duration-300 shadow-sm flex flex-col group">
                     <div class="relative aspect-[4/3] w-full overflow-hidden bg-zinc-100">
-                        <img src="./images/mx5.jpg" alt="レーシングカーレンタル" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+                        <img src="./images/mx5.jpg" alt="レーシングカーレンタル" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                         <div class="absolute top-3 left-3 bg-zinc-900/80 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">
                             <i class="fas fa-flag-checkered text-rose-500 mr-1.5"></i>レンタル
                         </div>
@@ -221,7 +259,7 @@
                 <!-- 2. レーシングシミュレーターレッスン -->
                 <div class="bg-white rounded-2xl border border-gray-200/80 overflow-hidden card-hover transition duration-300 shadow-sm flex flex-col group">
                     <div class="relative aspect-[4/3] w-full overflow-hidden bg-zinc-100">
-                        <img src="./images/sim.jpg" alt="レーシングシミュレーターレッスン" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+                        <img src="./images/sim.jpg" alt="レーシングシミュレーターレッスン" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                         <div class="absolute top-3 left-3 bg-zinc-900/80 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">
                             <i class="fas fa-gamepad text-rose-500 mr-1.5"></i>シミュレーター
                         </div>
@@ -241,7 +279,7 @@
                 <!-- 3. レーシングコーチング -->
                 <div class="bg-white rounded-2xl border border-gray-200/80 overflow-hidden card-hover transition duration-300 shadow-sm flex flex-col group">
                     <div class="relative aspect-[4/3] w-full overflow-hidden bg-zinc-100">
-                        <img src="./images/coaching1.jpg" alt="レーシングコーチング" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+                        <img src="./images/coaching1.jpg" alt="レーシングコーチング" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                         <div class="absolute top-3 left-3 bg-zinc-900/80 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">
                             <i class="fas fa-chart-line text-rose-500 mr-1.5"></i>コーチング
                         </div>
@@ -261,7 +299,7 @@
                 <!-- 4. 自動車販売・買取 -->
                 <div class="bg-white rounded-2xl border border-gray-200/80 overflow-hidden card-hover transition duration-300 shadow-sm flex flex-col group">
                     <div class="relative aspect-[4/3] w-full overflow-hidden bg-zinc-100">
-                        <img src="./images/GR86cup.jpg" alt="自動車販売・買取" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+                        <img src="./images/GR86cup.jpg" alt="自動車販売・買取" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                         <div class="absolute top-3 left-3 bg-zinc-900/80 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">
                             <i class="fas fa-car text-rose-500 mr-1.5"></i>販売・買取
                         </div>
@@ -281,7 +319,7 @@
                 <!-- 5. メンテナンス・車両製作 -->
                 <div class="bg-white rounded-2xl border border-gray-200/80 overflow-hidden card-hover transition duration-300 shadow-sm flex flex-col group">
                     <div class="relative aspect-[4/3] w-full overflow-hidden bg-zinc-100">
-                        <img src="./images/car-main.jpg" alt="メンテナンス・車両製作" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+                        <img src="./images/car-main.jpg" alt="メンテナンス・車両製作" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                         <div class="absolute top-3 left-3 bg-zinc-900/80 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">
                             <i class="fas fa-wrench text-rose-500 mr-1.5"></i>メンテナンス
                         </div>
@@ -423,7 +461,7 @@
                 <div class="md:col-span-4">
                     <div class="sticky top-32">
                         <div class="aspect-[3/4] rounded-3xl overflow-hidden border-4 border-rose-600 shadow-2xl bg-zinc-900 mb-8">
-                            <img src="./images/nwia.webp" alt="Director Eiji Niwa" class="w-full h-full object-cover">
+                            <img src="./images/nwia.webp" alt="Director Eiji Niwa" class="w-full h-full object-cover" loading="lazy" decoding="async">
                         </div>
                         <div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10">
                             <h3 class="text-3xl font-bold mb-1">丹羽 英司</h3>
@@ -534,7 +572,7 @@
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <!-- ロゴ & コンタクト -->
                 <div class="md:col-span-1">
-                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8">
+                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8" loading="lazy" decoding="async">
                     <div class="space-y-6">
                         <h5 class="text-zinc-900 font-bold uppercase text-xs tracking-widest border-b border-rose-600 w-fit pb-1">Contact</h5>
                         <div class="space-y-3">

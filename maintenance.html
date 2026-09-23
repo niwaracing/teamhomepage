@@ -18,6 +18,36 @@
     <meta name="twitter:description" content="日常点検から本格レーシングカー製作・ロールケージ施工まで。確かな技術でサポート。">
     <meta name="twitter:image" content="https://niwaracing.github.io/teamhomepage/images/car-main.jpg">
 
+    <!-- 構造化データ (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "NIWA RACING",
+      "alternateName": "丹羽レーシング",
+      "image": "https://niwaracing.github.io/teamhomepage/images/teamrogo.jpg",
+      "url": "https://niwaracing.github.io/teamhomepage/maintenance.html",
+      "telephone": "+81-80-1172-4441",
+      "faxNumber": "+81-268-84-2674",
+      "email": "niwaracing@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "国分1530-1",
+        "addressLocality": "上田市",
+        "addressRegion": "長野県",
+        "postalCode": "386-0016",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.3881,
+        "longitude": 138.2721
+      },
+      "priceRange": "¥¥",
+      "description": "NIWA RACINGのメンテナンス＆車両製作。日常点検からロールケージ施工・競技規則適合のレーシングカー製作、足回りセッティングまで幅広くサポート。"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -78,7 +108,7 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center">
                     <a href="#">
-                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain">
+                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain" decoding="async">
                     </a>
                 </div>
                 <!-- PC用メニュー -->
@@ -255,7 +285,7 @@
             <div class="grid md:grid-cols-4 gap-12 mb-20">
                 <!-- ロゴ & コンタクト -->
                 <div class="md:col-span-1">
-                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8">
+                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8" loading="lazy" decoding="async">
                     <div class="space-y-6">
                         <h5 class="text-zinc-900 font-bold uppercase text-xs tracking-widest border-b border-rose-600 w-fit pb-1">Contact</h5>
                         <div class="space-y-3">

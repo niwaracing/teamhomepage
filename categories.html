@@ -18,6 +18,36 @@
     <meta name="twitter:description" content="スーパー耐久、ロードスターパーティレース、マツ耐、富士チャンピオンレース等、参戦カテゴリー一覧。">
     <meta name="twitter:image" content="https://niwaracing.github.io/teamhomepage/images/car-main.jpg">
 
+    <!-- 構造化データ (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsClub",
+      "name": "NIWA RACING",
+      "alternateName": "丹羽レーシング",
+      "image": "https://niwaracing.github.io/teamhomepage/images/teamrogo.jpg",
+      "url": "https://niwaracing.github.io/teamhomepage/categories.html",
+      "telephone": "+81-80-1172-4441",
+      "faxNumber": "+81-268-84-2674",
+      "email": "niwaracing@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "国分1530-1",
+        "addressLocality": "上田市",
+        "addressRegion": "長野県",
+        "postalCode": "386-0016",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.3881,
+        "longitude": 138.2721
+      },
+      "priceRange": "¥¥",
+      "description": "NIWA RACINGの参戦レースカテゴリー一覧。スーパー耐久シリーズ（S耐）、ROADSTER Party Race、マツ耐、富士チャンピオンレース、N-ONE OWNER'S CUP、iRacingなど。"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -78,7 +108,7 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center">
                     <a href="#">
-                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain">
+                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain" decoding="async">
                     </a>
                 </div>
                 <!-- PC用メニュー -->
@@ -143,7 +173,7 @@
             <div>
                 <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col lg:flex-row card-hover transition duration-300">
                     <div class="lg:w-1/2 aspect-video lg:aspect-auto overflow-hidden relative bg-zinc-100 min-h-[260px]">
-                        <img src="./images/car-ST5R.jpg" alt="Super Taikyu Series" class="w-full h-full object-cover transition duration-700 hover:scale-105">
+                        <img src="./images/car-ST5R.jpg" alt="Super Taikyu Series" class="w-full h-full object-cover transition duration-700 hover:scale-105" loading="lazy" decoding="async">
                         <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
                             ST-5 CLASS
                         </div>
@@ -198,7 +228,7 @@
                     <div class="lg:col-span-5 flex flex-col">
                         <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col h-full">
                             <div class="relative w-full aspect-[3/2] lg:aspect-auto lg:flex-grow lg:min-h-[340px] bg-zinc-100 overflow-hidden">
-                                <img src="./images/car-roadstar.jpg" alt="MAZDA ロードスター (ND5RC)" class="w-full h-full object-cover object-center transition duration-700 hover:scale-105">
+                                <img src="./images/car-roadstar.jpg" alt="MAZDA ロードスター (ND5RC)" class="w-full h-full object-cover object-center transition duration-700 hover:scale-105" loading="lazy" decoding="async">
                                 <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider font-oswald">
                                     SHARED MACHINE / 共通参戦車両
                                 </div>
@@ -288,7 +318,7 @@
                     <!-- N-ONE OWNER'S CUP -->
                     <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
                         <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
-                            <img src="./images/car-none.jpg" alt="N-ONE OWNER'S CUP" class="w-full h-full object-cover transition duration-700 hover:scale-105">
+                            <img src="./images/car-none.jpg" alt="N-ONE OWNER'S CUP" class="w-full h-full object-cover transition duration-700 hover:scale-105" loading="lazy" decoding="async">
                             <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
                                 660cc TURBO
                             </div>
@@ -309,7 +339,7 @@
                     <!-- もてぎEnjoy耐久レース (JOY耐) -->
                     <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
                         <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
-                            <img src="./images/MX-5.jpg" alt="もてぎEnjoy耐久レース (JOY耐)" class="w-full h-full object-cover transition duration-700 hover:scale-105">
+                            <img src="./images/MX-5.jpg" alt="もてぎEnjoy耐久レース (JOY耐)" class="w-full h-full object-cover transition duration-700 hover:scale-105" loading="lazy" decoding="async">
                             <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
                                 7 HOURS ENDURANCE
                             </div>
@@ -336,7 +366,7 @@
                     <!-- Starfield idlers Games -->
                     <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
                         <div class="aspect-video w-full overflow-hidden relative bg-zinc-100">
-                            <img src="./images/BRZ.jpg" alt="Starfield idlers Games" class="w-full h-full object-cover transition duration-700 hover:scale-105">
+                            <img src="./images/BRZ.jpg" alt="Starfield idlers Games" class="w-full h-full object-cover transition duration-700 hover:scale-105" loading="lazy" decoding="async">
                             <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-oswald">
                                 SPRINT & ENDURANCE
                             </div>
@@ -370,7 +400,7 @@
             <div class="grid md:grid-cols-4 gap-12 mb-20">
                 <!-- ロゴ & コンタクト -->
                 <div class="md:col-span-1">
-                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8">
+                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8" loading="lazy" decoding="async">
                     <div class="space-y-6">
                         <h5 class="text-zinc-900 font-bold uppercase text-xs tracking-widest border-b border-rose-600 w-fit pb-1">Contact</h5>
                         <div class="space-y-3">

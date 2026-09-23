@@ -18,6 +18,36 @@
     <meta name="twitter:description" content="GLOBAL MX-5 CUP、ロードスター、N-ONE等、本格レーシングカーレンタル。手ぶらでサーキット走行やレース参戦へ。">
     <meta name="twitter:image" content="https://niwaracing.github.io/teamhomepage/images/mx5.jpg">
 
+    <!-- 構造化データ (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "NIWA RACING",
+      "alternateName": "丹羽レーシング",
+      "image": "https://niwaracing.github.io/teamhomepage/images/teamrogo.jpg",
+      "url": "https://niwaracing.github.io/teamhomepage/rental.html",
+      "telephone": "+81-80-1172-4441",
+      "faxNumber": "+81-268-84-2674",
+      "email": "niwaracing@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "国分1530-1",
+        "addressLocality": "上田市",
+        "addressRegion": "長野県",
+        "postalCode": "386-0016",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.3881,
+        "longitude": 138.2721
+      },
+      "priceRange": "¥¥",
+      "description": "NIWA RACINGのレーシングカーレンタル。GLOBAL MX-5 CUP、ロードスター（ND5RC）、N-ONEなど本格競技車両をレンタル。"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -78,7 +108,7 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center">
                     <a href="#">
-                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain">
+                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain" decoding="async">
                     </a>
                 </div>
                 <!-- PC用メニュー -->
@@ -139,7 +169,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- GLOBAL MX-5 CUP -->
                     <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
-                        <img src="./images/mx5.jpg" alt="GLOBAL MX-5 CUP" class="h-48 w-full object-cover">
+                        <img src="./images/mx5.jpg" alt="GLOBAL MX-5 CUP" class="h-48 w-full object-cover" loading="lazy" decoding="async">
                         <div class="p-6 flex-grow flex flex-col">
                             <h3 class="text-xl font-bold text-zinc-900 mb-2">GLOBAL MX-5 CUP</h3>
                             <p class="text-rose-600 font-bold mb-4">価格: 1枠 50,000円</p>
@@ -150,7 +180,7 @@
 
                     <!-- ロードスター（ND5RC） -->
                     <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
-                        <img src="./images/car-roadstar.jpg" alt="ロードスター（ND5RC）" class="h-48 w-full object-cover">
+                        <img src="./images/car-roadstar.jpg" alt="ロードスター（ND5RC）" class="h-48 w-full object-cover" loading="lazy" decoding="async">
                         <div class="p-6 flex-grow flex flex-col">
                             <h3 class="text-xl font-bold text-zinc-900 mb-2">ロードスター（ND5RC）</h3>
                             <p class="text-rose-600 font-bold mb-4">価格: 1枠 25,000円<br><span class="text-sm">1レース 110,000円</span></p>
@@ -161,7 +191,7 @@
 
                     <!-- N-ONE -->
                     <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col card-hover transition duration-300">
-                        <img src="./images/car-none.jpg" alt="N-ONE" class="h-48 w-full object-cover">
+                        <img src="./images/car-none.jpg" alt="N-ONE" class="h-48 w-full object-cover" loading="lazy" decoding="async">
                         <div class="p-6 flex-grow flex flex-col">
                             <h3 class="text-xl font-bold text-zinc-900 mb-2">N-ONE</h3>
                             <p class="text-rose-600 font-bold mb-4">価格: 1枠 20,000円<br><span class="text-sm">1レース 100,000円</span></p>
@@ -217,7 +247,7 @@
             <div class="grid md:grid-cols-4 gap-12 mb-20">
                 <!-- ロゴ & コンタクト -->
                 <div class="md:col-span-1">
-                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8">
+                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8" loading="lazy" decoding="async">
                     <div class="space-y-6">
                         <h5 class="text-zinc-900 font-bold uppercase text-xs tracking-widest border-b border-rose-600 w-fit pb-1">Contact</h5>
                         <div class="space-y-3">

@@ -18,6 +18,36 @@
     <meta name="twitter:description" content="iRacing・シミュレーターから実車レースの頂点・スーパー耐久へ。NIWA RACINGのステップアップ・ロードマップ。">
     <meta name="twitter:image" content="https://niwaracing.github.io/teamhomepage/images/car-main.jpg">
 
+    <!-- 構造化データ (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsClub",
+      "name": "NIWA RACING",
+      "alternateName": "丹羽レーシング",
+      "image": "https://niwaracing.github.io/teamhomepage/images/teamrogo.jpg",
+      "url": "https://niwaracing.github.io/teamhomepage/roadmap.html",
+      "telephone": "+81-80-1172-4441",
+      "faxNumber": "+81-268-84-2674",
+      "email": "niwaracing@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "国分1530-1",
+        "addressLocality": "上田市",
+        "addressRegion": "長野県",
+        "postalCode": "386-0016",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.3881,
+        "longitude": 138.2721
+      },
+      "priceRange": "¥¥",
+      "description": "NIWA RACINGが提案する実車レースステップアップ・ピラミッドとシミュレーター・コミュニティ。iRacingからマツ耐・パーティレース、スーパー耐久へ。"
+    }
+    </script>
+
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome 6 -->
@@ -61,7 +91,7 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center">
                     <a href="index.html">
-                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain">
+                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain" decoding="async">
                     </a>
                 </div>
                 <!-- PC用メニュー -->
@@ -233,7 +263,7 @@
                 <div id="detail-stai" class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover scroll-mt-28 flex flex-col justify-between">
                     <div>
                         <div class="h-44 overflow-hidden relative">
-                            <img src="./images/car-ST5R.jpg" alt="スーパー耐久" class="w-full h-full object-cover">
+                            <img src="./images/car-ST5R.jpg" alt="スーパー耐久" class="w-full h-full object-cover" loading="lazy" decoding="async">
                             <span class="absolute top-3 left-3 bg-rose-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full font-oswald tracking-wider">SUPER TAIKYU</span>
                         </div>
                         <div class="p-6">
@@ -258,7 +288,7 @@
                 <div id="detail-rpr" class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover scroll-mt-28 flex flex-col justify-between">
                     <div>
                         <div class="h-44 overflow-hidden relative">
-                            <img src="./images/car-roadstar.jpg" alt="パーティレース" class="w-full h-full object-cover">
+                            <img src="./images/car-roadstar.jpg" alt="パーティレース" class="w-full h-full object-cover" loading="lazy" decoding="async">
                             <span class="absolute top-3 left-3 bg-zinc-800 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full font-oswald tracking-wider">PARTY RACE</span>
                         </div>
                         <div class="p-6">
@@ -283,7 +313,7 @@
                 <div id="detail-mazda" class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover scroll-mt-28 flex flex-col justify-between">
                     <div>
                         <div class="h-44 overflow-hidden relative">
-                            <img src="./images/MX-5.jpg" alt="マツ耐" class="w-full h-full object-cover">
+                            <img src="./images/MX-5.jpg" alt="マツ耐" class="w-full h-full object-cover" loading="lazy" decoding="async">
                             <span class="absolute top-3 left-3 bg-zinc-800 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full font-oswald tracking-wider">MAZDA FAN ENDURANCE</span>
                         </div>
                         <div class="p-6">
@@ -364,14 +394,14 @@
             <!-- 集合写真＆シミュレーターのビジュアル紹介 -->
             <div class="max-w-5xl mx-auto mb-16 grid md:grid-cols-2 gap-6 items-center">
                 <div class="rounded-3xl overflow-hidden shadow-lg border border-gray-200">
-                    <img src="./images/sim.jpg" alt="本格レーシングシミュレーター" class="w-full h-64 md:h-72 object-cover hover:scale-105 transition duration-500">
+                    <img src="./images/sim.jpg" alt="本格レーシングシミュレーター" class="w-full h-64 md:h-72 object-cover hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                     <div class="p-4 bg-zinc-900 text-white text-xs flex justify-between items-center">
                         <span><i class="fas fa-desktop text-rose-500 mr-2"></i> プロ仕様リグ & 高精度フィードバック</span>
                         <span class="text-zinc-400 font-oswald">NIWA RACING SIM LAB</span>
                     </div>
                 </div>
                 <div class="rounded-3xl overflow-hidden shadow-lg border border-gray-200">
-                    <img src="./images/shugo2.jpg" alt="NIWA RACING メンバー集合" class="w-full h-64 md:h-72 object-cover hover:scale-105 transition duration-500">
+                    <img src="./images/shugo2.jpg" alt="NIWA RACING メンバー集合" class="w-full h-64 md:h-72 object-cover hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                     <div class="p-4 bg-zinc-900 text-white text-xs flex justify-between items-center">
                         <span><i class="fas fa-users text-rose-500 mr-2"></i> 大勢の仲間が集まり笑顔が溢れるチーム</span>
                         <span class="text-zinc-400 font-oswald">COMMUNITY FIRST</span>
@@ -487,7 +517,7 @@
         <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
             <div>
                 <div class="mb-6">
-                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-12 w-auto object-contain">
+                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-12 w-auto object-contain" loading="lazy" decoding="async">
                 </div>
                 <p class="text-zinc-600 text-sm leading-relaxed mb-6 font-medium">
                     〒386-0016<br>

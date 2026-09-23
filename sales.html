@@ -18,6 +18,36 @@
     <meta name="twitter:description" content="新車・中古車から本格N1競技車両まで。厳選在庫と高価買取査定。">
     <meta name="twitter:image" content="https://niwaracing.github.io/teamhomepage/images/GR86cup.jpg">
 
+    <!-- 構造化データ (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoDealer",
+      "name": "NIWA RACING",
+      "alternateName": "丹羽レーシング",
+      "image": "https://niwaracing.github.io/teamhomepage/images/teamrogo.jpg",
+      "url": "https://niwaracing.github.io/teamhomepage/sales.html",
+      "telephone": "+81-80-1172-4441",
+      "faxNumber": "+81-268-84-2674",
+      "email": "niwaracing@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "国分1530-1",
+        "addressLocality": "上田市",
+        "addressRegion": "長野県",
+        "postalCode": "386-0016",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.3881,
+        "longitude": 138.2721
+      },
+      "priceRange": "¥¥",
+      "description": "NIWA RACINGの自動車販売・買取。GR86 N1競技車両やスポーツモデルから一般中古車・新車まで。モータースポーツ視点の確かな車両選定と高価査定・買取。"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -78,7 +108,7 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center">
                     <a href="#">
-                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain">
+                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain" decoding="async">
                     </a>
                 </div>
                 <!-- PC用メニュー -->
@@ -218,7 +248,7 @@
                 <!-- MX-5CUPカー -->
                 <div id="mx-5" data-car-id="mx-5" class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('MX-5CUPカー', '300万円（税込）', '＊＊＊', 'MT', 'なし', 'images/MX-5/MX-5.jpg', false, 'GLOBAL MX-5 CUP JAPAN レース専用車両。ロールケージ、バケットシート、レーシングハーネス、セーフティネット装備。', [{src: 'images/MX-5/MX-5in1.jpg', alt: 'MX-5 CUPカー 内装1'}, {src: 'images/MX-5/MX-5in2.jpg', alt: 'MX-5 CUPカー 内装2'}, {src: 'images/MX-5/MX-5out1.jpg', alt: 'MX-5 CUPカー 外装1'}, {src: 'images/MX-5/MX-5out2.jpg', alt: 'MX-5 CUPカー 外装2'}], 'mx-5')">
                     <div class="aspect-video bg-zinc-100 flex items-center justify-center overflow-hidden relative">
-                        <img src="images/MX-5/MX-5.jpg" alt="MX-5CUPカー" class="w-full h-full object-contain">
+                        <img src="images/MX-5/MX-5.jpg" alt="MX-5CUPカー" class="w-full h-full object-contain" loading="lazy" decoding="async">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
@@ -238,7 +268,7 @@
                 <!-- マツダ デミオ 15MB -->
                 <div id="demio" data-car-id="demio" class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('マツダ デミオ 15MB（平成28年式）', '88万円（税込）', '52,274km', '6速MT', '2年付き', 'images/demio/demio.jpg', false, '修復歴無し、ラルグス車高調、カーボンボンネット、ETC付き。', ['images/demio/in1.jpg', 'images/demio/in2.jpg', 'images/demio/in3.jpg', 'images/demio/out1.jpg', 'images/demio/out2.jpg'], 'demio')">
                     <div class="aspect-video bg-zinc-100 flex items-center justify-center overflow-hidden relative">
-                        <img src="images/demio/demio.jpg" alt="マツダ デミオ 15MB" class="w-full h-full object-contain">
+                        <img src="images/demio/demio.jpg" alt="マツダ デミオ 15MB" class="w-full h-full object-contain" loading="lazy" decoding="async">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
@@ -258,7 +288,7 @@
                 <!-- トヨタ GR86 N1車両 -->
                 <div id="gr86" data-car-id="gr86" class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('トヨタ GR86 N1車両', '530万円（税込）', '約7,000km', 'MT', 'なし', 'images/GR86cup.jpg', false, null, null, 'gr86')">
                     <div class="aspect-video bg-zinc-100 flex items-center justify-center overflow-hidden relative">
-                        <img src="images/GR86cup.jpg" alt="トヨタ GR86 N1車両" class="w-full h-full object-contain">
+                        <img src="images/GR86cup.jpg" alt="トヨタ GR86 N1車両" class="w-full h-full object-contain" loading="lazy" decoding="async">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
@@ -278,7 +308,7 @@
                 <!-- ルノー メガーヌRS -->
                 <div id="megane" data-car-id="megane" class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('ルノー メガーヌRS', '230万円（税込）', '77,744km', 'AT', '令和9年2月', 'images/Megane.jpg', false, null, null, 'megane')">
                     <div class="aspect-video bg-zinc-100 flex items-center justify-center overflow-hidden relative">
-                        <img src="images/Megane.jpg" alt="ルノー メガーヌRS" class="w-full h-full object-contain">
+                        <img src="images/Megane.jpg" alt="ルノー メガーヌRS" class="w-full h-full object-contain" loading="lazy" decoding="async">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
@@ -298,7 +328,7 @@
                 <!-- トヨタ ランドクルーザー250 -->
                 <div id="lc250" data-car-id="lc250" class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('トヨタ ランドクルーザー250', '730万円（税込）', '22km', 'AT', '令和10年9月', 'images/250.jpg', false, null, null, 'lc250')">
                     <div class="aspect-video bg-zinc-100 flex items-center justify-center overflow-hidden relative">
-                        <img src="images/250.jpg" alt="トヨタ ランドクルーザー250" class="w-full h-full object-contain">
+                        <img src="images/250.jpg" alt="トヨタ ランドクルーザー250" class="w-full h-full object-contain" loading="lazy" decoding="async">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
@@ -318,7 +348,7 @@
                 <!-- トヨタ アクア -->
                 <div id="aqua" data-car-id="aqua" class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('トヨタ アクア', '89.8万円（税込）', '61,000km', 'AT', '令和9年1月', 'images/AQUA.jpg', false, null, null, 'aqua')">
                     <div class="aspect-video bg-zinc-100 flex items-center justify-center overflow-hidden relative">
-                        <img src="images/AQUA.jpg" alt="トヨタ アクア" class="w-full h-full object-contain">
+                        <img src="images/AQUA.jpg" alt="トヨタ アクア" class="w-full h-full object-contain" loading="lazy" decoding="async">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
@@ -338,7 +368,7 @@
                 <!-- BMW 235i -->
                 <div id="bmw-235i" data-car-id="bmw-235i" class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('BMW 235i', '280万円（税込）', '50,127km', 'AT', '令和9年3月', 'images/235i.jpg', true, null, null, 'bmw-235i')">
                     <div class="aspect-video bg-zinc-100 flex items-center justify-center overflow-hidden relative">
-                        <img src="images/235i.jpg" alt="BMW 235i" class="w-full h-full object-contain">
+                        <img src="images/235i.jpg" alt="BMW 235i" class="w-full h-full object-contain" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-red-600/70 flex items-center justify-center text-white font-bold text-2xl tracking-widest z-10">SOLD OUT</div>
                     </div>
                     <div class="p-6">
@@ -359,7 +389,7 @@
                 <!-- スズキ エブリイ -->
                 <div id="every" data-car-id="every" class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('スズキ エブリイ', '39.8万円（税込）', '78,234km', 'MT', '令和8年10月', 'images/every.jpg', true, null, null, 'every')">
                     <div class="aspect-video bg-zinc-100 flex items-center justify-center overflow-hidden relative">
-                        <img src="images/every.jpg" alt="スズキ エブリイ" class="w-full h-full object-contain">
+                        <img src="images/every.jpg" alt="スズキ エブリイ" class="w-full h-full object-contain" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-red-600/70 flex items-center justify-center text-white font-bold text-2xl tracking-widest z-10">SOLD OUT</div>
                     </div>
                     <div class="p-6">
@@ -392,7 +422,7 @@
             <div class="grid md:grid-cols-4 gap-12 mb-20">
                 <!-- ロゴ & コンタクト -->
                 <div class="md:col-span-1">
-                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8">
+                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8" loading="lazy" decoding="async">
                     <div class="space-y-6">
                         <h5 class="text-zinc-900 font-bold uppercase text-xs tracking-widest border-b border-rose-600 w-fit pb-1">Contact</h5>
                         <div class="space-y-3">

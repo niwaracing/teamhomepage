@@ -18,6 +18,36 @@
     <meta name="twitter:description" content="データロガー解析と車載動画で走りを科学。現役S耐ドライバーによる直接指導。">
     <meta name="twitter:image" content="https://niwaracing.github.io/teamhomepage/images/coaching1.jpg">
 
+    <!-- 構造化データ (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsClub",
+      "name": "NIWA RACING",
+      "alternateName": "丹羽レーシング",
+      "image": "https://niwaracing.github.io/teamhomepage/images/teamrogo.jpg",
+      "url": "https://niwaracing.github.io/teamhomepage/coaching.html",
+      "telephone": "+81-80-1172-4441",
+      "faxNumber": "+81-268-84-2674",
+      "email": "niwaracing@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "国分1530-1",
+        "addressLocality": "上田市",
+        "addressRegion": "長野県",
+        "postalCode": "386-0016",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.3881,
+        "longitude": 138.2721
+      },
+      "priceRange": "¥¥",
+      "description": "NIWA RACINGのレーシングコーチング。データロガー（AIM/MoTeC等）解析と車載カメラ動画分析による論理的ドライビングレッスン。"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -78,7 +108,7 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center">
                     <a href="#">
-                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain">
+                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain" decoding="async">
                     </a>
                 </div>
                 <!-- PC用メニュー -->
@@ -160,7 +190,7 @@
                     </p>
                 </div>
                 <div class="rounded-3xl overflow-hidden shadow-2xl relative aspect-[4/3]">
-                    <img src="./images/coaching1.jpg" alt="コーチングの様子" class="w-full h-full object-cover">
+                    <img src="./images/coaching1.jpg" alt="コーチングの様子" class="w-full h-full object-cover" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -195,7 +225,7 @@
                 </div>
                 <div class="order-1 md:order-2">
                     <div class="aspect-[4/5] md:aspect-square rounded-3xl overflow-hidden shadow-2xl relative">
-                        <img src="./images/nwia.webp" alt="コーチ" class="w-full h-full object-cover">
+                        <img src="./images/nwia.webp" alt="コーチ" class="w-full h-full object-cover" loading="lazy" decoding="async">
                         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-zinc-900 to-transparent p-8">
                             <p class="text-white font-bold text-xl">丹羽 英司</p>
                             <p class="text-rose-400 font-oswald text-sm">NIWA RACING 代表 / ドライバー</p>
@@ -220,10 +250,10 @@
             <!-- 画像ギャラリー -->
             <div class="grid grid-cols-2 md:grid-cols-2 gap-4 mb-12">
                 <div class="rounded-2xl overflow-hidden shadow-lg aspect-video">
-                    <img src="./images/logger1.jpg" alt="データロガーの解析画面1" class="w-full h-full object-cover">
+                    <img src="./images/logger1.jpg" alt="データロガーの解析画面1" class="w-full h-full object-cover" loading="lazy" decoding="async">
                 </div>
                 <div class="rounded-2xl overflow-hidden shadow-lg aspect-video">
-                    <img src="./images/logger2.jpg" alt="データロガーの解析画面2" class="w-full h-full object-cover">
+                    <img src="./images/logger2.jpg" alt="データロガーの解析画面2" class="w-full h-full object-cover" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -267,7 +297,7 @@
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="order-2 md:order-1 relative">
                     <div class="rounded-3xl overflow-hidden shadow-2xl aspect-video border border-zinc-700">
-                        <img src="./images/movie.jpg" alt="車載カメラ動画分析" class="w-full h-full object-cover">
+                        <img src="./images/movie.jpg" alt="車載カメラ動画分析" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="order-1 md:order-2">
@@ -362,7 +392,7 @@
             <div class="grid md:grid-cols-4 gap-12 mb-20">
                 <!-- ロゴ & コンタクト -->
                 <div class="md:col-span-1">
-                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8">
+                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8" loading="lazy" decoding="async">
                     <div class="space-y-6">
                         <h5 class="text-zinc-900 font-bold uppercase text-xs tracking-widest border-b border-rose-600 w-fit pb-1">Contact</h5>
                         <div class="space-y-3">

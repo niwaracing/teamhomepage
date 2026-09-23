@@ -18,6 +18,36 @@
     <meta name="twitter:description" content="iRacing・アセットコルサ対応。プロ仕様シミュレーターによる実戦的ドライビングレッスン。">
     <meta name="twitter:image" content="https://niwaracing.github.io/teamhomepage/images/sim.jpg">
 
+    <!-- 構造化データ (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsClub",
+      "name": "NIWA RACING",
+      "alternateName": "丹羽レーシング",
+      "image": "https://niwaracing.github.io/teamhomepage/images/teamrogo.jpg",
+      "url": "https://niwaracing.github.io/teamhomepage/simulator.html",
+      "telephone": "+81-80-1172-4441",
+      "faxNumber": "+81-268-84-2674",
+      "email": "niwaracing@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "国分1530-1",
+        "addressLocality": "上田市",
+        "addressRegion": "長野県",
+        "postalCode": "386-0016",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.3881,
+        "longitude": 138.2721
+      },
+      "priceRange": "¥¥",
+      "description": "NIWA RACINGのレーシングシミュレーターレッスン。iRacingやアセットコルサを用いたプロ仕様設備での実戦的トレーニング。"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -78,7 +108,7 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center">
                     <a href="#">
-                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain">
+                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain" decoding="async">
                     </a>
                 </div>
                 <!-- PC用メニュー -->
@@ -137,7 +167,7 @@
             <!-- 導入・シミュレーター使用風景 -->
             <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm mb-16 flex flex-col lg:flex-row gap-8 items-center">
                 <div class="lg:w-1/2">
-                    <img src="./images/sim.jpg" alt="シミュレーター使用風景" class="w-full h-auto rounded-xl shadow-md object-cover">
+                    <img src="./images/sim.jpg" alt="シミュレーター使用風景" class="w-full h-auto rounded-xl shadow-md object-cover" loading="lazy" decoding="async">
                 </div>
                 <div class="lg:w-1/2">
                     <h3 class="text-2xl font-bold mb-6 text-zinc-900 border-b border-rose-600 pb-2 inline-block">リアルな挙動で実戦的なトレーニングを</h3>
@@ -225,7 +255,7 @@
             <div class="grid md:grid-cols-4 gap-12 mb-20">
                 <!-- ロゴ & コンタクト -->
                 <div class="md:col-span-1">
-                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8">
+                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8" loading="lazy" decoding="async">
                     <div class="space-y-6">
                         <h5 class="text-zinc-900 font-bold uppercase text-xs tracking-widest border-b border-rose-600 w-fit pb-1">Contact</h5>
                         <div class="space-y-3">

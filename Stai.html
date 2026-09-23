@@ -18,6 +18,36 @@
     <meta name="twitter:description" content="NIWA RACING スーパー耐久シリーズ参戦。チームストーリー・ドライバー・公式レースレポート。">
     <meta name="twitter:image" content="https://niwaracing.github.io/teamhomepage/images/288_1.jpg">
 
+    <!-- 構造化データ (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsClub",
+      "name": "NIWA RACING",
+      "alternateName": "丹羽レーシング",
+      "image": "https://niwaracing.github.io/teamhomepage/images/teamrogo.jpg",
+      "url": "https://niwaracing.github.io/teamhomepage/Stai.html",
+      "telephone": "+81-80-1172-4441",
+      "faxNumber": "+81-268-84-2674",
+      "email": "niwaracing@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "国分1530-1",
+        "addressLocality": "上田市",
+        "addressRegion": "長野県",
+        "postalCode": "386-0016",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.3881,
+        "longitude": 138.2721
+      },
+      "priceRange": "¥¥",
+      "description": "NIWA RACINGのスーパー耐久シリーズ（S耐）特設ページ。ST-5Rクラス参戦体制、チームストーリー、参戦車両、ドライバー紹介、公式レースレポート。"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -81,7 +111,7 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center">
                     <a href="#">
-                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain">
+                        <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain" decoding="async">
                     </a>
                 </div>
                 <!-- PC用メニュー -->
@@ -137,7 +167,7 @@
     <!-- ヒーローセクション -->
     <header class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="./images/288_1.jpg" alt="Super Taikyu Hero" class="w-full h-full object-cover">
+            <img src="./images/288_1.jpg" alt="Super Taikyu Hero" class="w-full h-full object-cover" decoding="async" fetchpriority="high">
             <div class="absolute inset-0 bg-black/60"></div>
         </div>
         <div class="relative z-10 text-center px-4 max-w-5xl mx-auto flex flex-col items-center justify-center h-full pt-20">
@@ -155,7 +185,7 @@
     <section id="our-story" class="py-32 px-4 bg-zinc-950 text-white relative overflow-hidden">
         <!-- Background decoration -->
         <div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
-            <img src="./images/shugo1.jpg" alt="Team Background" class="w-full h-full object-cover mix-blend-luminosity">
+            <img src="./images/shugo1.jpg" alt="Team Background" class="w-full h-full object-cover mix-blend-luminosity" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-transparent"></div>
         </div>
 
@@ -188,7 +218,7 @@
                 <div class="relative group">
                     <div class="absolute -inset-4 bg-gradient-to-r from-rose-600 to-rose-400 rounded-2xl opacity-20 group-hover:opacity-40 blur-lg transition duration-500"></div>
                     <div class="relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                        <img src="./images/shugo1.jpg" alt="NIWA RACING チーム集合写真" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                        <img src="./images/shugo1.jpg" alt="NIWA RACING チーム集合写真" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -208,7 +238,7 @@
             <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                 <!-- Machine (Large) -->
                 <div class="md:col-span-8 group relative overflow-hidden rounded-2xl shadow-md h-[300px] md:h-[500px]">
-                    <img src="./images/288_2.jpg" alt="The Machine" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105">
+                    <img src="./images/288_2.jpg" alt="The Machine" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6 md:p-8">
                         <div>
                             <span class="text-rose-500 font-bold uppercase text-xs tracking-wider mb-2 block">The Machine</span>
@@ -219,7 +249,7 @@
 
                 <!-- Driver 1 -->
                 <div class="md:col-span-4 group relative overflow-hidden rounded-2xl shadow-md h-[300px] md:h-[500px]">
-                    <img src="./images/driver1.jpg" alt="Drivers" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105">
+                    <img src="./images/driver1.jpg" alt="Drivers" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6 md:p-8">
                         <div>
                             <span class="text-rose-500 font-bold uppercase text-xs tracking-wider mb-2 block">Drivers</span>
@@ -230,7 +260,7 @@
 
                 <!-- Mechanics 1 -->
                 <div class="md:col-span-4 group relative overflow-hidden rounded-2xl shadow-md h-[300px]">
-                    <img src="./images/meca1.jpg" alt="Mechanics" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105">
+                    <img src="./images/meca1.jpg" alt="Mechanics" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
                         <div>
                             <span class="text-rose-500 font-bold uppercase text-xs tracking-wider mb-2 block">Mechanics</span>
@@ -241,7 +271,7 @@
 
                 <!-- The Team (Small) -->
                 <div class="md:col-span-4 group relative overflow-hidden rounded-2xl shadow-md h-[300px]">
-                    <img src="./images/shugo2.jpg" alt="The Team" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105">
+                    <img src="./images/shugo2.jpg" alt="The Team" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
                         <div>
                             <span class="text-rose-500 font-bold uppercase text-xs tracking-wider mb-2 block">The Team</span>
@@ -252,7 +282,7 @@
 
                 <!-- Mechanics 2 -->
                 <div class="md:col-span-4 group relative overflow-hidden rounded-2xl shadow-md h-[300px]">
-                    <img src="./images/meca2.jpg" alt="Mechanics" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105">
+                    <img src="./images/meca2.jpg" alt="Mechanics" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
                         <div>
                             <span class="text-rose-500 font-bold uppercase text-xs tracking-wider mb-2 block">Mechanics</span>
@@ -263,7 +293,7 @@
 
                 <!-- Driver 2 -->
                 <div class="md:col-span-3 group relative overflow-hidden rounded-2xl shadow-md h-[300px]">
-                    <img src="./images/driver2.jpg" alt="Drivers" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105">
+                    <img src="./images/driver2.jpg" alt="Drivers" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
                         <span class="text-rose-500 font-bold uppercase text-xs tracking-wider">Drivers</span>
                     </div>
@@ -271,7 +301,7 @@
 
                 <!-- Machine (Small) -->
                 <div class="md:col-span-6 group relative overflow-hidden rounded-2xl shadow-md h-[300px]">
-                    <img src="./images/288_3.jpg" alt="The Machine" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105">
+                    <img src="./images/288_3.jpg" alt="The Machine" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
                         <span class="text-rose-500 font-bold uppercase text-xs tracking-wider">The Machine</span>
                     </div>
@@ -279,7 +309,7 @@
 
                 <!-- Driver 3 -->
                 <div class="md:col-span-3 group relative overflow-hidden rounded-2xl shadow-md h-[300px]">
-                    <img src="./images/driver3.jpg" alt="Drivers" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105">
+                    <img src="./images/driver3.jpg" alt="Drivers" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
                         <span class="text-rose-500 font-bold uppercase text-xs tracking-wider">Drivers</span>
                     </div>
@@ -287,7 +317,7 @@
 
                 <!-- The Team (Wide) -->
                 <div class="md:col-span-12 group relative overflow-hidden rounded-2xl shadow-md h-[300px] md:h-[400px]">
-                    <img src="./images/shugo3.jpg" alt="The Team" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105">
+                    <img src="./images/shugo3.jpg" alt="The Team" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end justify-center p-8">
                         <h4 class="text-white text-3xl md:text-4xl font-bold font-mincho tracking-widest text-center">
                             心をひとつに。<br class="md:hidden">共に頂点へ。
@@ -381,7 +411,7 @@
             <div class="grid md:grid-cols-4 gap-12 mb-20">
                 <!-- ロゴ & コンタクト -->
                 <div class="md:col-span-1">
-                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8">
+                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8" loading="lazy" decoding="async">
                     <div class="space-y-6">
                         <h5 class="text-zinc-900 font-bold uppercase text-xs tracking-widest border-b border-rose-600 w-fit pb-1">Contact</h5>
                         <div class="space-y-3">
