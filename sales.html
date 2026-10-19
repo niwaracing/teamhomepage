@@ -983,11 +983,18 @@
         function checkAndOpenCarFromHash() {
             const rawHash = window.location.hash;
             if (!rawHash) return;
-            const carId = decodeURIComponent(rawHash.replace(/^#/, ''));
+            let carId;
+            try {
+                carId = decodeURIComponent(rawHash.replace(/^#/, ''));
+            } catch (err) {
+                // 不正なエンコードのハッシュは無視
+                return;
+            }
             if (!carId) return;
 
-            // 車両カード要素をIDまたはdata-car-idから検索
-            const targetCard = document.getElementById(carId) || document.querySelector(`[data-car-id="${carId}"]`);
+            // 車両カード（data-car-id付き要素）のみを対象に一致検索
+            const targetCard = Array.from(document.querySelectorAll('[data-car-id]'))
+                .find(card => card.dataset.carId === carId);
             if (targetCard) {
                 setTimeout(() => {
                     targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
