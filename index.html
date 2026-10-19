@@ -114,14 +114,14 @@
     <nav class="fixed w-full z-50 bg-white border-b border-gray-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <div class="flex items-center">
+                <div class="flex items-center shrink-0">
                     <a href="#">
                         <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain" decoding="async">
                     </a>
                 </div>
                 <!-- PC用メニュー -->
-                <div class="hidden lg:block">
-                    <div class="ml-10 flex items-baseline space-x-6 text-sm font-bold whitespace-nowrap">
+                <div class="hidden xl:block">
+                    <div class="ml-6 flex items-baseline space-x-4 text-[13px] font-bold whitespace-nowrap">
                         <a href="index.html" class="nav-link transition text-rose-600">ホーム</a>
                         <a href="roadmap.html" class="nav-link transition">ロードマップ</a>
                         <a href="categories.html" class="nav-link transition">参戦カテゴリー</a>
@@ -134,7 +134,7 @@
                     </div>
                 </div>
                 <!-- スマホ用ハンバーガーボタン -->
-                <div class="lg:hidden flex items-center">
+                <div class="xl:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-zinc-900 hover:text-rose-600 focus:outline-none p-2">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
@@ -142,7 +142,7 @@
             </div>
         </div>
         <!-- スマホ用ドロップダウンメニュー -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100">
+        <div id="mobile-menu" class="hidden xl:hidden bg-white border-t border-gray-100">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-sm font-bold flex flex-col">
                 <a href="index.html" class="block px-3 py-2 rounded-md hover:bg-gray-50 nav-link transition text-rose-600">ホーム</a>
                 <a href="roadmap.html" class="block px-3 py-2 rounded-md hover:bg-gray-50 nav-link transition">ロードマップ</a>
@@ -353,15 +353,15 @@
             </div>
 
             <div class="bg-zinc-50 rounded-2xl p-4 sm:p-6 border border-gray-100 shadow-sm">
-                <div class="max-h-[380px] overflow-y-auto pr-2 custom-scrollbar space-y-3">
+                <div class="md:max-h-[380px] md:overflow-y-auto md:pr-2 custom-scrollbar space-y-3">
                     <!-- 記事: メディア掲載 -->
                     <a href="https://shinshu-sports.jp/articles/41478" target="_blank" rel="noopener noreferrer" class="group flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-white rounded-xl border border-gray-200/80 hover:border-rose-300 hover:shadow-md transition duration-200 gap-3">
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 flex-grow">
+                        <div class="flex flex-wrap sm:flex-nowrap items-center gap-x-3 gap-y-2 sm:gap-4 flex-grow">
                             <span class="font-oswald text-xs sm:text-sm font-bold text-zinc-400 tracking-wider">2026.09.16</span>
                             <span class="inline-flex items-center justify-center bg-blue-50 text-blue-600 border border-blue-200 text-xs font-bold px-3 py-1 rounded-full w-fit whitespace-nowrap">
                                 <i class="fas fa-newspaper mr-1.5 text-[11px]"></i>メディア
                             </span>
-                            <span class="text-zinc-800 font-bold group-hover:text-rose-600 transition text-sm sm:text-base leading-snug">
+                            <span class="text-zinc-800 font-bold group-hover:text-rose-600 transition text-sm sm:text-base leading-snug w-full sm:w-auto">
                                 信州スポーツキングダムにS耐活動を取り上げていただきました
                             </span>
                         </div>
@@ -372,12 +372,12 @@
 
                     <!-- 記事1: レポート -->
                     <a href="reports/2026_rd5_autopolis.pdf" target="_blank" rel="noopener noreferrer" class="group flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-white rounded-xl border border-gray-200/80 hover:border-rose-300 hover:shadow-md transition duration-200 gap-3">
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 flex-grow">
+                        <div class="flex flex-wrap sm:flex-nowrap items-center gap-x-3 gap-y-2 sm:gap-4 flex-grow">
                             <span class="font-oswald text-xs sm:text-sm font-bold text-zinc-400 tracking-wider">2026.09.01</span>
                             <span class="inline-flex items-center justify-center bg-rose-50 text-rose-600 border border-rose-200 text-xs font-bold px-3 py-1 rounded-full w-fit whitespace-nowrap">
                                 <i class="fas fa-file-pdf mr-1.5 text-[11px]"></i>レポート
                             </span>
-                            <span class="text-zinc-800 font-bold group-hover:text-rose-600 transition text-sm sm:text-base leading-snug">
+                            <span class="text-zinc-800 font-bold group-hover:text-rose-600 transition text-sm sm:text-base leading-snug w-full sm:w-auto">
                                 スーパー耐久シリーズ 2026 第5戦 オートポリス 公式レースレポートを公開しました
                             </span>
                         </div>
@@ -388,12 +388,16 @@
 
                     <!-- 記事2: 車両情報 -->
                     <a href="sales.html#demio" class="group flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-white rounded-xl border border-gray-200/80 hover:border-rose-300 hover:shadow-md transition duration-200 gap-3">
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 flex-grow">
+                        <div class="flex flex-wrap sm:flex-nowrap items-center gap-x-3 gap-y-2 sm:gap-4 flex-grow">
                             <span class="font-oswald text-xs sm:text-sm font-bold text-zinc-400 tracking-wider">2026.08.20</span>
                             <span class="inline-flex items-center justify-center bg-zinc-100 text-zinc-800 border border-zinc-200 text-xs font-bold px-3 py-1 rounded-full w-fit whitespace-nowrap">
                                 <i class="fas fa-car mr-1.5 text-[11px] text-zinc-500"></i>車両情報
                             </span>
-                            <span class="text-zinc-800 font-bold group-hover:text-rose-600 transition text-sm sm:text-base leading-snug">
+                            <!-- 売約済みバッジ（新規記事は増やさず既存の入庫記事に付与） -->
+                            <span class="inline-flex items-center justify-center bg-zinc-900 text-white text-xs font-bold px-3 py-1 rounded-full w-fit whitespace-nowrap">
+                                売約済み
+                            </span>
+                            <span class="text-zinc-800 font-bold group-hover:text-rose-600 transition text-sm sm:text-base leading-snug w-full sm:w-auto">
                                 【新着入庫】マツダ デミオ 15MB（競技・スポーツ走行ベース）の販売を開始しました
                             </span>
                         </div>
@@ -404,12 +408,12 @@
 
                     <!-- 記事3: 車両情報 -->
                     <a href="sales.html#gr86" class="group flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-white rounded-xl border border-gray-200/80 hover:border-rose-300 hover:shadow-md transition duration-200 gap-3">
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 flex-grow">
+                        <div class="flex flex-wrap sm:flex-nowrap items-center gap-x-3 gap-y-2 sm:gap-4 flex-grow">
                             <span class="font-oswald text-xs sm:text-sm font-bold text-zinc-400 tracking-wider">2026.08.10</span>
                             <span class="inline-flex items-center justify-center bg-zinc-100 text-zinc-800 border border-zinc-200 text-xs font-bold px-3 py-1 rounded-full w-fit whitespace-nowrap">
                                 <i class="fas fa-car mr-1.5 text-[11px] text-zinc-500"></i>車両情報
                             </span>
-                            <span class="text-zinc-800 font-bold group-hover:text-rose-600 transition text-sm sm:text-base leading-snug">
+                            <span class="text-zinc-800 font-bold group-hover:text-rose-600 transition text-sm sm:text-base leading-snug w-full sm:w-auto">
                                 【新着入庫】トヨタ GR86 N1車両の販売を開始しました
                             </span>
                         </div>
@@ -420,12 +424,12 @@
 
                     <!-- 記事4: レポート -->
                     <a href="reports/2026_rd4_sugo.pdf" target="_blank" rel="noopener noreferrer" class="group flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-white rounded-xl border border-gray-200/80 hover:border-rose-300 hover:shadow-md transition duration-200 gap-3">
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 flex-grow">
+                        <div class="flex flex-wrap sm:flex-nowrap items-center gap-x-3 gap-y-2 sm:gap-4 flex-grow">
                             <span class="font-oswald text-xs sm:text-sm font-bold text-zinc-400 tracking-wider">2026.07.28</span>
                             <span class="inline-flex items-center justify-center bg-rose-50 text-rose-600 border border-rose-200 text-xs font-bold px-3 py-1 rounded-full w-fit whitespace-nowrap">
                                 <i class="fas fa-file-pdf mr-1.5 text-[11px]"></i>レポート
                             </span>
-                            <span class="text-zinc-800 font-bold group-hover:text-rose-600 transition text-sm sm:text-base leading-snug">
+                            <span class="text-zinc-800 font-bold group-hover:text-rose-600 transition text-sm sm:text-base leading-snug w-full sm:w-auto">
                                 スーパー耐久シリーズ 2026 第4戦 SUGO 4時間レース 公式レースレポートを公開しました
                             </span>
                         </div>
@@ -436,12 +440,12 @@
 
                     <!-- 記事5: レポート -->
                     <a href="reports/2026_rd3_fuji24h.pdf" target="_blank" rel="noopener noreferrer" class="group flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-white rounded-xl border border-gray-200/80 hover:border-rose-300 hover:shadow-md transition duration-200 gap-3">
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 flex-grow">
+                        <div class="flex flex-wrap sm:flex-nowrap items-center gap-x-3 gap-y-2 sm:gap-4 flex-grow">
                             <span class="font-oswald text-xs sm:text-sm font-bold text-zinc-400 tracking-wider">2026.06.15</span>
                             <span class="inline-flex items-center justify-center bg-rose-50 text-rose-600 border border-rose-200 text-xs font-bold px-3 py-1 rounded-full w-fit whitespace-nowrap">
                                 <i class="fas fa-file-pdf mr-1.5 text-[11px]"></i>レポート
                             </span>
-                            <span class="text-zinc-800 font-bold group-hover:text-rose-600 transition text-sm sm:text-base leading-snug">
+                            <span class="text-zinc-800 font-bold group-hover:text-rose-600 transition text-sm sm:text-base leading-snug w-full sm:w-auto">
                                 スーパー耐久シリーズ 2026 第3戦 富士24時間レース 公式レースレポートを公開しました
                             </span>
                         </div>
@@ -492,12 +496,12 @@
 
                 <!-- 右カラム: 経歴と戦績 -->
                 <div class="md:col-span-8 space-y-12">
-                    <div class="bg-white/5 p-10 rounded-3xl border border-white/10">
+                    <div class="bg-white/5 p-6 md:p-10 rounded-3xl border border-white/10">
                         <h4 class="text-xl font-bold mb-8 flex items-center">
                             <span class="w-10 h-1 bg-rose-600 mr-4 rounded-full"></span>
                             BIOGRAPHY
                         </h4>
-                        <div class="space-y-6 text-gray-400 leading-relaxed text-lg">
+                        <div class="space-y-6 text-gray-400 leading-relaxed text-base md:text-lg">
                             <p>
                                 長野県出身。20歳のときに読んだ「頭文字D」をきっかけにキャリアをスタート。
                                 安曇野のサーキットでカートを始め、2022年より本格的にリアルモータースポーツへの挑戦を開始。
@@ -508,53 +512,53 @@
                         </div>
                     </div>
 
-                    <div class="bg-white/5 p-10 rounded-3xl border border-white/10">
+                    <div class="bg-white/5 p-6 md:p-10 rounded-3xl border border-white/10">
                         <h4 class="text-xl font-bold mb-8 flex items-center">
                             <span class="w-10 h-1 bg-rose-600 mr-4 rounded-full"></span>
                             RACING HISTORY
                         </h4>
-                        <div class="h-[600px] overflow-y-auto pr-6 custom-scrollbar">
+                        <div class="md:h-[600px] md:overflow-y-auto md:pr-6 custom-scrollbar">
                             <div class="space-y-8">
-                                <div class="flex gap-8 group">
-                                    <div class="w-20 font-oswald font-bold text-rose-500 text-2xl">2025</div>
+                                <div class="flex flex-col md:flex-row gap-1 md:gap-8 group">
+                                    <div class="md:w-20 md:shrink-0 font-oswald font-bold text-rose-500 text-xl md:text-2xl">2025</div>
                                     <div class="flex-grow pb-8 border-b border-white/5">
-                                        <p class="text-white font-bold text-xl group-hover:text-rose-500 transition">スーパー耐久 ST-5Rクラス参戦中</p>
+                                        <p class="text-white font-bold text-lg md:text-xl group-hover:text-rose-500 transition">スーパー耐久 ST-5Rクラス参戦中</p>
                                     </div>
                                 </div>
-                                <div class="flex gap-8 group">
-                                    <div class="w-20 font-oswald font-bold text-rose-500 text-2xl">2024</div>
+                                <div class="flex flex-col md:flex-row gap-1 md:gap-8 group">
+                                    <div class="md:w-20 md:shrink-0 font-oswald font-bold text-rose-500 text-xl md:text-2xl">2024</div>
                                     <div class="flex-grow pb-8 border-b border-white/5 space-y-3">
-                                        <p class="text-white font-bold text-xl group-hover:text-rose-500 transition">スーパー耐久 ST-5クラス シリーズ3位</p>
+                                        <p class="text-white font-bold text-lg md:text-xl group-hover:text-rose-500 transition">スーパー耐久 ST-5クラス シリーズ3位</p>
                                         <p class="text-gray-500">ロードスターパーティレースジャパンツアーシリーズ参戦 / マツ耐参戦</p>
                                     </div>
                                 </div>
-                                <div class="flex gap-8 group">
-                                    <div class="w-20 font-oswald font-bold text-rose-500 text-2xl">2023</div>
+                                <div class="flex flex-col md:flex-row gap-1 md:gap-8 group">
+                                    <div class="md:w-20 md:shrink-0 font-oswald font-bold text-rose-500 text-xl md:text-2xl">2023</div>
                                     <div class="flex-grow pb-8 border-b border-white/5">
-                                        <p class="text-white font-bold text-xl group-hover:text-rose-500 transition">スーパー耐久 富士24時間 3位 (ST-5)</p>
+                                        <p class="text-white font-bold text-lg md:text-xl group-hover:text-rose-500 transition">スーパー耐久 富士24時間 3位 (ST-5)</p>
                                     </div>
                                 </div>
-                                <div class="flex gap-8 group">
-                                    <div class="w-20 font-oswald font-bold text-rose-500 text-2xl">2021</div>
+                                <div class="flex flex-col md:flex-row gap-1 md:gap-8 group">
+                                    <div class="md:w-20 md:shrink-0 font-oswald font-bold text-rose-500 text-xl md:text-2xl">2021</div>
                                     <div class="flex-grow pb-8 border-b border-white/5 space-y-2">
-                                        <p class="text-white font-bold text-xl group-hover:text-rose-500 transition">idlers Games 6耐 総合2位 (Lotus)</p>
+                                        <p class="text-white font-bold text-lg md:text-xl group-hover:text-rose-500 transition">idlers Games 6耐 総合2位 (Lotus)</p>
                                         <p class="text-gray-500">ロードスターパーティレース 東日本 6位</p>
                                     </div>
                                 </div>
-                                <div class="flex gap-8 group">
-                                    <div class="w-20 font-oswald font-bold text-rose-500 text-2xl">14-16</div>
+                                <div class="flex flex-col md:flex-row gap-1 md:gap-8 group">
+                                    <div class="md:w-20 md:shrink-0 font-oswald font-bold text-rose-500 text-xl md:text-2xl">14-16</div>
                                     <div class="flex-grow pb-8 border-b border-white/5">
-                                        <p class="text-white font-bold text-xl group-hover:text-rose-500 transition uppercase">エビスフォーミュラバトル FJ1600<br>3年連続シリーズチャンピオン</p>
+                                        <p class="text-white font-bold text-lg md:text-xl group-hover:text-rose-500 transition uppercase">エビスフォーミュラバトル FJ1600<br>3年連続シリーズチャンピオン</p>
                                     </div>
                                 </div>
-                                <div class="flex gap-8 group">
-                                    <div class="w-20 font-oswald font-bold text-rose-500 text-2xl">2011</div>
+                                <div class="flex flex-col md:flex-row gap-1 md:gap-8 group">
+                                    <div class="md:w-20 md:shrink-0 font-oswald font-bold text-rose-500 text-xl md:text-2xl">2011</div>
                                     <div class="flex-grow pb-8 border-b border-white/5">
-                                        <p class="text-white font-bold text-xl group-hover:text-rose-500 transition">ハルナカートシリーズ チャンピオン</p>
+                                        <p class="text-white font-bold text-lg md:text-xl group-hover:text-rose-500 transition">ハルナカートシリーズ チャンピオン</p>
                                     </div>
                                 </div>
-                                <div class="flex gap-8 group">
-                                    <div class="w-20 font-oswald font-bold text-rose-500 text-2xl">EARLY</div>
+                                <div class="flex flex-col md:flex-row gap-1 md:gap-8 group">
+                                    <div class="md:w-20 md:shrink-0 font-oswald font-bold text-rose-500 text-xl md:text-2xl">EARLY</div>
                                     <div class="flex-grow pb-8 border-b border-white/5 space-y-3">
                                         <p class="text-gray-500">2010: S-FJもてぎシリーズ参戦</p>
                                         <p class="text-gray-500">2004: JAF筑波FJ1600選手権参戦 / FDテスト</p>

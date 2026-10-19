@@ -45,39 +45,4 @@
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
-  <url>
-    <loc>https://niwaracing.github.io/teamhomepage/RPR.html</loc>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://niwaracing.github.io/teamhomepage/Fuji.html</loc>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://niwaracing.github.io/teamhomepage/Nonecup.html</loc>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://niwaracing.github.io/teamhomepage/yaris.html</loc>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://niwaracing.github.io/teamhomepage/mazda-fan.html</loc>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://niwaracing.github.io/teamhomepage/joytai.html</loc>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://niwaracing.github.io/teamhomepage/starfield.html</loc>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
 </urlset>

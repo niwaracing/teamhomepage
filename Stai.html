@@ -109,14 +109,14 @@
     <nav class="fixed w-full z-50 bg-white border-b border-gray-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <div class="flex items-center">
+                <div class="flex items-center shrink-0">
                     <a href="#">
                         <img src="./images/teamrogo.jpg" alt="NIWA RACING ロゴ" class="h-14 w-auto object-contain" decoding="async">
                     </a>
                 </div>
                 <!-- PC用メニュー -->
-                <div class="hidden lg:block">
-                    <div class="ml-10 flex items-baseline space-x-6 text-sm font-bold whitespace-nowrap">
+                <div class="hidden xl:block">
+                    <div class="ml-6 flex items-baseline space-x-4 text-[13px] font-bold whitespace-nowrap">
                         <a href="index.html" class="nav-link transition">ホーム</a>
                         <a href="roadmap.html" class="nav-link transition">ロードマップ</a>
                         <a href="categories.html" class="nav-link transition">参戦カテゴリー</a>
@@ -129,7 +129,7 @@
                     </div>
                 </div>
                 <!-- スマホ用ハンバーガーボタン -->
-                <div class="lg:hidden flex items-center">
+                <div class="xl:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-zinc-900 hover:text-rose-600 focus:outline-none p-2">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
@@ -137,7 +137,7 @@
             </div>
         </div>
         <!-- スマホ用ドロップダウンメニュー -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100">
+        <div id="mobile-menu" class="hidden xl:hidden bg-white border-t border-gray-100">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-sm font-bold flex flex-col">
                 <a href="index.html" class="block px-3 py-2 rounded-md hover:bg-gray-50 nav-link transition">ホーム</a>
                 <a href="roadmap.html" class="block px-3 py-2 rounded-md hover:bg-gray-50 nav-link transition">ロードマップ</a>
@@ -174,9 +174,9 @@
             <h2 class="text-white/80 font-oswald text-sm md:text-base tracking-[0.3em] uppercase font-bold mb-8 md:mb-12">Super Taikyu Series</h2>
             <div class="font-mincho text-white text-2xl md:text-4xl lg:text-5xl leading-loose md:leading-loose tracking-widest drop-shadow-2xl italic space-y-6 md:space-y-8">
                 <p>一人一人が主役であり、</p>
-                <p>みんながスポットライトの当たる場所にいる。</p>
-                <p>だから我々はチームになった。</p>
-                <p class="text-3xl md:text-5xl lg:text-6xl mt-12 md:mt-16 text-rose-500 not-italic">さあ行こう、みんなの為に。</p>
+                <p><span class="inline-block">みんなが</span><span class="inline-block">スポットライトの</span><span class="inline-block">当たる場所にいる。</span></p>
+                <p><span class="inline-block">だから我々は</span><span class="inline-block">チームになった。</span></p>
+                <p class="text-3xl md:text-5xl lg:text-6xl mt-12 md:mt-16 text-rose-500 not-italic"><span class="inline-block">さあ行こう、</span><span class="inline-block">みんなの為に。</span></p>
             </div>
         </div>
     </header>

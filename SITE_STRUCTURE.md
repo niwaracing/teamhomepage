@@ -151,8 +151,8 @@
   8. 自動車販売・買取（[`sales.html`](./sales.html)）
   9. コーチング（[`coaching.html`](./coaching.html)）
 - **レスポンシブ挙動**:
-  - PC（`lg:block`）: 横並びメニュー（`text-sm font-bold whitespace-nowrap`）
-  - モバイル（`lg:hidden`）: ハンバーガーボタン（`#mobile-menu-btn`）とトグル式ドロップダウン（`#mobile-menu`）
+  - PC（`xl:block`、1280px以上）: 横並びメニュー（`text-[13px] font-bold whitespace-nowrap space-x-4`）。ロゴ枠は `shrink-0` で縮小させない
+  - モバイル・タブレット（`xl:hidden`、1280px未満）: ハンバーガーボタン（`#mobile-menu-btn`）とトグル式ドロップダウン（`#mobile-menu`）
 - **モバイルメニュースクリプト**:
   ```javascript
   document.addEventListener('DOMContentLoaded', function() {
