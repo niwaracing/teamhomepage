@@ -203,10 +203,20 @@ SNSでカード写真を大きなアイキャッチとして表示させるた�
 5. **リスト最後尾への並び替え（リオーダー）**:
    - 更新したカードブロック全体を切り取り、`#stock-list` グリッドの**最下部（既存のSOLD OUT車両群の末尾）** へ移動。
    - これにより、販売中車両が常に上位に表示され、売約済み車両が下部に集約される。
-6. **Gitコミット＆Push**:
+6. **トップページのニュースへ売約済みバッジを付与**:
+   - `index.html` の `#news` 内に、対象車両の【新着入庫】記事（`href="sales.html#{車両ID}"`）があるか確認する。
+   - 記事がある場合は、「車両情報」カテゴリーバッジの直後に以下のバッジを挿入する（記事タイトル・日付・リンクは変更しない）：
+     ```html
+     <span class="inline-flex items-center justify-center bg-zinc-900 text-white text-xs font-bold px-3 py-1 rounded-full w-fit whitespace-nowrap">
+         売約済み
+     </span>
+     ```
+   - ニュース量の肥大化を防ぐため、売約済みを告知する**新規記事は追加しない**。
+   - 対象車両の入庫記事がない場合は、このステップを省略する。
+7. **Gitコミット＆Push**:
    - コミットメッセージ例:
      - `Update [車種名] to SOLD OUT and reorder vehicle list by stock status`
-   - `git add sales.html` → `git commit -m "..."` → `git push origin main`
+   - `git add sales.html index.html` → `git commit -m "..."` → `git push origin main`
 
 ---
 
@@ -280,6 +290,7 @@ SNSでカード写真を大きなアイキャッチとして表示させるた�
 - [ ] 車両画像のコンテナクラスが `aspect-video bg-zinc-100 flex items-center justify-center overflow-hidden relative` になっているか
 - [ ] `<img>` タグのクラスが `w-full h-full object-contain` になっているか（見切れが発生していないか）
 - [ ] 販売中車両がリスト前半、SOLD OUT車両がリスト末尾にグループ分けされているか
+- [ ] 売約済みにした車両の入庫ニュースが `index.html` にある場合、「売約済み」バッジを付与したか（新規記事は追加しない）
 - [ ] モーダル呼び出しの `openCarModal` の引数順序・型に狂いがないか
 - [ ] `git status` / `git diff` で差分を確認し、意図しない箇所の変更がないか
 - [ ] `AGENTS.md` の運用ポリシーに従い、作業後は自律的にGitコミット＆Pushを実施しているか
