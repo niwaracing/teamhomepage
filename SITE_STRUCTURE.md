@@ -45,7 +45,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- アイコンフォント: FontAwesome 6 (CDN) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- 共通スタイル定義 -->
     <style>
@@ -170,10 +170,10 @@
 全ページ共通で末尾に配置（`bg-white py-24 px-4 border-t border-gray-100`）。
 
 - **4カラムレイアウト（PC時）**:
-  - **Column 1**: チームロゴ、所在地、電話番号、TEL/FAX、メールアドレス、SNSリンク（X/Twitter, Instagram, Facebook）
+  - **Column 1**: チームロゴ、所在地、電話番号・TEL/FAX（`tel:` リンク）、メールアドレス、SNSリンク（X/Twitter, Instagram, Facebook）
   - **Column 2〜4**: Google Maps iframe（長野県上田市国分1530-1）
 - **下部コピーライト**:
-  - `© 2025 NIWA RACING TEAM. All Rights Reserved.`
+  - `© 2026 NIWA RACING TEAM. All Rights Reserved.`
   - プライバシーポリシー / 利用規約リンク
 
 ### 4.3 コンタクト情報（統一表記）
