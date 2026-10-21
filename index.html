@@ -170,8 +170,12 @@
 
 
     <!-- ヒーローセクション（マシンを最大限に魅せるミニマル構成） -->
-    <header class="relative h-[92vh] flex flex-col justify-end hero-gradient pb-10 px-4 sm:px-8 overflow-hidden pt-20">
-        <div class="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 relative z-10 pb-4">
+    <header class="relative pt-20 bg-white">
+        <!-- メインビジュアル（文字を重ねず写真のみを表示） -->
+        <div class="hero-gradient h-[52vh] sm:h-[64vh]" role="img" aria-label="NIWA RACING レーシングカー"></div>
+
+        <!-- 写真下：ブランドシグネチャーと導線ボタン -->
+        <div class="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 px-4 sm:px-8 pt-4 pb-10 sm:pb-12">
             <!-- 左下：控えめで力強いブランドシグネチャー -->
             <div>
                 <span class="text-rose-600 font-oswald text-xs sm:text-sm uppercase tracking-[0.35em] font-bold block mb-1">
@@ -197,12 +201,6 @@
                     <span>お問い合わせ・見学</span>
                 </a>
             </div>
-        </div>
-
-        <!-- 最下部中央：スクロールインジケーター -->
-        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none">
-            <span class="text-[10px] font-oswald uppercase tracking-[0.3em] text-zinc-400 font-bold mb-0.5">SCROLL</span>
-            <i class="fas fa-chevron-down text-[10px] text-zinc-400 animate-bounce"></i>
         </div>
     </header>
 
