@@ -19,13 +19,6 @@
 | [`sales.html`](./sales.html) | 自動車販売・買取 | 新車・中古車販売、レース専用競技車両販売、カスタム車両製作、高価買取査定、在庫車両紹介 |
 | [`coaching.html`](./coaching.html) | レーシングコーチング | データロガー（AIM/MoTeC等）解析、車載映像分析、同乗・先導走行レッスン、オンライン指導 |
 | [`Stai.html`](./Stai.html) | スーパー耐久特設ページ | スーパー耐久シリーズ参戦情報、チームストーリー、参戦車両、ドライバー紹介、公式レースレポート（PDF閲覧＆アーカイブモーダル） |
-| [`RPR.html`](./RPR.html) | ロードスター・パーティレース | ROADSTER Party Race 参戦情報 |
-| [`Fuji.html`](./Fuji.html) | 富士チャンピオンレース | Fuji Champion Race 参戦情報 |
-| [`Nonecup.html`](./Nonecup.html) | N-ONE OWNER'S CUP | N-ONE ワンメイクレース参戦情報 |
-| [`yaris.html`](./yaris.html) | Yaris Cup | TOYOTA GAZOO Racing Yaris Cup 参戦情報 |
-| [`mazda-fan.html`](./mazda-fan.html) | マツ耐 | MAZDA Fan ENDURANCE 参戦情報 |
-| [`joytai.html`](./joytai.html) | JOY耐 | もてぎEnjoy耐久レース 参戦情報 |
-| [`starfield.html`](./starfield.html) | Starfield idlers Games | アイドラーズ・ゲームス参戦情報 |
 
 ---
 
@@ -213,8 +206,8 @@
 - **目的**: 初心者から国内最高峰耐久までの育成ピラミッドと、仲間が集い切磋琢磨するシミュレーター・コミュニティの共鳴を提示。
 - **Real Racing Pyramid（実車ピラミッド）**:
   1. **APEX（頂点）: スーパー耐久（S耐）** - チームのフラッグシップ目標・国内最高峰（`Stai.html` へのリンク）
-  2. **MIDDLE（2段目）: ロードスター・パーティレース** - JAF公認ワンメイク・純粋な腕磨き（`RPR.html` へのリンク）
-  3. **BASE（1段目）: マツ耐（マツダファン・エンデュランス）** - 初心者歓迎・チーム耐久入門（`mazda-fan.html` へのリンク）
+  2. **MIDDLE（2段目）: ロードスター・パーティレース** - JAF公認ワンメイク・純粋な腕磨き（詳細ページなし。説明は `categories.html` に集約）
+  3. **BASE（1段目）: マツ耐（マツダファン・エンデュランス）** - 初心者歓迎・チーム耐久入門（詳細ページなし。説明は `categories.html` に集約）
 - **Simulator Community & e-Motorsports**:
   - 単なる練習台ではなく、所属メンバーが集いワイワイ笑い合いながら競い合う独立した拠点。
   - iRacing / グランツーリスモの活用、テレメトリ共有によるスキル向上、実車ピラミッドへのシナジー（Virtual to Real）を提示。
