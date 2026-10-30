@@ -235,7 +235,8 @@ reports/                  # レースレポートPDFディレクトリ
 ├── 2026_rd1_motegi.pdf   # 2026 Rd.1 もてぎ戦 レースレポート (PDF)
 ├── 2026_rd3_fuji24h.pdf  # 2026 Rd.3 富士24時間戦 レースレポート (PDF)
 ├── 2026_rd4_sugo.pdf     # 2026 Rd.4 SUGO 4時間戦 レースレポート (PDF)
-└── 2026_rd5_autopolis.pdf# 2026 Rd.5 オートポリス戦 レースレポート (PDF)
+├── 2026_rd5_autopolis.pdf# 2026 Rd.5 オートポリス戦 レースレポート (PDF)
+└── 2026_rd6_okayama.pdf  # 2026 Rd.6 岡山戦 レースレポート (PDF)
 
 images/
 ├── teamrogo.jpg          # メインチームロゴ
