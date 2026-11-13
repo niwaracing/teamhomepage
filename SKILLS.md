@@ -45,7 +45,7 @@
 | `mileage` | 必須 | String | 走行距離（例: `38,000km`, `＊＊＊`） |
 | `transmission` | 必須 | String | トランスミッション（例: `6速MT`, `AT`） |
 | `inspection` | 必須 | String | 車検情報（例: `令和9年10月`, `2年付き`, `なし`） |
-| `card_price` | 必須 | String | カード表示用価格（例: `¥ 2,480,000`, `ASK`） |
+| `card_price` | 必須 | String | カード表示用価格（例: `248万円`, `ASK`） |
 | `modal_price` | 必須 | String | モーダル表示用価格（例: `248万円（税込）`, `ASK`） |
 | `main_image_path`| 必須 | String | メイン車両画像の配置パス（例: `images/roadster/roadster.jpg`） |
 | `equipment` | 任意 | String | 装備や状態の詳細テキスト（例: `ロールケージ、ビルシュタイン車高調、機械式LSD`） |
@@ -98,7 +98,7 @@
             <p>ミッション: {transmission}</p>
             <p>車検: {inspection}</p>
         </div>
-        <div class="text-xl font-bold text-rose-600 font-oswald">
+        <div class="text-xl font-bold text-rose-600">
             {card_price}
         </div>
     </div>
@@ -122,7 +122,7 @@
             <p>ミッション: {transmission}</p>
             <p>車検: {inspection}</p>
         </div>
-        <div class="text-xl font-bold text-rose-600 font-oswald">
+        <div class="text-xl font-bold text-rose-600">
             {card_price}
         </div>
     </div>
@@ -238,8 +238,8 @@ SNSでカード写真を大きなアイキャッチとして表示させるた�
             <p>ミッション: MT</p>
             <p>車検: 令和8年10月</p>
         </div>
-        <div class="text-xl font-bold text-rose-600 font-oswald">
-            ¥ 398,000
+        <div class="text-xl font-bold text-rose-600">
+            39.8万円
         </div>
     </div>
 </div>
@@ -264,8 +264,8 @@ SNSでカード写真を大きなアイキャッチとして表示させるた�
             <p>車検: 令和8年10月</p>
         </div>
         <!-- 打ち消し線 ＋ 売約済みバッジ -->
-        <div class="text-xl font-bold font-oswald text-zinc-400 line-through">
-            ¥ 398,000<span class="ml-2 text-sm text-red-600 font-normal no-underline inline-block">売約済み</span>
+        <div class="text-xl font-bold text-zinc-400 line-through">
+            39.8万円<span class="ml-2 text-sm text-red-600 font-normal no-underline inline-block">売約済み</span>
         </div>
     </div>
 </div>
