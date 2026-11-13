@@ -45,7 +45,7 @@
 | `mileage` | 必須 | String | 走行距離（例: `38,000km`, `＊＊＊`） |
 | `transmission` | 必須 | String | トランスミッション（例: `6速MT`, `AT`） |
 | `inspection` | 必須 | String | 車検情報（例: `令和9年10月`, `2年付き`, `なし`） |
-| `card_price` | 必須 | String | カード表示用価格（例: `248万円`, `ASK`） |
+| `card_price` | 必須 | String | カード表示用価格（例: `248万円<span class="ml-1 text-sm font-normal">（税込）</span>`, `ASK`（ASKの場合は税込表記を付けない）） |
 | `modal_price` | 必須 | String | モーダル表示用価格（例: `248万円（税込）`, `ASK`） |
 | `main_image_path`| 必須 | String | メイン車両画像の配置パス（例: `images/roadster/roadster.jpg`） |
 | `equipment` | 任意 | String | 装備や状態の詳細テキスト（例: `ロールケージ、ビルシュタイン車高調、機械式LSD`） |
@@ -145,16 +145,16 @@ SNSでカード写真を大きなアイキャッチとして表示させるた�
 <head>
     <meta charset="UTF-8">
     <title>{vehicle_name} - NIWA RACING 自動車販売</title>
-    <meta name="description" content="【NIWA RACING 在庫車両】{vehicle_name}（{modal_price}）走行: {mileage} / ミッション: {transmission} / 車検: {inspection}。">
+    <meta name="description" content="【NIWA RACING 在庫車両】{vehicle_name}｜{modal_price} / 走行: {mileage} / ミッション: {transmission} / 車検: {inspection}。">
     
     <!-- OGP / Twitter Card -->
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="NIWA RACING">
-    <meta property="og:title" content="【NIWA RACING 在庫車両】{vehicle_name}（{modal_price}）">
+    <meta property="og:title" content="【NIWA RACING 在庫車両】{vehicle_name}｜{modal_price}">
     <meta property="og:description" content="走行: {mileage} / ミッション: {transmission} / 車検: {inspection}。">
     <meta property="og:image" content="https://niwaracing.github.io/teamhomepage/{main_image_path}">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【NIWA RACING 在庫車両】{vehicle_name}（{modal_price}）">
+    <meta name="twitter:title" content="【NIWA RACING 在庫車両】{vehicle_name}｜{modal_price}">
     <meta name="twitter:description" content="走行: {mileage} / ミッション: {transmission} / 車検: {inspection}。">
     <meta name="twitter:image" content="https://niwaracing.github.io/teamhomepage/{main_image_path}">
 
@@ -198,7 +198,8 @@ SNSでカード写真を大きなアイキャッチとして表示させるた�
      <div class="absolute inset-0 bg-red-600/70 flex items-center justify-center text-white font-bold text-2xl tracking-widest z-10">SOLD OUT</div>
      ```
 4. **価格表示の打ち消し線＆バッジ追加**:
-   - 価格コンテナのクラスを `text-rose-600` から `text-zinc-400 line-through` に変更。
+   - 価格コンテナのクラスを `text-rose-600` から `text-zinc-400` に変更。
+   - 価格と（税込）を `<span class="price-strike">…</span>` で囲む（文字サイズが違っても打ち消し線が1本の高さで揃う。`.price-strike` は `sales.html` の `<style>` で定義）。
    - 価格テキストの直後に `<span class="ml-2 text-sm text-red-600 font-normal no-underline inline-block">売約済み</span>` を挿入。
 5. **リスト最後尾への並び替え（リオーダー）**:
    - 更新したカードブロック全体を切り取り、`#stock-list` グリッドの**最下部（既存のSOLD OUT車両群の末尾）** へ移動。
@@ -239,7 +240,7 @@ SNSでカード写真を大きなアイキャッチとして表示させるた�
             <p>車検: 令和8年10月</p>
         </div>
         <div class="text-xl font-bold text-rose-600">
-            39.8万円
+            39.8万円<span class="ml-1 text-sm font-normal">（税込）</span>
         </div>
     </div>
 </div>
@@ -264,8 +265,8 @@ SNSでカード写真を大きなアイキャッチとして表示させるた�
             <p>車検: 令和8年10月</p>
         </div>
         <!-- 打ち消し線 ＋ 売約済みバッジ -->
-        <div class="text-xl font-bold text-zinc-400 line-through">
-            39.8万円<span class="ml-2 text-sm text-red-600 font-normal no-underline inline-block">売約済み</span>
+        <div class="text-xl font-bold text-zinc-400">
+            <span class="price-strike">39.8万円<span class="ml-1 text-sm font-normal">（税込）</span></span><span class="ml-2 text-sm text-red-600 font-normal no-underline inline-block">売約済み</span>
         </div>
     </div>
 </div>

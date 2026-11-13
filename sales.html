@@ -102,6 +102,10 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
         }
+        /* 売約済み価格の打ち消し線（文字サイズが異なる要素をまたいで同じ高さに引く） */
+        .price-strike {
+            background: linear-gradient(currentColor, currentColor) no-repeat 0 60% / 100% 2px;
+        }
         .footer-map iframe {
             filter: grayscale(0.1) contrast(1.1);
             border-radius: 1rem;
@@ -256,7 +260,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- ホンダ N-ONE オーナーズカップカー（平成28年式） -->
-                <div id="n-one" data-car-id="n-one" class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('ホンダ N-ONE オーナーズカップカー（平成28年式）', '120万円（車両本体価格）', '約30,000km', 'CVT', '令和10年1月', 'images/car-none.jpg', false, 'N-ONE OWNER\'S CUP 参戦車両。特典：運転席にBRIDE ZETA III フルバケットシート装着。', null, 'n-one')">
+                <div id="n-one" data-car-id="n-one" class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm card-hover cursor-pointer" onclick="openCarModal('ホンダ N-ONE オーナーズカップカー（平成28年式）', '120万円（税込）', '約30,000km', 'CVT', '令和10年1月', 'images/car-none.jpg', false, 'N-ONE OWNER\'S CUP 参戦車両。特典：運転席にBRIDE ZETA III フルバケットシート装着。', null, 'n-one')">
                     <div class="aspect-video bg-zinc-100 flex items-center justify-center overflow-hidden relative">
                         <img src="images/car-none.jpg" alt="ホンダ N-ONE オーナーズカップカー（平成28年式）" class="w-full h-full object-contain" loading="lazy" decoding="async">
                     </div>
@@ -270,7 +274,7 @@
                             <p>車検: 令和10年1月</p>
                         </div>
                         <div class="text-xl font-bold text-rose-600">
-                            120万円
+                            120万円<span class="ml-1 text-sm font-normal">（税込）</span>
                         </div>
                     </div>
                 </div>
@@ -290,7 +294,7 @@
                             <p>車検: なし</p>
                         </div>
                         <div class="text-xl font-bold text-rose-600">
-                            300万円
+                            300万円<span class="ml-1 text-sm font-normal">（税込）</span>
                         </div>
                     </div>
                 </div>
@@ -311,7 +315,7 @@
                             <p>車検: なし</p>
                         </div>
                         <div class="text-xl font-bold text-rose-600">
-                            530万円
+                            530万円<span class="ml-1 text-sm font-normal">（税込）</span>
                         </div>
                     </div>
                 </div>
@@ -331,7 +335,7 @@
                             <p>車検: 令和9年2月</p>
                         </div>
                         <div class="text-xl font-bold text-rose-600">
-                            230万円
+                            230万円<span class="ml-1 text-sm font-normal">（税込）</span>
                         </div>
                     </div>
                 </div>
@@ -352,7 +356,7 @@
                             <p>車検: 令和9年1月</p>
                         </div>
                         <div class="text-xl font-bold text-rose-600">
-                            89.8万円
+                            89.8万円<span class="ml-1 text-sm font-normal">（税込）</span>
                         </div>
                     </div>
                 </div>
@@ -372,8 +376,8 @@
                             <p>ミッション: AT</p>
                             <p>車検: 令和9年3月</p>
                         </div>
-                        <div class="text-xl font-bold text-zinc-400 line-through">
-                            280万円<span class="ml-2 text-sm text-red-600 font-normal no-underline inline-block">売約済み</span>
+                        <div class="text-xl font-bold text-zinc-400">
+                            <span class="price-strike">280万円<span class="ml-1 text-sm font-normal">（税込）</span></span><span class="ml-2 text-sm text-red-600 font-normal no-underline inline-block">売約済み</span>
                         </div>
                     </div>
                 </div>
@@ -393,8 +397,8 @@
                             <p>ミッション: MT</p>
                             <p>車検: 令和8年10月</p>
                         </div>
-                        <div class="text-xl font-bold text-zinc-400 line-through">
-                            39.8万円<span class="ml-2 text-sm text-red-600 font-normal no-underline inline-block">売約済み</span>
+                        <div class="text-xl font-bold text-zinc-400">
+                            <span class="price-strike">39.8万円<span class="ml-1 text-sm font-normal">（税込）</span></span><span class="ml-2 text-sm text-red-600 font-normal no-underline inline-block">売約済み</span>
                         </div>
                     </div>
                 </div>
@@ -414,8 +418,8 @@
                             <p>ミッション: 6速MT</p>
                             <p>車検: 2年付き</p>
                         </div>
-                        <div class="text-xl font-bold text-zinc-400 line-through">
-                            88万円<span class="ml-2 text-sm text-red-600 font-normal no-underline inline-block">売約済み</span>
+                        <div class="text-xl font-bold text-zinc-400">
+                            <span class="price-strike">88万円<span class="ml-1 text-sm font-normal">（税込）</span></span><span class="ml-2 text-sm text-red-600 font-normal no-underline inline-block">売約済み</span>
                         </div>
                     </div>
                 </div>
@@ -435,8 +439,8 @@
                             <p>ミッション: AT</p>
                             <p>車検: 令和10年9月</p>
                         </div>
-                        <div class="text-xl font-bold text-zinc-400 line-through">
-                            730万円<span class="ml-2 text-sm text-red-600 font-normal no-underline inline-block">売約済み</span>
+                        <div class="text-xl font-bold text-zinc-400">
+                            <span class="price-strike">730万円<span class="ml-1 text-sm font-normal">（税込）</span></span><span class="ml-2 text-sm text-red-600 font-normal no-underline inline-block">売約済み</span>
                         </div>
                     </div>
                 </div>
@@ -558,7 +562,7 @@
 
                         <!-- 基本情報 -->
                         <div class="space-y-4 bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-                            <div id="modalPriceContainer" class="text-3xl font-bold text-rose-600 font-oswald border-b border-gray-100 pb-4">
+                            <div id="modalPriceContainer" class="text-3xl font-bold text-rose-600 border-b border-gray-100 pb-4">
                                 <span id="modalCarPrice"></span><span id="modalSoldOutBadge" class="ml-2 text-lg text-red-600 font-normal no-underline inline-block hidden">売約済み</span>
                             </div>
                             <ul class="space-y-3 text-sm text-zinc-700">
@@ -842,7 +846,7 @@
             let text = '【NIWA RACING 在庫車両】';
             if (currentCarShareData) {
                 const status = currentCarShareData.isSoldOut ? ' [売約済み]' : '';
-                text = `【NIWA RACING 在庫車両】${currentCarShareData.name}${status}（${currentCarShareData.price}） 走行: ${currentCarShareData.mileage} #NIWARACING`;
+                text = `【NIWA RACING 在庫車両】${currentCarShareData.name}${status}｜${currentCarShareData.price} 走行: ${currentCarShareData.mileage} #NIWARACING`;
             }
             return {
                 shareUrl,
