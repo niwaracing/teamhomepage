@@ -1,2 +1,8 @@
 node_modules/
 .env
+
+# AIエージェント用ドキュメント・バックアップ（公開しない）
+*.bak-*
+AGENTS.md
+SKILLS.md
+SITE_STRUCTURE.md
