@@ -250,7 +250,7 @@ images/
 ├── 250.jpg               # レース車両画像
 ├── Megane.jpg            # ルノー メガーヌRS
 ├── GR86cup.jpg           # GR86 Cup
-├── car-ST5R.jpg          # スーパー耐久 ST-5 車両
+├── car-ST5R.jpg          # スーパー耐久 ST-5R 車両
 ├── 288_1.jpg〜288_3.jpg   # スーパー耐久参戦・車両画像
 ├── shugo1.jpg〜shugo3.jpg # チーム集合写真
 ├── driver1.jpg〜driver3.jpg # ドライバー写真
