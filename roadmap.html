@@ -460,26 +460,49 @@
     <!-- フッター -->
     <footer id="contact" class="bg-white py-24 px-4 border-t border-gray-100">
         <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
-            <div>
-                <div class="mb-6">
-                    <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-12 w-auto object-contain" loading="lazy" decoding="async">
-                </div>
-                <p class="text-zinc-600 text-sm leading-relaxed mb-6 font-medium">
-                    〒386-0016<br>
-                    長野県上田市国分1530-1<br>
-                    携帯: <a href="tel:08011724441" class="hover:text-rose-600 transition">080-1172-4441</a><br>
-                    TEL＆FAX: <a href="tel:0268842674" class="hover:text-rose-600 transition">0268-84-2674</a><br>
-                    E-mail: niwaracing@gmail.com
-                </p>
-                <p class="text-zinc-600 text-sm leading-relaxed mb-6 font-medium">
-                    営業時間: 9:00〜21:00<br>
-                    <span class="inline-block">定休日: 不定休</span><span class="inline-block">（レース・イベント</span><span class="inline-block">参戦日等は休業）</span><br>
-                    <span class="text-xs text-zinc-400"><span class="inline-block">※ご来店の際は</span><span class="inline-block">事前にお電話ください</span></span>
-                </p>
-                <div class="flex space-x-4">
-                    <a href="https://x.com/niwaracing" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-600 hover:bg-rose-600 hover:text-white transition"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://www.instagram.com/niwaracing" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-600 hover:bg-rose-600 hover:text-white transition"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/eiji.niwa.5/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-600 hover:bg-rose-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+            <!-- ロゴ & コンタクト（他ページと共通） -->
+            <div class="md:col-span-1">
+                <img src="./images/teamrogo.jpg" alt="NIWA RACING" class="h-20 mb-8" loading="lazy" decoding="async">
+                <div class="space-y-6">
+                    <h5 class="text-zinc-900 font-bold uppercase text-xs tracking-widest border-b border-rose-600 w-fit pb-1">Contact</h5>
+                    <div class="space-y-3">
+                        <p class="text-zinc-500 text-sm font-bold flex items-start gap-2">
+                            <i class="fas fa-map-marker-alt text-rose-600 mt-1 w-4 text-center"></i>
+                            <span>長野県上田市国分1530-1</span>
+                        </p>
+                        <p class="text-zinc-500 text-sm font-bold flex items-center gap-2">
+                            <i class="fas fa-phone text-rose-600 w-4 text-center"></i>
+                            <a href="tel:08011724441" class="hover:text-rose-600 transition">080-1172-4441</a>
+                        </p>
+                        <p class="text-zinc-500 text-sm font-bold flex items-center gap-2">
+                            <i class="fas fa-fax text-rose-600 w-4 text-center"></i>
+                            <span>TEL＆FAX：<a href="tel:0268842674" class="hover:text-rose-600 transition">0268-84-2674</a></span>
+                        </p>
+                        <p class="text-zinc-500 text-sm font-bold flex items-start gap-2">
+                            <i class="fas fa-clock text-rose-600 mt-1 w-4 text-center"></i>
+                            <span>営業時間：9:00〜21:00<br><span class="inline-block">定休日：不定休</span><span class="inline-block">（レース・イベント</span><span class="inline-block">参戦日等は休業）</span><br><span class="text-xs font-medium text-zinc-400"><span class="inline-block">※ご来店の際は</span><span class="inline-block">事前にお電話ください</span></span></span>
+                        </p>
+                        <a href="mailto:niwaracing@gmail.com" class="text-zinc-500 hover:text-rose-600 transition block font-medium flex items-center gap-2">
+                            <i class="fas fa-envelope text-rose-600 w-4 text-center"></i>
+                            niwaracing@gmail.com
+                        </a>
+                    </div>
+
+                    <h5 class="text-zinc-900 font-bold uppercase text-xs tracking-widest mt-8 border-b border-rose-600 w-fit pb-1">Follow Us</h5>
+                    <div class="flex flex-col space-y-4">
+                        <a href="https://x.com/niwaracing" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 group text-zinc-400 hover:text-sky-500 transition w-fit">
+                            <span class="text-xl w-6 text-center"><i class="fab fa-x-twitter"></i></span>
+                            <span class="text-zinc-500 group-hover:text-sky-500 transition font-bold">@niwaracing</span>
+                        </a>
+                        <a href="https://www.instagram.com/niwaracing" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 group text-zinc-400 hover:text-rose-600 transition w-fit">
+                            <span class="text-xl w-6 text-center"><i class="fab fa-instagram"></i></span>
+                            <span class="text-zinc-500 group-hover:text-rose-600 transition font-bold">@niwaracing</span>
+                        </a>
+                        <a href="https://www.facebook.com/eiji.niwa.5/" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 group text-zinc-400 hover:text-blue-600 transition w-fit">
+                            <span class="text-xl w-6 text-center"><i class="fab fa-facebook-f"></i></span>
+                            <span class="text-zinc-500 group-hover:text-blue-600 transition font-bold">NIWA RACING</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="md:col-span-3">
