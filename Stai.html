@@ -109,6 +109,24 @@
             filter: grayscale(0.1) contrast(1.1);
             border-radius: 1rem;
         }
+        /* 横スクロール列のスクロールバー非表示 */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            scrollbar-width: none;
+        }
+        /* ラウンド別カード列：左端を見出しと揃え、吸着位置も同じ余白にする */
+        .season-track {
+            padding-inline: max(1rem, calc((100vw - 80rem) / 2 + 2rem));
+            scroll-padding-inline: max(1rem, calc((100vw - 80rem) / 2 + 2rem));
+        }
+        @media (max-width: 1023px) {
+            .season-track {
+                padding-inline: 1rem;
+                scroll-padding-inline: 1rem;
+            }
+        }
     </style>
 </head>
 <body class="antialiased pb-20 lg:pb-0">
@@ -172,243 +190,285 @@
     </script>
 
 
-    <!-- ヒーローセクション -->
-    <header class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="./images/288_1.jpg" alt="Super Taikyu Hero" class="w-full h-full object-cover" decoding="async" fetchpriority="high">
-            <div class="absolute inset-0 bg-black/60"></div>
-        </div>
-        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto flex flex-col items-center justify-center h-full pt-20">
-            <h2 class="text-white/80 font-oswald text-sm md:text-base tracking-[0.3em] uppercase font-bold mb-8 md:mb-12">Super Taikyu Series</h2>
-            <div class="font-mincho text-white text-2xl md:text-4xl lg:text-5xl leading-loose md:leading-loose tracking-widest drop-shadow-2xl italic space-y-6 md:space-y-8">
-                <p>一人一人が主役であり、</p>
-                <p><span class="inline-block">みんなが</span><span class="inline-block">スポットライトの</span><span class="inline-block">当たる場所にいる。</span></p>
-                <p><span class="inline-block">だから我々は</span><span class="inline-block">チームになった。</span></p>
-                <p class="text-3xl md:text-5xl lg:text-6xl mt-12 md:mt-16 text-rose-500 not-italic"><span class="inline-block">さあ行こう、</span><span class="inline-block">みんなの為に。</span></p>
+    <!-- ヒーローセクション（富士24h 完走直後） -->
+    <header class="bg-zinc-950 pt-20">
+        <!-- 写真に文字を重ねず、表情とゼッケンを見せる。PCでは元画像(1477px)を引き伸ばさないよう本文幅に収める -->
+        <div class="max-w-7xl mx-auto md:px-6 lg:px-8 md:pt-6">
+            <div class="relative h-[58svh] md:h-[calc(100vh-18.5rem)] min-h-[360px] overflow-hidden md:rounded-2xl">
+                <img src="./images/stai2026/fuji24h_finish.jpg" alt="富士24時間レース完走直後、チームメイトに迎えられる888号車" class="w-full h-full object-cover object-[62%_center] md:object-[center_65%]" decoding="async" fetchpriority="high">
+                <div class="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-zinc-950/80 to-transparent"></div>
+                <p class="absolute right-4 bottom-3 md:right-6 md:bottom-4 text-white/70 text-[10px] md:text-xs font-bold flex items-center gap-2">
+                    <i class="fas fa-camera text-rose-500"></i>Rd.3 富士24時間レース／完走直後
+                </p>
             </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-10 pb-4 md:flex md:items-end md:justify-between md:gap-10">
+            <div>
+                <p class="text-rose-500 font-oswald text-sm md:text-base tracking-[0.3em] uppercase font-bold mb-3">Super Taikyu Series 2026</p>
+                <h1 class="text-white font-oswald text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-wide leading-none">Season Review</h1>
+            </div>
+            <p class="text-white/80 font-mincho text-lg md:text-2xl tracking-widest mt-5 md:mt-0 md:pb-2">初参戦の1年を、写真でふりかえる。</p>
         </div>
     </header>
 
-    <!-- チームのストーリー (Our Story) -->
-    <section id="our-story" class="py-32 px-4 bg-zinc-950 text-white relative overflow-hidden">
-        <!-- Background decoration -->
-        <div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
-            <img src="./images/shugo1.jpg" alt="Team Background" class="w-full h-full object-cover mix-blend-luminosity" loading="lazy" decoding="async">
-            <div class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-transparent"></div>
-        </div>
+    <!-- コンセプト（チームの言葉） -->
+    <section id="our-story" class="pt-20 pb-24 md:pt-28 md:pb-32 px-4 bg-zinc-950 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="font-mincho text-xl md:text-3xl lg:text-4xl leading-loose md:leading-loose tracking-widest space-y-4 md:space-y-6">
+                <p>一人一人が主役であり、</p>
+                <p><span class="inline-block">みんなが</span><span class="inline-block">スポットライトの</span><span class="inline-block">当たる場所にいる。</span></p>
+                <p><span class="inline-block">だから我々は</span><span class="inline-block">チームになった。</span></p>
+                <p class="text-2xl md:text-4xl lg:text-5xl pt-6 text-rose-500"><span class="inline-block">さあ行こう、</span><span class="inline-block">みんなの為に。</span></p>
+            </div>
+            <div class="h-px w-20 bg-rose-600 mx-auto my-14 md:my-16"></div>
+            <div class="space-y-5 text-gray-300 text-base md:text-lg leading-relaxed font-medium max-w-2xl mx-auto text-left md:text-center">
+                <p>長野県上田市を拠点に、普段は会社員など「レースのプロ」ではない仲間たちが集まったチーム、NIWA RACING。</p>
+                <p>2026年、日本最高峰の耐久レース「スーパー耐久シリーズ」に初参戦し、「#888 Fets高砂NIWA Racingロードスター」でST-5Rクラスを1シーズン戦いました。</p>
+            </div>
 
-        <div class="max-w-7xl mx-auto relative z-10">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8">
-                    <div class="inline-block bg-rose-600/20 px-4 py-1 rounded-full border border-rose-500/30">
-                        <h2 class="text-rose-500 font-oswald text-sm tracking-[0.3em] uppercase font-bold">Our Story</h2>
-                    </div>
-                    <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-mincho tracking-wide">
-                        2026年、<br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-400">新たな挑戦</span>
-                    </h3>
-
-                    <div class="h-1 w-20 bg-rose-600 rounded-full"></div>
-
-                    <div class="space-y-6 text-gray-300 text-lg leading-relaxed font-medium">
-                        <p>
-                            長野県上田市を拠点に、普段は会社員など「レースのプロ」ではない仲間たちが、ただ純粋な情熱をもって集結しました。
-                        </p>
-                        <p>
-                            我々が挑むのは、日本最高峰の耐久レース「スーパー耐久シリーズ」。2026年からの参戦に向けて、チーム一丸となって準備を進めています。
-                        </p>
-                        <p>
-                            予算もリソースも限られているかもしれない。しかし、私たちには諦めない心と、互いを信じる強い絆があります。プロフェッショナルな舞台で、プライベーターとしての意地と誇りを見せつけます。
-                        </p>
-                    </div>
+            <!-- シーズンの数字 -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden mt-16 md:mt-20">
+                <div class="bg-zinc-950 py-8 px-4">
+                    <p class="font-oswald text-4xl md:text-5xl font-bold">5</p>
+                    <p class="text-xs text-zinc-400 font-bold tracking-widest mt-2">参戦ラウンド</p>
                 </div>
-
-                <div class="relative group">
-                    <div class="absolute -inset-4 bg-gradient-to-r from-rose-600 to-rose-400 rounded-2xl opacity-20 group-hover:opacity-40 blur-lg transition duration-500"></div>
-                    <div class="relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                        <img src="./images/shugo1.jpg" alt="NIWA RACING チーム集合写真" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" decoding="async">
-                    </div>
+                <div class="bg-zinc-950 py-8 px-4">
+                    <p class="font-oswald text-4xl md:text-5xl font-bold text-rose-500">P5</p>
+                    <p class="text-xs text-zinc-400 font-bold tracking-widest mt-2">最高位（Rd.4 SUGO）</p>
+                </div>
+                <div class="bg-zinc-950 py-8 px-4">
+                    <p class="font-oswald text-4xl md:text-5xl font-bold">24<span class="text-2xl md:text-3xl">h</span></p>
+                    <p class="text-xs text-zinc-400 font-bold tracking-widest mt-2">富士24時間 完走</p>
+                </div>
+                <div class="bg-zinc-950 py-8 px-4">
+                    <p class="font-oswald text-4xl md:text-5xl font-bold">888</p>
+                    <p class="text-xs text-zinc-400 font-bold tracking-widest mt-2">ST-5R / ROADSTER</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ギャラリー＆チーム紹介 -->
-    <section id="gallery-team" class="py-32 px-4 bg-zinc-50">
+    <!-- ラウンド別タイムライン（横スクロール） -->
+    <section id="season" class="py-24 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-end justify-between gap-6 mb-10 md:mb-14">
+                <div>
+                    <h2 class="text-rose-600 font-oswald text-sm tracking-[0.3em] uppercase font-bold mb-3">Round by Round</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold font-oswald tracking-widest uppercase text-zinc-900">2026 Season</h3>
+                </div>
+                <!-- PC用スクロールボタン -->
+                <div class="hidden md:flex gap-2">
+                    <button type="button" data-scroll="-1" class="season-scroll w-12 h-12 rounded-full border-2 border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white transition" aria-label="前のラウンド"><i class="fas fa-chevron-left"></i></button>
+                    <button type="button" data-scroll="1" class="season-scroll w-12 h-12 rounded-full border-2 border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white transition" aria-label="次のラウンド"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="season-track" class="season-track no-scrollbar flex gap-5 md:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4">
+            <!-- Rd.1 もてぎ -->
+            <article class="snap-start shrink-0 w-[82%] sm:w-[420px] group">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-100">
+                    <img src="./images/stai2026/rd1_motegi_run.jpg" alt="Rd.1 もてぎ 走行する888号車" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" decoding="async">
+                </div>
+                <div class="pt-5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-2.5 py-0.5 rounded text-xs font-bold font-oswald bg-rose-600 text-white">Rd.1</span>
+                        <span class="text-xs text-zinc-500 font-bold font-oswald">2026.04</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-zinc-900">もてぎ 5時間レース</h4>
+                    <p class="text-sm text-zinc-500 font-bold mt-1"><i class="fas fa-map-marker-alt mr-1 text-rose-600"></i>モビリティリゾートもてぎ</p>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-zinc-200">
+                        <span class="font-oswald font-bold text-zinc-900 tracking-wide">完走</span>
+                        <a href="reports/2026_rd1_motegi.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-zinc-600 hover:text-rose-600 transition"><i class="fas fa-file-pdf mr-1 text-rose-600"></i>レポート</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Rd.3 富士24時間 -->
+            <article class="snap-start shrink-0 w-[82%] sm:w-[420px] group">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-100">
+                    <img src="./images/stai2026/fuji24h_run.jpg" alt="Rd.3 富士24時間 走行する888号車" class="w-full h-full object-cover object-[35%_center] transition duration-700 group-hover:scale-105" loading="lazy" decoding="async">
+                </div>
+                <div class="pt-5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-2.5 py-0.5 rounded text-xs font-bold font-oswald bg-rose-600 text-white">Rd.3</span>
+                        <span class="text-xs text-zinc-500 font-bold font-oswald">2026.06</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-zinc-900">富士 24時間レース</h4>
+                    <p class="text-sm text-zinc-500 font-bold mt-1"><i class="fas fa-map-marker-alt mr-1 text-rose-600"></i>富士スピードウェイ</p>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-zinc-200">
+                        <span class="font-oswald font-bold text-zinc-900 tracking-wide">クラス8位 / 総合52位 完走</span>
+                        <a href="reports/2026_rd3_fuji24h.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-zinc-600 hover:text-rose-600 transition"><i class="fas fa-file-pdf mr-1 text-rose-600"></i>レポート</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Rd.4 SUGO -->
+            <article class="snap-start shrink-0 w-[82%] sm:w-[420px] group">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-100">
+                    <img src="./images/stai2026/rd4_sugo_run.jpg" alt="Rd.4 SUGO 走行する888号車" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" decoding="async">
+                </div>
+                <div class="pt-5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-2.5 py-0.5 rounded text-xs font-bold font-oswald bg-rose-600 text-white">Rd.4</span>
+                        <span class="text-xs text-zinc-500 font-bold font-oswald">2026.07</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-zinc-900">SUGO 4時間レース</h4>
+                    <p class="text-sm text-zinc-500 font-bold mt-1"><i class="fas fa-map-marker-alt mr-1 text-rose-600"></i>スポーツランドSUGO</p>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-zinc-200">
+                        <span class="font-oswald font-bold text-rose-600 tracking-wide">予選 5位 / 決勝 5位</span>
+                        <a href="reports/2026_rd4_sugo.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-zinc-600 hover:text-rose-600 transition"><i class="fas fa-file-pdf mr-1 text-rose-600"></i>レポート</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Rd.5 オートポリス -->
+            <article class="snap-start shrink-0 w-[82%] sm:w-[420px] group">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-100">
+                    <img src="./images/stai2026/rd5_autopolis_run.jpg" alt="Rd.5 オートポリス 走行する888号車" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" decoding="async">
+                </div>
+                <div class="pt-5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-2.5 py-0.5 rounded text-xs font-bold font-oswald bg-rose-600 text-white">Rd.5</span>
+                        <span class="text-xs text-zinc-500 font-bold font-oswald">2026.07.26</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-zinc-900">オートポリス 5時間レース</h4>
+                    <p class="text-sm text-zinc-500 font-bold mt-1"><i class="fas fa-map-marker-alt mr-1 text-rose-600"></i>オートポリス</p>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-zinc-200">
+                        <span class="font-oswald font-bold text-zinc-900 tracking-wide">予選 7位 / 決勝 8位</span>
+                        <a href="reports/2026_rd5_autopolis.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-zinc-600 hover:text-rose-600 transition"><i class="fas fa-file-pdf mr-1 text-rose-600"></i>レポート</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Rd.6 岡山 -->
+            <article class="snap-start shrink-0 w-[82%] sm:w-[420px] group">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-100">
+                    <img src="./images/stai2026/rd6_okayama_grid.jpg" alt="Rd.6 岡山 スタート前のグリッドに並ぶチーム" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" decoding="async">
+                </div>
+                <div class="pt-5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-2.5 py-0.5 rounded text-xs font-bold font-oswald bg-rose-600 text-white">Rd.6</span>
+                        <span class="text-xs text-zinc-500 font-bold font-oswald">2026.10.25</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-zinc-900">スーパー耐久レースin岡山</h4>
+                    <p class="text-sm text-zinc-500 font-bold mt-1"><i class="fas fa-map-marker-alt mr-1 text-rose-600"></i>岡山国際サーキット</p>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-zinc-200">
+                        <span class="font-oswald font-bold text-zinc-900 tracking-wide">予選 7位 / 決勝 7位</span>
+                        <a href="reports/2026_rd6_okayama.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-zinc-600 hover:text-rose-600 transition"><i class="fas fa-file-pdf mr-1 text-rose-600"></i>レポート</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <p class="text-xs text-zinc-400 font-bold md:hidden"><i class="fas fa-hand-point-right mr-1"></i>横にスワイプしてご覧ください</p>
+            <button id="open-report-modal" type="button" class="inline-flex items-center gap-3 px-6 py-3 rounded-full border-2 border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white font-bold text-sm tracking-wider transition-all duration-300 cursor-pointer group sm:ml-auto">
+                <i class="fas fa-file-pdf text-rose-600 group-hover:text-rose-400 transition-colors"></i>
+                <span>レースレポート一覧（PDF）</span>
+                <i class="fas fa-chevron-right text-xs group-hover:translate-x-1 transition-transform"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- 富士24時間 特集 -->
+    <section id="fuji24h" class="py-24 md:py-32 px-4 bg-zinc-950 text-white">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-rose-600 font-oswald text-sm tracking-[0.3em] uppercase font-bold mb-4">Gallery & Team</h2>
-                <h3 class="text-3xl md:text-5xl font-bold font-oswald tracking-widest uppercase text-zinc-900">Inside the Passion</h3>
-                <div class="h-1 w-20 bg-rose-600 mx-auto mt-6"></div>
+            <div class="grid md:grid-cols-12 gap-10 md:gap-12 items-center">
+                <div class="md:col-span-7">
+                    <div class="aspect-[3/2] rounded-2xl overflow-hidden">
+                        <img src="./images/stai2026/fuji24h_night.jpg" alt="富士24時間レース 夜間走行する888号車" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="md:col-span-5 space-y-6">
+                    <h2 class="text-rose-500 font-oswald text-sm tracking-[0.3em] uppercase font-bold">Highlight — Rd.3 Fuji 24H</h2>
+                    <h3 class="font-mincho text-3xl md:text-5xl leading-tight tracking-wide">24時間、<br>つなぎきった。</h3>
+                    <div class="h-1 w-16 bg-rose-600 rounded-full"></div>
+                    <p class="text-gray-300 leading-relaxed font-medium">
+                        シーズン最大の山場、富士24時間レース。前日の夜間練習で多重クラッシュに巻き込まれ、修復は間に合ったものの予選には出走できず、最後尾からのスタートとなりました。決勝中にはエンジン交換も経験しながら、ドライバーとメカニックが一丸となってマシンをつなぎ、ST-5Rクラス8位・総合52位で24時間を走りきりました。
+                    </p>
+                    <a href="reports/2026_rd3_fuji24h.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-rose-400 transition">
+                        <i class="fas fa-file-pdf text-rose-500"></i>富士24時間のレポートを読む
+                        <i class="fas fa-external-link-alt text-[10px] opacity-70"></i>
+                    </a>
+                </div>
             </div>
 
-            <!-- Asymmetric Grid Layout -->
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                <!-- Machine (Large) -->
-                <div class="md:col-span-8 group relative overflow-hidden rounded-2xl shadow-md h-[300px] md:h-[500px]">
-                    <img src="./images/288_2.jpg" alt="The Machine" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6 md:p-8">
-                        <div>
-                            <span class="text-rose-500 font-bold uppercase text-xs tracking-wider mb-2 block">The Machine</span>
-                            <h4 class="text-white text-2xl font-bold font-oswald tracking-wide">ST-5 CLASS</h4>
-                        </div>
+            <!-- 24時間の場面（ドライバー交代・修復作業） -->
+            <div class="grid grid-cols-2 md:grid-cols-12 gap-3 md:gap-6 mt-10 md:mt-14">
+                <figure class="md:col-span-4">
+                    <div class="aspect-[3/4] md:aspect-auto md:h-[520px] rounded-2xl overflow-hidden">
+                        <img src="./images/stai2026/fuji24h_driverchange.jpg" alt="ドライバー交代の様子" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     </div>
-                </div>
+                    <figcaption class="text-xs text-zinc-400 font-bold mt-3">ドライバー交代</figcaption>
+                </figure>
+                <figure class="md:col-span-8">
+                    <div class="aspect-[3/4] md:aspect-auto md:h-[520px] rounded-2xl overflow-hidden">
+                        <img src="./images/stai2026/fuji24h_repair.jpg" alt="決勝中、ガレージでエンジン交換を行うメカニック" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
+                    <figcaption class="text-xs text-zinc-400 font-bold mt-3">決勝中のエンジン交換作業</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
 
-                <!-- Driver 1 -->
-                <div class="md:col-span-4 group relative overflow-hidden rounded-2xl shadow-md h-[300px] md:h-[500px]">
-                    <img src="./images/driver1.jpg" alt="Drivers" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6 md:p-8">
-                        <div>
-                            <span class="text-rose-500 font-bold uppercase text-xs tracking-wider mb-2 block">Drivers</span>
-                            <h4 class="text-white text-xl font-bold tracking-wide">Steering the Dream</h4>
-                        </div>
-                    </div>
+    <!-- Behind the Scenes（仮：既存写真） -->
+    <section id="behind-the-scenes" class="py-24 md:py-32 px-4 bg-zinc-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-10 md:mb-14">
+                <h2 class="text-rose-600 font-oswald text-sm tracking-[0.3em] uppercase font-bold mb-3">Behind the Scenes</h2>
+                <h3 class="text-3xl md:text-5xl font-bold font-oswald tracking-widest uppercase text-zinc-900">The Team</h3>
+                <p class="text-zinc-500 mt-4 text-sm md:text-base font-medium">走る1台の後ろには、チーム全員の時間があります。</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+                <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden aspect-square md:aspect-auto">
+                    <img src="./images/shugo2.jpg" alt="NIWA RACING チーム" class="w-full h-full object-cover" loading="lazy" decoding="async">
                 </div>
-
-                <!-- Mechanics 1 -->
-                <div class="md:col-span-4 group relative overflow-hidden rounded-2xl shadow-md h-[300px]">
-                    <img src="./images/meca1.jpg" alt="Mechanics" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
-                        <div>
-                            <span class="text-rose-500 font-bold uppercase text-xs tracking-wider mb-2 block">Mechanics</span>
-                            <h4 class="text-white text-xl font-bold tracking-wide">Unsung Heroes</h4>
-                        </div>
-                    </div>
+                <div class="rounded-2xl overflow-hidden aspect-square">
+                    <img src="./images/meca1.jpg" alt="メカニックの作業" class="w-full h-full object-cover" loading="lazy" decoding="async">
                 </div>
-
-                <!-- The Team (Small) -->
-                <div class="md:col-span-4 group relative overflow-hidden rounded-2xl shadow-md h-[300px]">
-                    <img src="./images/shugo2.jpg" alt="The Team" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
-                        <div>
-                            <span class="text-rose-500 font-bold uppercase text-xs tracking-wider mb-2 block">The Team</span>
-                            <h4 class="text-white text-xl font-bold tracking-wide">United as One</h4>
-                        </div>
-                    </div>
+                <div class="rounded-2xl overflow-hidden aspect-square">
+                    <img src="./images/driver1.jpg" alt="ドライバー" class="w-full h-full object-cover" loading="lazy" decoding="async">
                 </div>
-
-                <!-- Mechanics 2 -->
-                <div class="md:col-span-4 group relative overflow-hidden rounded-2xl shadow-md h-[300px]">
-                    <img src="./images/meca2.jpg" alt="Mechanics" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
-                        <div>
-                            <span class="text-rose-500 font-bold uppercase text-xs tracking-wider mb-2 block">Mechanics</span>
-                            <h4 class="text-white text-xl font-bold tracking-wide">Precision Matters</h4>
-                        </div>
-                    </div>
+                <div class="rounded-2xl overflow-hidden aspect-square">
+                    <img src="./images/meca2.jpg" alt="メカニックの作業" class="w-full h-full object-cover" loading="lazy" decoding="async">
                 </div>
-
-                <!-- Driver 2 -->
-                <div class="md:col-span-3 group relative overflow-hidden rounded-2xl shadow-md h-[300px]">
-                    <img src="./images/driver2.jpg" alt="Drivers" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
-                        <span class="text-rose-500 font-bold uppercase text-xs tracking-wider">Drivers</span>
-                    </div>
-                </div>
-
-                <!-- Machine (Small) -->
-                <div class="md:col-span-6 group relative overflow-hidden rounded-2xl shadow-md h-[300px]">
-                    <img src="./images/288_3.jpg" alt="The Machine" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
-                        <span class="text-rose-500 font-bold uppercase text-xs tracking-wider">The Machine</span>
-                    </div>
-                </div>
-
-                <!-- Driver 3 -->
-                <div class="md:col-span-3 group relative overflow-hidden rounded-2xl shadow-md h-[300px]">
-                    <img src="./images/driver3.jpg" alt="Drivers" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
-                        <span class="text-rose-500 font-bold uppercase text-xs tracking-wider">Drivers</span>
-                    </div>
-                </div>
-
-                <!-- The Team (Wide) -->
-                <div class="md:col-span-12 group relative overflow-hidden rounded-2xl shadow-md h-[300px] md:h-[400px]">
-                    <img src="./images/shugo3.jpg" alt="The Team" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end justify-center p-8">
-                        <h4 class="text-white text-3xl md:text-4xl font-bold font-mincho tracking-widest text-center">
-                            心をひとつに。<br class="md:hidden">共に頂点へ。
-                        </h4>
-                    </div>
+                <div class="rounded-2xl overflow-hidden aspect-square">
+                    <img src="./images/driver2.jpg" alt="ドライバー" class="w-full h-full object-cover" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- レースレポート (Race Reports) -->
-    <section id="race-reports" class="py-28 px-4 bg-white relative overflow-hidden border-t border-gray-100">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-rose-600 font-oswald text-sm tracking-[0.3em] uppercase font-bold mb-4">Race Reports</h2>
-                <h3 class="text-3xl md:text-5xl font-bold font-oswald tracking-widest uppercase text-zinc-900">2026 Season Reports</h3>
-                <div class="h-1 w-20 bg-rose-600 mx-auto mt-6"></div>
-                <p class="text-zinc-500 mt-4 text-sm md:text-base font-medium">過酷な戦いを走り抜いたNIWA RACINGの公式レースレポートをご覧いただけます。</p>
+    <!-- 支援企業一覧（レポート掲載の画像をそのまま使用。スマホでは小さいため画像単体を開けるようにする） -->
+    <section id="supporters" class="py-20 md:py-28 px-4 bg-zinc-950">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-8 md:mb-12 text-center">
+                <h2 class="text-rose-500 font-oswald text-sm tracking-[0.3em] uppercase font-bold mb-3">Supported by</h2>
+                <h3 class="text-3xl md:text-5xl font-bold font-oswald tracking-widest uppercase text-white">Our Partners</h3>
+                <p class="text-white/70 mt-4 text-sm md:text-base font-medium"><span class="inline-block">2026シーズンを支えてくださった</span><span class="inline-block">皆様に、心より感謝申し上げます。</span></p>
             </div>
-
-            <!-- 最新レースカード（最新1件のみ表示） -->
-            <div class="max-w-2xl mx-auto mb-12">
-                <!-- Rd.6 岡山戦（最新） -->
-                <div class="bg-zinc-50 rounded-3xl p-8 md:p-10 border border-zinc-200 shadow-md hover:shadow-2xl transition-all duration-300 card-hover flex flex-col justify-between relative group">
-                    <div class="absolute top-0 left-0 h-1.5 w-0 bg-rose-600 rounded-t-3xl transition-all duration-300 group-hover:w-full"></div>
-                    <div>
-                        <div class="flex items-center justify-between gap-4 mb-6">
-                            <div class="flex items-center gap-2">
-                                <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold font-oswald tracking-wider bg-rose-600 text-white shadow-sm">LATEST</span>
-                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold font-oswald tracking-wider bg-rose-600/10 text-rose-600 border border-rose-200">ROUND 6</span>
-                            </div>
-                            <span class="text-xs md:text-sm font-bold text-zinc-500 font-oswald tracking-wider flex items-center gap-1.5">
-                                <i class="far fa-calendar-alt text-rose-600"></i>2026.10.25
-                            </span>
-                        </div>
-                        <h4 class="text-2xl md:text-4xl font-bold text-zinc-900 mb-3 font-oswald tracking-wide group-hover:text-rose-600 transition-colors">
-                            スーパー耐久レースin岡山
-                        </h4>
-                        <p class="text-sm md:text-base font-bold text-zinc-600 flex items-center gap-2 mb-8">
-                            <i class="fas fa-map-marker-alt text-rose-600"></i>
-                            岡山国際サーキット（岡山県）
-                        </p>
-                    </div>
-                    <div>
-                        <a href="reports/2026_rd6_okayama.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full py-4 px-8 rounded-xl bg-zinc-900 text-white hover:bg-rose-600 font-bold text-base tracking-wide transition-all duration-300 shadow-md group/btn">
-                            <i class="fas fa-file-pdf mr-3 text-rose-400 group-hover/btn:text-white transition-colors text-lg"></i>
-                            最新レポートを読む (PDF)
-                            <i class="fas fa-external-link-alt ml-3 text-xs opacity-70 group-hover/btn:translate-x-0.5 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- モーダル起動ボタン（過去のレポート一覧） -->
-            <div class="text-center">
-                <button id="open-report-modal" type="button" class="inline-flex items-center gap-3 px-8 py-4 rounded-full border-2 border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white font-bold text-sm md:text-base tracking-wider transition-all duration-300 shadow-sm hover:shadow-lg cursor-pointer group">
-                    <i class="fas fa-history text-rose-600 group-hover:text-rose-400 transition-colors"></i>
-                    <span>過去のレースレポート一覧を見る</span>
-                    <i class="fas fa-chevron-right text-xs group-hover:translate-x-1 transition-transform"></i>
-                </button>
-            </div>
+            <a href="./images/stai2026/sponsors_2026.jpg" target="_blank" rel="noopener" class="block rounded-2xl overflow-hidden ring-1 ring-white/10">
+                <img src="./images/stai2026/sponsors_2026.jpg" alt="#888 Fets高砂NIWA Racingロードスター 支援企業：高砂エアテック、NIWA RACING、Select Hotels Group、Winmax、MAZDA、Garage-I、FORTEC、IDS Studio Limited、進化剤、StarFive、OGURA CLUTCH、Sim tech、LAILE、RED CREATE" class="w-full h-auto" loading="lazy" decoding="async">
+            </a>
+            <p class="md:hidden text-white/50 text-xs font-bold text-center mt-3"><i class="fas fa-magnifying-glass-plus mr-1"></i>タップで拡大表示</p>
         </div>
     </section>
 
     <!-- スポンサー募集 (Call to Action) -->
-    <section id="sponsor-cta" class="py-32 px-4 bg-rose-600 text-white text-center relative overflow-hidden">
-        <!-- Abstract Pattern Background -->
-        <div class="absolute inset-0 opacity-10">
-            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M0,100 L100,0 L100,100 Z" fill="currentColor"></path>
-                <path d="M0,50 L50,0 L0,0 Z" fill="currentColor"></path>
-            </svg>
+    <section id="sponsor-cta" class="relative py-32 md:py-40 px-4 text-white text-center overflow-hidden bg-zinc-950">
+        <div class="absolute inset-0">
+            <img src="./images/stai2026/rd1_motegi_run.jpg" alt="" class="w-full h-full object-cover" loading="lazy" decoding="async">
+            <div class="absolute inset-0 bg-zinc-950/75"></div>
         </div>
-
         <div class="max-w-4xl mx-auto relative z-10">
-            <h2 class="text-3xl md:text-5xl font-bold font-oswald tracking-widest uppercase mb-8">
-                スポンサー様 大募集
-            </h2>
-            <p class="text-xl md:text-2xl font-medium leading-relaxed mb-12 font-mincho">
-                私たちの熱い挑戦を共に戦い、<br class="md:hidden">
-                応援していただけるパートナー企業様・個人スポンサー様を募集しています。
+            <p class="text-rose-500 font-oswald text-sm tracking-[0.3em] uppercase font-bold mb-6">Partner with us</p>
+            <h2 class="text-3xl md:text-5xl font-bold tracking-widest mb-8">スポンサー様 大募集</h2>
+            <p class="text-lg md:text-2xl font-medium leading-relaxed mb-12 font-mincho">
+                私たちの熱い挑戦を共に戦い、<br>
+                <span class="inline-block">応援していただける</span><span class="inline-block">パートナー企業様・</span><span class="inline-block">個人スポンサー様を</span><span class="inline-block">募集しています。</span>
             </p>
-            <a href="#contact" class="inline-block bg-white text-rose-600 font-bold text-lg md:text-xl px-12 py-5 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:bg-zinc-900 hover:text-white hover:shadow-[0_10px_30px_rgba(225,29,72,0.5)] transition duration-300 transform hover:-translate-y-1">
+            <a href="#contact" class="inline-block bg-rose-600 text-white font-bold text-lg md:text-xl px-12 py-5 rounded-full shadow-[0_10px_30px_rgba(225,29,72,0.4)] hover:bg-white hover:text-rose-600 transition duration-300 transform hover:-translate-y-1">
                 <i class="fas fa-handshake mr-3"></i> 応援・お問い合わせはこちら
             </a>
         </div>
@@ -587,7 +647,7 @@
                                     <span class="px-2.5 py-0.5 rounded text-xs font-bold font-oswald bg-rose-600 text-white">Rd.3</span>
                                     <span class="text-xs text-zinc-500 font-bold font-oswald"><i class="far fa-calendar-alt mr-1 text-rose-600"></i>2026.06</span>
                                     <span class="text-xs text-zinc-500 font-bold"><i class="fas fa-map-marker-alt mr-1 text-rose-600"></i>富士スピードウェイ</span>
-                                    <span class="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">ST-5 決勝8位完走</span>
+                                    <span class="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">ST-5R 決勝8位完走</span>
                                 </div>
                                 <h5 class="text-base md:text-lg font-bold text-zinc-900">富士 24時間レース</h5>
                             </div>
@@ -631,6 +691,21 @@
             </div>
         </div>
     </div>
+
+    <!-- ラウンド別カード 横スクロールボタン制御 -->
+    <script>
+        (function() {
+            const track = document.getElementById('season-track');
+            if (!track) return;
+            document.querySelectorAll('.season-scroll').forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const card = track.querySelector('article');
+                    const step = card ? card.offsetWidth + 24 : 400;
+                    track.scrollBy({ left: step * Number(btn.dataset.scroll), behavior: 'smooth' });
+                });
+            });
+        })();
+    </script>
 
     <!-- レースレポート モーダル制御スクリプト -->
     <script>
