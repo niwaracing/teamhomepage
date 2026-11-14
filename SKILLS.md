@@ -71,11 +71,11 @@
    - SNS（XやLINE等）でカード写真付きプレビュー（Twitter Card `summary_large_image`）を表示させるため、後述の [1.4 OGP共有用リダイレクトHTML テンプレート構造](#14-ogp共有用リダイレクトhtml-テンプレート構造) に従って `cars/{vehicle_id}.html` を作成。
 5. **構文およびスタイル確認**:
    - HTMLタグの閉じ漏れ、onclickのクォートエスケープミスがないか確認。
-6. **Gitコミット＆Push**:
+6. **Gitコミット＆Push（Pushは承認必須）**:
    - コミットメッセージ例:
      - `Add [車種名] to sales page and update stock list`
      - ギャラリー含む場合: `Add [車種名] with photo gallery to sales.html`
-   - `git add .` → `git commit -m "..."` → `git push origin main`
+   - `git add .` → `git commit -m "..."` までは実施してよい。`git push origin main` は、`AGENTS.md` のポリシーに従い、ユーザーへ変更内容を提示して承認を得てから実施すること（承認がない場合はPushしない）。
 
 ---
 
@@ -214,10 +214,10 @@ SNSでカード写真を大きなアイキャッチとして表示させるた�
      ```
    - ニュース量の肥大化を防ぐため、売約済みを告知する**新規記事は追加しない**。
    - 対象車両の入庫記事がない場合は、このステップを省略する。
-7. **Gitコミット＆Push**:
+7. **Gitコミット＆Push（Pushは承認必須）**:
    - コミットメッセージ例:
      - `Update [車種名] to SOLD OUT and reorder vehicle list by stock status`
-   - `git add sales.html index.html` → `git commit -m "..."` → `git push origin main`
+   - `git add sales.html index.html` → `git commit -m "..."` までは実施してよい。`git push origin main` は、`AGENTS.md` のポリシーに従い、ユーザーへ変更内容を提示して承認を得てから実施すること（承認がない場合はPushしない）。
 
 ---
 
@@ -294,4 +294,4 @@ SNSでカード写真を大きなアイキャッチとして表示させるた�
 - [ ] 売約済みにした車両の入庫ニュースが `index.html` にある場合、「売約済み」バッジを付与したか（新規記事は追加しない）
 - [ ] モーダル呼び出しの `openCarModal` の引数順序・型に狂いがないか
 - [ ] `git status` / `git diff` で差分を確認し、意図しない箇所の変更がないか
-- [ ] `AGENTS.md` の運用ポリシーに従い、作業後は自律的にGitコミット＆Pushを実施しているか
+- [ ] `AGENTS.md` の運用ポリシーに従い、作業後にGitコミットを作成し、Pushについてはユーザー承認を得ているか（未承認の場合はPushしていないか）
